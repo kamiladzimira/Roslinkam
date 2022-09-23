@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -873,13 +873,12 @@ TextureImporter:
       Tools_8: -94954524
       Tools_5: -1645865118
       Tools_24: 1670212328
-      Tools_26: -949077330
+      Tools_27: -552472546
       Tools_33: -1693667265
       Tools_2: -87844451
       Tools_3: 1680935507
       Tools_6: 1293348698
       Tools_34: 1634444941
-      Tools_27: -552472546
       Tools_17: -550078154
       Tools_12: 567571021
       Tools_4: -812337003
@@ -901,9 +900,10 @@ TextureImporter:
       Tools_35: -1434664858
       Tools_28: 840881488
       Tools_18: -1897508090
+      Tools_26: -949077330
       Tools_0: -333679411
-      Tools_23: 1101449410
       Tools_9: 955055702
+      Tools_23: 1101449410
       Tools_15: 652486136
       Tools_32: 383144679
   spritePackingTag: 

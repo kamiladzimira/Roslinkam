@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1422,9 +1422,8 @@ TextureImporter:
       Tilled Dirt_31: -1253452202
       Tilled Dirt_22: -1970412859
       Tilled Dirt_56: 894665861
-      Tilled Dirt_50: -1437222199
-      Tilled Dirt_3: -414624278
       Tilled Dirt_52: 322107860
+      Tilled Dirt_3: -414624278
       Tilled Dirt_59: -218248405
       Tilled Dirt_34: 1931338295
       Tilled Dirt_27: 1590369114
@@ -1475,6 +1474,7 @@ TextureImporter:
       Tilled Dirt_16: -1529842049
       Tilled Dirt_40: -243900219
       Tilled Dirt_29: 757518677
+      Tilled Dirt_50: -1437222199
       Tilled Dirt_15: 2112643624
       Tilled Dirt_24: 558116689
       Tilled Dirt_44: 1891473812

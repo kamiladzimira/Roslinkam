@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -1605,7 +1605,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass_62: -1375348227
       Grass_33: 1258430833
       Grass_5: 1060521082
       Grass_22: -1363115368
@@ -1640,14 +1639,14 @@ TextureImporter:
       Grass_30: 665847354
       Grass_64: -715689431
       Grass_27: -1175722578
-      Grass_19: 1890153834
+      Grass_9: 1834349510
       Grass_23: 2037232715
-      Grass_8: 444490585
+      Grass_58: -42065957
       Grass_24: -848381538
       Grass_52: -1283422551
-      Grass_9: 1834349510
+      Grass_8: 444490585
       Grass_70: 1966303120
-      Grass_58: -42065957
+      Grass_19: 1890153834
       Grass_35: -341248431
       Grass_38: -2006689548
       Grass_21: -570201159
@@ -1670,6 +1669,7 @@ TextureImporter:
       Grass_65: -1761943076
       Grass_56: -323960243
       Grass_44: 1673527348
+      Grass_62: -1375348227
       Grass_55: 929747358
       Grass_37: -708051177
       Grass_47: 1603653786
