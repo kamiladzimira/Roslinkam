@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
        movementVector = context.ReadValue<Vector2>();
     }
 
-    private void OnMove()
+    private void Move()
     {
         rb2D.MovePosition(rb2D.position + (movementVector * moveSpeed * Time.fixedDeltaTime));
 
@@ -42,6 +42,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        OnMove();
+        Move();
     }
 }
