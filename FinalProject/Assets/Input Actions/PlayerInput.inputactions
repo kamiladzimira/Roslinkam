@@ -13,6 +13,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Inventory",
+                    "type": "Button",
+                    "id": "80590ebb-0ba8-4ed3-b845-6fd4805c7f10",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -125,6 +134,17 @@
                     "action": "Walk",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "887aa5fa-ce7a-4e31-9683-c29608bf291b",
+                    "path": "<Keyboard>/i",
+                    "interactions": "Press(pressPoint=0.1)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inventory",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
