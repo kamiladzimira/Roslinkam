@@ -5,20 +5,23 @@ using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] GameObject inventory;
+    [SerializeField] GameObject itemContainer;
+    [SerializeField] GameObject inventoryPanel;
+    [SerializeField] List<ItemSlot> itemSlots;
 
-    List<GameObject> pickups = new List<GameObject>();
+    List<Item> pickups = new List<Item>();
 
     private void Start()
     {
-        inventory.SetActive(false);
+        inventoryPanel.SetActive(false);
     }
 
     public void OnInventoryOpen(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
-            inventory.SetActive(!inventory.activeSelf);
+            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+            SetupSlots();
         }
     }
 
@@ -29,11 +32,60 @@ public class Inventory : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Pickup")
+        if (pickups.Count >= itemSlots.Count)
         {
-            pickups.Add(collision.gameObject);
-            collision.gameObject.SetActive(false);
-            collision.transform.parent = inventory.transform;
+            return;
+        }
+
+        Item item = collision.GetComponent<Item>();
+
+        if (item != null)
+        {
+            pickups.Add(item);
+            item.gameObject.SetActive(false);
+            item.transform.parent = itemContainer.transform;
+            SetupSlots();
         }
     }
+
+    public void Equip()
+    {
+        Debug.Log("click click");
+    }
+
+    private void SetupSlots()
+    {
+        for (int i = 0; i < itemSlots.Count; i++)
+        { 
+            ItemSlot itemSlot = itemSlots[i];
+
+            if (i < pickups.Count)
+            {
+                Item item = pickups[i];
+                itemSlot.Setup(item.Sprite);
+            }
+            else
+            {
+                itemSlot.Setup(null);
+            }
+        }
+    }
+
+    [ContextMenu("DropFirstItem")]
+    private void DropFirstItem()
+    {
+        if(pickups.Count <=0)
+        {
+            return;
+        }
+        Item itemToDrop = pickups[0];
+        itemToDrop.transform.position += Vector3.right * 2;
+        itemToDrop.transform.SetParent(null);
+        itemToDrop.gameObject.SetActive(true);
+        pickups.RemoveAt(0);
+        SetupSlots();
+    }
+
+
+
 }
