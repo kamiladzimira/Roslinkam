@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3655194828339109628}
   - component: {fileID: 3655194828339109629}
   - component: {fileID: 3655194828339109626}
-  - component: {fileID: 3655194828339109631}
+  - component: {fileID: 1329351012662633809}
   m_Layer: 0
   m_Name: Item
   m_TagString: Pickup
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3655194828339109627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7199633, y: -1.7619861, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,7 +102,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4375
---- !u!114 &3655194828339109631
+--- !u!114 &1329351012662633809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3655194828339109627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 460e8908b28a2e24ab8c5eb442b15c81, type: 3}
+  m_Script: {fileID: 11500000, guid: eee06d8745b33f645a9a9a01ab34321a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 1143514915, guid: dc0124ff37a4d6d42ab1c8bd2313c31d, type: 3}

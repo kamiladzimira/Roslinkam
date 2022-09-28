@@ -19,6 +19,18 @@ public class Inventory : MonoBehaviour
         inventoryPanel.SetActive(false);
     }
 
+    public void OnItemUse(InputAction.CallbackContext context)
+    {
+        if (equipedItem == null)
+        {
+            return;
+        }
+        if (context.performed)
+        {
+            equipedItem.Use();
+        }
+    }
+
     public void OnInventoryOpen(InputAction.CallbackContext context)
     {
         if (context.performed)

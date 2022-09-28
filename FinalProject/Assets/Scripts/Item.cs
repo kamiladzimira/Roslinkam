@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour
 {
     [SerializeField] private Sprite sprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
     public Sprite Sprite => sprite;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         Setup();
     }
 
-    private void Setup()
+    [ContextMenu("Setup")]
+    protected virtual void Setup()
     {
         spriteRenderer.sprite = sprite;
     }
+
+    public abstract void Use();
 }

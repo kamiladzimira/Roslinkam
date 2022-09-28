@@ -35,9 +35,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetBool("isWalking", false);
         }
-
-        //if (movementVector.magnitude < 8 + Mathf.Epsilon && movementVector.magnitude > -8 - Mathf.Epsilon)
-
     }
 
     private void FixedUpdate()
