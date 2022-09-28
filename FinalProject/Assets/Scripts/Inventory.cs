@@ -5,11 +5,14 @@ using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] GameObject itemContainer;
-    [SerializeField] GameObject inventoryPanel;
-    [SerializeField] List<ItemSlot> itemSlots;
+    [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private List<ItemSlot> itemSlots;
+    [SerializeField] private GameObject itemContainer;
+    [SerializeField] private GameObject equipContainer;
 
     List<Item> pickups = new List<Item>();
+
+    private Item equipedItem;
 
     private void Start()
     {
@@ -48,25 +51,40 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void Equip()
+    public void Equip(ItemSlot itemSlot)
     {
-        Debug.Log("click click");
+
+        if (equipedItem != null)
+        {
+            equipedItem.gameObject.SetActive(false);
+            equipedItem.transform.parent = itemContainer.transform;
+        }
+
+        itemSlot.Item.transform.SetParent(equipContainer.transform);
+        itemSlot.Item.transform.localPosition = Vector3.zero;
+        itemSlot.Item.gameObject.SetActive(true);
+        equipedItem = itemSlot.Item;
+    }
+
+    public void Equip(Item item)
+    {
+        Debug.Log("click click item");
     }
 
     private void SetupSlots()
     {
         for (int i = 0; i < itemSlots.Count; i++)
-        { 
+        {
             ItemSlot itemSlot = itemSlots[i];
 
             if (i < pickups.Count)
             {
                 Item item = pickups[i];
-                itemSlot.Setup(item.Sprite);
+                itemSlot.Setup(item);
             }
             else
             {
-                itemSlot.Setup(null);
+                itemSlot.Setup();
             }
         }
     }
@@ -74,7 +92,7 @@ public class Inventory : MonoBehaviour
     [ContextMenu("DropFirstItem")]
     private void DropFirstItem()
     {
-        if(pickups.Count <=0)
+        if (pickups.Count <= 0)
         {
             return;
         }
