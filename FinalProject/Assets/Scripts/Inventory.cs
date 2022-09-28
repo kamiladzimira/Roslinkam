@@ -65,6 +65,10 @@ public class Inventory : MonoBehaviour
 
     public void Equip(ItemSlot itemSlot)
     {
+        if (itemSlot.Item == null)
+        {
+            return;
+        }
 
         if (equipedItem != null)
         {
