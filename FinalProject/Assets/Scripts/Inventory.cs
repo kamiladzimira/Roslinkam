@@ -83,6 +83,25 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void EquipSelectedItem()
+    {
+        if (selectedItemSlot == null)
+        {
+            return;
+        }
+
+        Equip(selectedItemSlot);
+    }
+
+    public void DropSelectedItem()
+    {
+        if (selectedItemSlot == null)
+        {
+            return;
+        }
+        Drop(selectedItemSlot.Item);
+    }
+
     public void Equip(ItemSlot itemSlot)
     {
         if (itemSlot.Item == null)
@@ -110,7 +129,7 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        item.transform.position += Vector3.up *2;
+        item.transform.position += Vector3.up * 2;
         item.transform.parent = null;
         item.gameObject.SetActive(true);
         pickups.Remove(item);
@@ -134,6 +153,13 @@ public class Inventory : MonoBehaviour
                 itemSlot.Setup();
             }
         }
+
+        for (int i = 0; i < itemSlots.Count; i++)
+        {
+            itemSlots[i].Select(false);
+        }
+
+        selectedItemSlot = null;
     }
 
     [ContextMenu("DropFirstItem")]
