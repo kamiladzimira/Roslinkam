@@ -6,8 +6,8 @@ public class Seed : Item
 {
     private List <Farmland> farmlands = new List<Farmland>();
 
-    [SerializeField]private float growingTime;
-    [SerializeField]private Item crop;
+    [SerializeField] private float growingTime;
+    [SerializeField] private Item crop;
 
     public float GrowingTime => growingTime;
     public Item Crop => crop;

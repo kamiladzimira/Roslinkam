@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Farmland : MonoBehaviour
 {
@@ -10,7 +9,6 @@ public class Farmland : MonoBehaviour
     private float timer;
     private bool isEmpty = true;
 
-    
     [SerializeField] public Action<float> onTimerChangedAction;
     [SerializeField] public Action onPlantSeededAction;
 

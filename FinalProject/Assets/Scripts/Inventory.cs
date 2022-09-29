@@ -13,7 +13,6 @@ public class Inventory : MonoBehaviour
     List<Item> pickups = new List<Item>();
 
     private Item equipedItem;
-    private Item dropItem;
 
     private void Start()
     {
