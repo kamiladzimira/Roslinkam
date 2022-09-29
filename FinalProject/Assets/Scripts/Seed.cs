@@ -25,7 +25,9 @@ public class Seed : Item
             return;
         }
 
+        inventory.Drop(this);
         farmland.SeedPlant(this);
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,15 +54,15 @@ public class Seed : Item
     private Farmland GetClosestEmptyFarmland()
     {
         Farmland result = null;
-        float distance = float.MaxValue;
+        float minDistance = float.MaxValue;
 
         for (int i = 0; i < farmlands.Count; i++)
         {
             float currentDistance = Vector3.Distance(transform.position, farmlands[i].transform.position);
 
-            if (currentDistance < distance && farmlands[i].IsEmpty)
+            if (currentDistance < minDistance && farmlands[i].IsEmpty)
             {
-                distance = currentDistance;
+                minDistance = currentDistance;
                 result = farmlands[i];
             }
         }

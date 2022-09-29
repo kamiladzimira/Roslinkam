@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     List<Item> pickups = new List<Item>();
 
     private Item equipedItem;
+    private Item dropItem;
 
     private void Start()
     {
@@ -40,11 +41,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (pickups.Count >= itemSlots.Count)
@@ -54,11 +50,15 @@ public class Inventory : MonoBehaviour
 
         Item item = collision.GetComponent<Item>();
 
+        if(pickups.Contains(item))
+        {
+            return;
+        }
         if (item != null)
         {
             pickups.Add(item);
             item.gameObject.SetActive(false);
-            item.transform.parent = itemContainer.transform;
+            item.transform.SetParent(itemContainer.transform);
             SetupSlots();
         }
     }
@@ -73,18 +73,29 @@ public class Inventory : MonoBehaviour
         if (equipedItem != null)
         {
             equipedItem.gameObject.SetActive(false);
-            equipedItem.transform.parent = itemContainer.transform;
+            equipedItem.transform.SetParent(itemContainer.transform);
         }
 
         itemSlot.Item.transform.SetParent(equipContainer.transform);
         itemSlot.Item.transform.localPosition = Vector3.zero;
         itemSlot.Item.gameObject.SetActive(true);
         equipedItem = itemSlot.Item;
+        equipedItem.Equip(this);
     }
 
-    public void Equip(Item item)
+    public void Drop(Item item)
     {
-        Debug.Log("click click item");
+        if (item == null)
+        {
+            return;
+        }
+
+        item.transform.position += Vector3.up *2;
+        item.transform.parent = null;
+        item.gameObject.SetActive(true);
+        pickups.Remove(item);
+        equipedItem = null;
+        SetupSlots();
     }
 
     private void SetupSlots()
@@ -108,16 +119,11 @@ public class Inventory : MonoBehaviour
     [ContextMenu("DropFirstItem")]
     private void DropFirstItem()
     {
-        if (pickups.Count <= 0)
+        if(pickups.Count <= 0)
         {
             return;
         }
-        Item itemToDrop = pickups[0];
-        itemToDrop.transform.position += Vector3.right * 2;
-        itemToDrop.transform.SetParent(null);
-        itemToDrop.gameObject.SetActive(true);
-        pickups.RemoveAt(0);
-        SetupSlots();
+        Drop(pickups[0]);
     }
 
 
