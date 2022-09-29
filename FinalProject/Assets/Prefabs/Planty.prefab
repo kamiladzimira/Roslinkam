@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6401119302798593610}
   - component: {fileID: 3143760171373390707}
   m_Layer: 0
-  m_Name: Planty
+  m_Name: PlantyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 710168603
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3043227625979600858
 RectTransform:
   m_ObjectHideFlags: 0
@@ -447,7 +447,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26aa7f039c35bc442b499c2aee6dcbc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedRenderer: {fileID: 3143760171373390707}
 --- !u!114 &3343922537677653742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,3 +461,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   farmland: {fileID: 268020508}
   timer: {fileID: 1868334313176822080}
+  seedRenderer: {fileID: 3143760171373390707}

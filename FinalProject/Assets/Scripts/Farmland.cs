@@ -10,9 +10,11 @@ public class Farmland : MonoBehaviour
     private float timer;
     private bool isEmpty = true;
 
-    [SerializeField] private SpriteRenderer seedRenderer;
+    
     [SerializeField] public Action<float> onTimerChangedAction;
+    [SerializeField] public Action onPlantSeededAction;
 
+    public Seed Seed => seed;
     public bool IsEmpty => isEmpty;
 
     private void Update()
@@ -32,7 +34,6 @@ public class Farmland : MonoBehaviour
         {
             isEmpty = true;
             Instantiate(seed.Crop, transform.position, Quaternion.identity, null);
-            seedRenderer.sprite = null;
         }
     }
 
@@ -40,7 +41,7 @@ public class Farmland : MonoBehaviour
     {
         timer = seed.GrowingTime;
         this.seed = seed;
-        seedRenderer.sprite = this.seed.Sprite;
         isEmpty = false;
+        onPlantSeededAction?.Invoke();
     }
 }
