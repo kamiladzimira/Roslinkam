@@ -8,7 +8,6 @@ public class SpawnerView : MonoBehaviour
     [SerializeField] private SeedSpawner seedSpawner;
     [SerializeField] TextMeshProUGUI timer;
 
-
     private void OnEnable()
     {
         seedSpawner.onTimerChangedAction += OnTimerChanged;

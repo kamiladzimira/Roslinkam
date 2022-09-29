@@ -171,7 +171,4 @@ public class Inventory : MonoBehaviour
         }
         Drop(pickups[0]);
     }
-
-
-
 }
