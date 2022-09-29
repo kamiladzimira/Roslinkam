@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
     List<Item> pickups = new List<Item>();
 
     private Item equipedItem;
+    private ItemSlot selectedItemSlot;
 
     private void Start()
     {
@@ -59,6 +60,26 @@ public class Inventory : MonoBehaviour
             item.gameObject.SetActive(false);
             item.transform.SetParent(itemContainer.transform);
             SetupSlots();
+        }
+    }
+
+    public void Select(ItemSlot itemSlot)
+    {
+        if (itemSlot.Item == null)
+        {
+            return;
+        }
+        selectedItemSlot = itemSlot;
+        foreach (ItemSlot slot in itemSlots)
+        {
+            if (slot == selectedItemSlot)
+            {
+                slot.Select(true);
+            }
+            else
+            {
+                slot.Select(false);
+            }
         }
     }
 
