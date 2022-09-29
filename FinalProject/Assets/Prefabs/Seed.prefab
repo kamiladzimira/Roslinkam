@@ -101,7 +101,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.4375
+  m_Radius: 2
 --- !u!114 &6034795465411040663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,3 +116,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -905394252, guid: dc0124ff37a4d6d42ab1c8bd2313c31d, type: 3}
   spriteRenderer: {fileID: 3655194828339109629}
+  growingTime: 3
+  crop: {fileID: 1329351012662633809, guid: 13026e8a7f48feb48bf60c5cee7f1d23, type: 3}
