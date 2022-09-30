@@ -6,6 +6,6 @@ public class BasicItem : Item
 {
     public override void Use()
     {
-        Debug.Log("item was used!");
+        Debug.Log("Item was used!");
     }
 }

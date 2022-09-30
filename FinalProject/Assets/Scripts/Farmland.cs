@@ -32,6 +32,7 @@ public class Farmland : MonoBehaviour
         {
             isEmpty = true;
             Instantiate(seed.Crop, transform.position, Quaternion.identity, null);
+            Destroy(seed.gameObject);
         }
     }
 

@@ -22,7 +22,6 @@ public class SeedSpawner : MonoBehaviour
     private void Update()
     {
         ProcessTimer();
-        Debug.Log(timer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
