@@ -54,6 +54,9 @@ TagManager:
   - name: Hills
     uniqueID: 1640707751
     locked: 0
+  - name: Structure
+    uniqueID: 3282418665
+    locked: 0
   - name: Player
     uniqueID: 3470254335
     locked: 0
