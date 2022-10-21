@@ -11,6 +11,7 @@ public class Seed : Item
 
     public float GrowingTime => growingTime;
     public Item Crop => crop;
+
     public override void Use()
     {
         if (farmlands.Count <= 0)
