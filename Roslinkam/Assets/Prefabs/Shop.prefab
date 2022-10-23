@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1807119848686701593}
   - component: {fileID: 1807119848686701592}
-  - component: {fileID: 1807119848686701599}
   - component: {fileID: 1807119848686701594}
+  - component: {fileID: 513982455}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -88,32 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1807119848686701599
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1807119848686701598}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.875}
-    newSize: {x: 1, y: 0.875}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.875}
-  m_EdgeRadius: 0
 --- !u!114 &1807119848686701594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,8 +100,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c59a8dd327937e429da8619b6cff32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShopInventoryPanel: {fileID: 1807119849836978513}
-  PlayerInventoryPanel: {fileID: 1807119848937800640}
+  shopInventoryPanel: {fileID: 1807119849836978513}
+  playerInventoryPanel: {fileID: 1807119848937800640}
+  itemSlots:
+  - {fileID: 5641579497007818764}
+  - {fileID: 5641579497754380011}
+  - {fileID: 5641579499083005677}
+  - {fileID: 5641579498529375713}
+  - {fileID: 5641579498856303446}
+  - {fileID: 5641579497845418496}
+  - {fileID: 5641579498716934448}
+  - {fileID: 5641579497528405430}
+  - {fileID: 5641579498245607883}
+  - {fileID: 5641579498896527892}
+  - {fileID: 5641579497126317803}
+  - {fileID: 5641579497251717017}
+  - {fileID: 5641579497199856156}
+  - {fileID: 5641579497994558467}
+  - {fileID: 5641579497767174840}
+  - {fileID: 5641579497352230767}
+  - {fileID: 5641579497737988653}
+  - {fileID: 5641579498549102254}
+  - {fileID: 5641579497832382901}
+  - {fileID: 5641579497977276151}
+  - {fileID: 5641579498316720647}
+  - {fileID: 5641579498775218171}
+  - {fileID: 5641579497122631399}
+  - {fileID: 5641579497249620840}
+  - {fileID: 5641579497179937897}
+--- !u!58 &513982455
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807119848686701598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.74
 --- !u!1 &1807119848853198568
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +207,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -214.50647, y: 212.46707}
+  m_AnchoredPosition: {x: -214.50647, y: 350}
   m_SizeDelta: {x: 430, y: 430}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1807119848853198564
@@ -315,7 +331,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1807119848937800643
 MonoBehaviour:
@@ -882,7 +898,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1807119849836978476
 MonoBehaviour:
@@ -1277,7 +1293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -214.50647, y: 212.46707}
+  m_AnchoredPosition: {x: -654, y: 350}
   m_SizeDelta: {x: 430, y: 430}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1807119850307198029
