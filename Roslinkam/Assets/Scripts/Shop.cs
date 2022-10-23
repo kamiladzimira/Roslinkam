@@ -7,12 +7,10 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject playerInventoryPanel;
     [SerializeField] private List<ItemSlot> itemSlots;
     [SerializeField] List<Item> buyableItems = new List<Item>();
-    private Inventory inventory;
 
     private bool isEmpty = true;
     public bool IsEmpty => isEmpty;
     
-
     private ItemSlot selectedItemSlot;
 
     void Start()
@@ -49,11 +47,6 @@ public class Shop : MonoBehaviour
         {
             itemSlots[i].Select(false);
         }
-    }
-
-    public void SetupPlayerInventorySlots()
-    {
-        inventory.SetupSlots();
     }
 
     public void Select(ItemSlot itemSlot)
