@@ -116,19 +116,27 @@ public class Shop : MonoBehaviour
 
     public void BuySelectedItem()
     {
+        if (activePlayerInventory.Money == 0)
+        {
+            return;
+        }
+
         if(!buyableItems.Contains(selectedItemSlot.Item))
         {
             return;
         }
+
         if (selectedItemSlot == null)
         {
             return;
         }
+
         Item item = selectedItemSlot.Item;
         buyableItems.Remove(item);
         activePlayerInventory.AddItem(item);
         SetupPlayerSlots();
         SetupShopSlots();
+        activePlayerInventory.ChangeMoneyValue(-10);
     }
 
     public void SellSelectedItem()
@@ -155,5 +163,6 @@ public class Shop : MonoBehaviour
         activePlayerInventory.RemoveItem(item);
         Destroy(item.gameObject);
         SetupPlayerSlots();
+        activePlayerInventory.ChangeMoneyValue(10);
     }
 }

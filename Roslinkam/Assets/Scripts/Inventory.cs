@@ -15,11 +15,28 @@ public class Inventory : MonoBehaviour
     private Item equipedItem;
     private ItemSlot selectedItemSlot;
 
+    private int money = 0;
+
     public IReadOnlyList<Item> Pickups => pickups;
+    public int Money => money;
 
     private void Start()
     {
         inventoryPanel.SetActive(false);
+    }
+
+    public void ChangeMoneyValue(int value)
+    {
+        if (money + value < 0)
+        {
+            return;
+        }
+        money += value;
+    }
+
+    public void AddMoney(int value)
+    {
+        money += value;
     }
 
     public void OnItemUse(InputAction.CallbackContext context)
