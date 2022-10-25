@@ -167,7 +167,7 @@
                 {
                     "name": "",
                     "id": "fed81502-6658-4163-b72f-0480c155a1a7",
-                    "path": "<Keyboard>/e",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -178,7 +178,7 @@
                 {
                     "name": "",
                     "id": "62724477-16b9-4b06-9fcf-11ff386f5b5a",
-                    "path": "<Keyboard>/o",
+                    "path": "<Keyboard>/e",
                     "interactions": "Press",
                     "processors": "",
                     "groups": "",
