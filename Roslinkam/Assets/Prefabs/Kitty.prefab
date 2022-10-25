@@ -18,6 +18,8 @@ GameObject:
   - component: {fileID: 4073545166449340695}
   - component: {fileID: 4073545166449340692}
   - component: {fileID: 4073545166449340693}
+  - component: {fileID: 2091443343}
+  - component: {fileID: 4073545168115996060}
   m_Layer: 0
   m_Name: Kitty
   m_TagString: Player
@@ -100,7 +102,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -824712961
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -1969641366, guid: b2dd14f1a0acef64082f912b4dac7e20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,6 +203,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: b200ee09-0b44-4f61-b9ae-62917f3c0f57
     m_ActionName: standard/UseItem[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2091443343}
+        m_TargetAssemblyTypeName: ShopActivator, Assembly-CSharp
+        m_MethodName: OnShopOpen
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 120a90ae-a6cd-4f68-b8c6-f41c532e3671
+    m_ActionName: standard/Shop[/Keyboard/o]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: standard
@@ -219,7 +237,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0033399165, y: 0}
+  m_Offset: {x: -0.02849397, y: -0.30772936}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -230,7 +248,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9265222, y: 1}
+  m_Size: {x: 0.3535089, y: 0.21476007}
   m_EdgeRadius: 0
 --- !u!50 &4073545166449340689
 Rigidbody2D:
@@ -337,6 +355,33 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &2091443343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073545166449340702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e7eac534cd03ab4b9e4de1909347b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerComponentsContainer: {fileID: 0}
+--- !u!114 &4073545168115996060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073545166449340702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4b96548d0750ba43b52e03e8e69db81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 4073545166449340695}
+  inventory: {fileID: 4073545166449340692}
 --- !u!1 &4073545166479484477
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,7 +829,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &4073545166891602267
 MonoBehaviour:

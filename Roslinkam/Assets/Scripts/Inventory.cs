@@ -10,10 +10,12 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject itemContainer;
     [SerializeField] private GameObject equipContainer;
 
-    List<Item> pickups = new List<Item>();
+    private List<Item> pickups = new List<Item>();
 
     private Item equipedItem;
     private ItemSlot selectedItemSlot;
+
+    public IReadOnlyList<Item> Pickups => pickups;
 
     private void Start()
     {

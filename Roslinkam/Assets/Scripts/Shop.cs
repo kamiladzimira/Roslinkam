@@ -6,7 +6,10 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject shopInventoryPanel;
     [SerializeField] private GameObject playerInventoryPanel;
     [SerializeField] private List<ItemSlot> itemSlots;
+    [SerializeField] private List<ItemSlot> playerItemSlots;
     [SerializeField] List<Item> buyableItems = new List<Item>();
+
+    private Inventory activePlayerInventory;
 
     private bool isEmpty = true;
     public bool IsEmpty => isEmpty;
@@ -19,11 +22,13 @@ public class Shop : MonoBehaviour
         playerInventoryPanel.SetActive(false);
     }
 
-    public void TriggerShop()
+    public void TriggerShop(PlayerComponentsContainer playerComponentsContainer)
     {
+        activePlayerInventory = playerComponentsContainer.Inventory;
         shopInventoryPanel.SetActive(!shopInventoryPanel.activeSelf);
         playerInventoryPanel.SetActive(!playerInventoryPanel.activeSelf);
         SetupShopSlots();
+        SetupPlayerSlots();
     }
 
     public void SetupShopSlots()
@@ -49,7 +54,35 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void Select(ItemSlot itemSlot)
+    public void SetupPlayerSlots()
+    {
+        if(activePlayerInventory == null)
+        {
+            return;
+        }
+
+        for (int i = 0; i < playerItemSlots.Count; i++)
+        {
+            ItemSlot playerItemSlot = playerItemSlots[i];
+
+            if (i < activePlayerInventory.Pickups.Count)
+            {
+                Item item = activePlayerInventory.Pickups[i];
+                playerItemSlot.Setup(item);
+            }
+            else
+            {
+                playerItemSlot.Setup();
+            }
+        }
+
+        for (int i = 0; i < playerItemSlots.Count; i++)
+        {
+            playerItemSlots[i].Select(false);
+        }
+    }
+
+    public void SelectShopItem(ItemSlot itemSlot)
     {
         if (itemSlot.Item == null)
         {
@@ -67,7 +100,20 @@ public class Shop : MonoBehaviour
                 slot.Select(false);
             }
         }
+
+        foreach (ItemSlot slot in playerItemSlots)
+        {
+            if (slot == selectedItemSlot)
+            {
+                slot.Select(true);
+            }
+            else
+            {
+                slot.Select(false);
+            }
+        }
     }
+
 
     public void BuySelectedItem()
     {

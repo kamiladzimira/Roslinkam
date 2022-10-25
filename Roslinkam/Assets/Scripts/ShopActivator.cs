@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 
 public class ShopActivator : MonoBehaviour
 {
+    [SerializeField]
+    PlayerComponentsContainer playerComponentsContainer;
+
     private List<Shop> shopItems = new List<Shop>();
     private Shop openShop;
 
@@ -39,7 +42,7 @@ public class ShopActivator : MonoBehaviour
 
         if (openShop != null)
         {
-            openShop.TriggerShop();
+            openShop.TriggerShop(playerComponentsContainer);
             openShop = null;
             return;
         }
@@ -50,7 +53,7 @@ public class ShopActivator : MonoBehaviour
         }
 
         openShop = GetClosestShop();
-        openShop.TriggerShop();
+        openShop.TriggerShop(playerComponentsContainer);
     }
 
     private Shop GetClosestShop()
