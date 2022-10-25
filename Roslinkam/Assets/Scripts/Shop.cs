@@ -114,25 +114,46 @@ public class Shop : MonoBehaviour
         }
     }
 
-
     public void BuySelectedItem()
+    {
+        if(!buyableItems.Contains(selectedItemSlot.Item))
+        {
+            return;
+        }
+        if (selectedItemSlot == null)
+        {
+            return;
+        }
+        Item item = selectedItemSlot.Item;
+        buyableItems.Remove(item);
+        activePlayerInventory.AddItem(item);
+        SetupPlayerSlots();
+        SetupShopSlots();
+    }
+
+    public void SellSelectedItem()
     {
         if (selectedItemSlot == null)
         {
             return;
         }
-        Drop(selectedItemSlot.Item);
-    }
 
-    public void Drop(Item item)
-    {
-        if (item == null)
+        bool playerContainsSelectedItem = false;
+        for (int i = 0; i < activePlayerInventory.Pickups.Count; i++)
+        {
+            if (activePlayerInventory.Pickups[i] == selectedItemSlot.Item)
+            {
+                playerContainsSelectedItem = true;
+            }
+        }
+        if (!playerContainsSelectedItem)
         {
             return;
         }
 
-        buyableItems.Remove(item);
+        Item item = selectedItemSlot.Item;
+        activePlayerInventory.RemoveItem(item);
         Destroy(item.gameObject);
-        SetupShopSlots();
+        SetupPlayerSlots();
     }
 }

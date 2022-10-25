@@ -134,9 +134,34 @@ public class Inventory : MonoBehaviour
         item.transform.position += Vector3.up * 2;
         item.transform.parent = null;
         item.gameObject.SetActive(true);
-        pickups.Remove(item);
         equipedItem = null;
+        RemoveItem(item);
+    }
+
+    public void AddItem(Item item)
+    {
+        if (pickups.Contains(item))
+        {
+            return;
+        }
+        if (item != null)
+        {
+            pickups.Add(item);
+            item.gameObject.SetActive(false);
+            item.transform.SetParent(itemContainer.transform);
+            SetupSlots();
+        }
+    }
+
+    public void RemoveItem(Item item)
+    {
+        if (!pickups.Contains(item))
+        {
+            return;
+        }
+        pickups.Remove(item);
         SetupSlots();
+        item.transform.SetParent(null);
     }
 
     private void SetupSlots()
