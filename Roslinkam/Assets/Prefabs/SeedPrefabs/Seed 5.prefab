@@ -116,5 +116,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: -1252742516, guid: dc0124ff37a4d6d42ab1c8bd2313c31d, type: 3}
   spriteRenderer: {fileID: 3655194828339109629}
+  price: 9
   growingTime: 5
   crop: {fileID: 0}
