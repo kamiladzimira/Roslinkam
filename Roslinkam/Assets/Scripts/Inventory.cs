@@ -66,7 +66,7 @@ public class Inventory : MonoBehaviour
 
 private void OnTriggerEnter2D(Collider2D collision)
     {
-        OldOnTriggerEnter2D(collision);
+        NewOnTriggerEnter2D(collision);
     }
 
     private void OldOnTriggerEnter2D(Collider2D collision)
@@ -94,12 +94,14 @@ private void OnTriggerEnter2D(Collider2D collision)
         if (item != null)
         {
             bool foundContainer = false;
+
             for (int i = 0; i < itemContainers.Count; i++)
             {
                 if (itemContainers[i].Items[0].name == item.name)
                 {
                     itemContainers[i].AddItem(item);
                     foundContainer = true;
+                    SetupSlots();
                     break;
                 }
             }
@@ -113,6 +115,7 @@ private void OnTriggerEnter2D(Collider2D collision)
             {
                 ItemContainer itemContainer = new ItemContainer(item);
                 itemContainers.Add(itemContainer);
+                SetupSlots();
             }
             item.gameObject.SetActive(false);
             item.transform.SetParent(itemContainer.transform);
@@ -218,28 +221,20 @@ private void OnTriggerEnter2D(Collider2D collision)
         item.transform.SetParent(null);
     }
 
-
-      /*for (int i = 0; i<inventoryViews.Count; i++)
-        {
-            inventoryViews[i].SetupSlots(itemContainers);
-}*/
-
-
-
 private void SetupSlots()
     {
         for (int i = 0; i < inventoryViews.Count; i++)
         {
-            inventoryViews[i].SetupSlots(pickups); 
+            inventoryViews[i].SetupSlots(itemContainers); 
         }
 
         for (int i = 0; i < itemSlots.Count; i++)
         {
             ItemSlot itemSlot = itemSlots[i];
 
-            if (i < pickups.Count)
+            if (i < itemContainers.Count)
             {
-                Item item = pickups[i];
+                ItemContainer itemContainer = itemContainers[i];
                 itemSlot.Setup();
             }
             else
