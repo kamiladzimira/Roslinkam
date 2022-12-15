@@ -46,33 +46,7 @@ public class InventoryView : MonoBehaviour
         }
         inventory.Drop(selectedItemSlot.Item);
     }
-
-    public void SetupSlots(List<Item> pickups)
-    {
-        for (int i = 0; i < itemSlots.Count; i++)
-        {
-            ItemSlot itemSlot = itemSlots[i];
-
-            if (i < pickups.Count)
-            {
-                Item item = pickups[i];
-                itemSlot.Setup(item);
-            }
-            else
-            {
-                itemSlot.Setup();
-            }
-        }
-
-        for (int i = 0; i < itemSlots.Count; i++)
-        {
-            itemSlots[i].Select(false);
-        }
-
-        selectedItemSlot = null;
-    }
-
-    /*public void SetupSlots(List<ItemContainer> itemContainers)
+    public void SetupSlots(List<ItemContainer> itemContainers)
     {
         for (int i = 0; i < itemSlots.Count; i++)
         {
@@ -95,6 +69,32 @@ public class InventoryView : MonoBehaviour
         }
 
         selectedItemSlot = null;
+    }
+
+    /*public void SetupSlots(List<Item> pickups)
+    {
+        for (int i = 0; i < itemSlots.Count; i++)
+        {
+            ItemSlot itemSlot = itemSlots[i];
+
+            if (i < pickups.Count)
+            {
+                Item item = pickups[i];
+                itemSlot.Setup(item);
+            }
+            else
+            {
+                itemSlot.Setup();
+            }
+        }
+
+        for (int i = 0; i < itemSlots.Count; i++)
+        {
+            itemSlots[i].Select(false);
+        }
+
+        selectedItemSlot = null;
     }*/
+
 }
 
