@@ -15,35 +15,41 @@ public class ItemSlot : MonoBehaviour
     public Item Item => item;
     public ItemContainer ItemContainer => itemContainer;
 
+    private void Start()
+    {
+        amountOfItems.text = "";
+    }
+
     public void Select(bool isSelected)
     {
         selectedImage.gameObject.SetActive(isSelected);
     }
 
-    public void Setup(Item item)
-    {
-        if (item == null)
+        public void Setup(Item item)
         {
-            Setup();
-            return;
-        }
+            if (item == null)
+            {
+                Setup();
+                return;
+            }
         image.sprite = item.Sprite;
-        image.gameObject.SetActive(true);
-        this.item = item;
-    }
+            image.gameObject.SetActive(true);
+            this.item = item;
+        }
 
-    /*public void Setup(ItemContainer itemContainer)
+    public void Setup(ItemContainer itemContainer)
     {
-        if (item == null)
+        if (itemContainer == null)
         {
             Setup();
             return;
         }
+
         image.sprite = itemContainer.Items[0].Sprite;
         image.gameObject.SetActive(true);
         this.itemContainer = itemContainer;
         amountOfItems.text = itemContainer.Items.Count.ToString();
-    }*/
+    }
 
     public void Setup()
     {
