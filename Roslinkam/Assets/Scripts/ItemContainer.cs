@@ -1,5 +1,7 @@
 using System.Collections.Generic;
+using System;
 
+[Serializable]
 public class ItemContainer
 {
     private List<Item> items;
@@ -16,8 +18,8 @@ public class ItemContainer
         items.Add(item);
     }
 
-    public void RemoveItem()
+    public void RemoveItem(Item item)
     {
-
+        items.Remove(item);
     }
 }
