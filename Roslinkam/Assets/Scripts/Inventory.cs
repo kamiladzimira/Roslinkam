@@ -9,14 +9,18 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<ItemSlot> itemSlots;
     [SerializeField] private GameObject itemContainer;
     [SerializeField] private GameObject equipContainer;
+    [SerializeField] private int maxPickupsValue;
+
+    [SerializeField] private List<InventoryView> inventoryViews;
 
     private List<Item> pickups = new List<Item>();
+
+    private List<ItemContainer> itemContainers = new List<ItemContainer>();
 
     private Item equipedItem;
     private ItemSlot selectedItemSlot;
 
     private int money = 0;
-
     public IReadOnlyList<Item> Pickups => pickups;
     public int Money => money;
 
@@ -60,25 +64,58 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (pickups.Count >= itemSlots.Count)
-        {
-            return;
-        }
+        OldOnTriggerEnter2D(collision);
+    }
 
+    private void OldOnTriggerEnter2D(Collider2D collision)
+    {
         Item item = collision.GetComponent<Item>();
 
-        if(pickups.Contains(item))
+        if (pickups.Contains(item) || pickups.Count >= maxPickupsValue)
         {
             return;
         }
+
         if (item != null)
         {
             pickups.Add(item);
             item.gameObject.SetActive(false);
             item.transform.SetParent(itemContainer.transform);
             SetupSlots();
+        }
+    }
+
+    private void NewOnTriggerEnter2D(Collider2D collision)
+    {
+        Item item = collision.GetComponent<Item>();
+
+        if (item != null)
+        {
+            bool foundContainer = false;
+            for (int i = 0; i < itemContainers.Count; i++)
+            {
+                if (itemContainers[i].Items[0].name == item.name)
+                {
+                    itemContainers[i].AddItem(item);
+                    foundContainer = true;
+                    break;
+                }
+            }
+
+            if (itemContainers.Count >= maxPickupsValue)
+            {
+                return;
+            }
+
+            if (!foundContainer)
+            {
+                ItemContainer itemContainer = new ItemContainer(item);
+                itemContainers.Add(itemContainer);
+            }
+            item.gameObject.SetActive(false);
+            item.transform.SetParent(itemContainer.transform);
         }
     }
 
@@ -181,8 +218,21 @@ public class Inventory : MonoBehaviour
         item.transform.SetParent(null);
     }
 
-    private void SetupSlots()
+
+      /*for (int i = 0; i<inventoryViews.Count; i++)
+        {
+            inventoryViews[i].SetupSlots(itemContainers);
+}*/
+
+
+
+private void SetupSlots()
     {
+        for (int i = 0; i < inventoryViews.Count; i++)
+        {
+            inventoryViews[i].SetupSlots(pickups); 
+        }
+
         for (int i = 0; i < itemSlots.Count; i++)
         {
             ItemSlot itemSlot = itemSlots[i];
@@ -190,7 +240,7 @@ public class Inventory : MonoBehaviour
             if (i < pickups.Count)
             {
                 Item item = pickups[i];
-                itemSlot.Setup(item);
+                itemSlot.Setup();
             }
             else
             {

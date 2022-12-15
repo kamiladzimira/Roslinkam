@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Shop : MonoBehaviour
 {
@@ -116,7 +117,7 @@ public class Shop : MonoBehaviour
 
     public void BuySelectedItem()
     {
-        if (activePlayerInventory.Money == 0)
+        if (activePlayerInventory.Money <= 0)
         {
             return;
         }
@@ -132,11 +133,18 @@ public class Shop : MonoBehaviour
         }
 
         Item item = selectedItemSlot.Item;
+
+        if(activePlayerInventory.Money < item.BuyPrice)
+        {
+            Debug.Log("You dont have enough money");
+            return;
+        }
+
         buyableItems.Remove(item);
         activePlayerInventory.AddItem(item);
         SetupPlayerSlots();
         SetupShopSlots();
-        activePlayerInventory.ChangeMoneyValue(-10);
+        activePlayerInventory.ChangeMoneyValue(-(item.BuyPrice));
     }
 
     public void SellSelectedItem()
@@ -146,20 +154,13 @@ public class Shop : MonoBehaviour
             return;
         }
 
-        bool playerContainsSelectedItem = false;
-        for (int i = 0; i < activePlayerInventory.Pickups.Count; i++)
-        {
-            if (activePlayerInventory.Pickups[i] == selectedItemSlot.Item)
-            {
-                playerContainsSelectedItem = true;
-            }
-        }
-        if (!playerContainsSelectedItem)
+        Item item = selectedItemSlot.Item;
+
+        if (!activePlayerInventory.Pickups.Contains(item))
         {
             return;
         }
 
-        Item item = selectedItemSlot.Item;
         activePlayerInventory.RemoveItem(item);
         Destroy(item.gameObject);
         SetupPlayerSlots();

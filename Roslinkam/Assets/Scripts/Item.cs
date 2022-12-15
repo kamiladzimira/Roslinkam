@@ -1,14 +1,25 @@
 using UnityEngine;
 
-public abstract class Item : MonoBehaviour
+public abstract class Item : MonoBehaviour, ISellable, IBuyable
 {
     [SerializeField] private Sprite sprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private int price;
 
     protected Inventory inventory;
-
     public Sprite Sprite => sprite;
+    public int BuyPrice => price;
+    public int SellPrice => price;
 
+    public void Sell()
+    {
+        Debug.Log("Witaj swiecie");
+    }
+
+    public void Buy()
+    {
+        Debug.Log("Witaj swiecie");
+    }
     protected virtual void Awake()
     {
         Setup();
