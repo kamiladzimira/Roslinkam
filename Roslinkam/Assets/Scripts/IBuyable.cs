@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IBuyable
 {
-    public void Buy();
+    public int BuyPrice { get; }
 }
