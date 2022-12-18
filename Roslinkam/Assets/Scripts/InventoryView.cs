@@ -10,7 +10,7 @@ public class InventoryView : MonoBehaviour
 
     public void Select(ItemSlot itemSlot)
     {
-        if (itemSlot.Item == null)
+        if (itemSlot.ItemContainer == null)
         {
             return;
         }
@@ -44,8 +44,9 @@ public class InventoryView : MonoBehaviour
         {
             return;
         }
-        inventory.Drop(selectedItemSlot.Item);
+        inventory.Drop(selectedItemSlot.ItemContainer);
     }
+
     public void SetupSlots(List<ItemContainer> itemContainers)
     {
         for (int i = 0; i < itemSlots.Count; i++)

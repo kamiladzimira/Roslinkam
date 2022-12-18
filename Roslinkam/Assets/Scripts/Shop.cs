@@ -161,7 +161,7 @@ public class Shop : MonoBehaviour
             return;
         }
 
-        activePlayerInventory.RemoveItem(item);
+        //activePlayerInventory.RemoveItem(item);
         Destroy(item.gameObject);
         SetupPlayerSlots();
         activePlayerInventory.ChangeMoneyValue(10);

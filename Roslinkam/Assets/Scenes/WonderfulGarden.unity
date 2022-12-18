@@ -1216,10 +1216,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1868240005}
     m_Modifications:
-    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.199997
-      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot
@@ -70344,7 +70340,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: -202}
+  m_AnchoredPosition: {x: 0.0000076294, y: -238}
   m_SizeDelta: {x: 710.5339, y: 118.6211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868240006
@@ -72123,6 +72119,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4073545166449340692, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
+      propertyPath: maxPickupsValue
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4073545166449340692, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
       propertyPath: inventoryViews.Array.data[0]
       value: 

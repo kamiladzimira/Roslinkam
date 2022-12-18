@@ -13,6 +13,14 @@ public class ItemContainer
         items = new List<Item>();
         items.Add(item);
     }
+
+    public Item GetFirstItem()
+    {
+        Item firstItem = items[0];
+
+        return firstItem;
+    }
+
     public void AddItem(Item item)
     {
         items.Add(item);

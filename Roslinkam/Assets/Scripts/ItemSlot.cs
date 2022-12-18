@@ -32,7 +32,7 @@ public class ItemSlot : MonoBehaviour
                 Setup();
                 return;
             }
-        image.sprite = item.Sprite;
+            image.sprite = item.Sprite;
             image.gameObject.SetActive(true);
             this.item = item;
         }

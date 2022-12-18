@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Seed : Item 
+public class Seed : Item
 {
     private List<Farmland> farmlands = new List<Farmland>();
 
     [SerializeField] private float growingTime;
     [SerializeField] private Item crop;
-
 
     public float GrowingTime => growingTime;
     public Item Crop => crop;
@@ -27,7 +26,7 @@ public class Seed : Item
             return;
         }
 
-        inventory.Drop(this);
+        //inventory.Drop(this);
         farmland.SeedPlant(this);
         gameObject.SetActive(false);
     }

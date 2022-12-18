@@ -124,7 +124,7 @@ private void OnTriggerEnter2D(Collider2D collision)
 
     public void Select(ItemSlot itemSlot)
     {
-        if (itemSlot.Item == null)
+        if (itemSlot.ItemContainer == null)
         {
             return;
         }
@@ -158,12 +158,12 @@ private void OnTriggerEnter2D(Collider2D collision)
         {
             return;
         }
-        Drop(selectedItemSlot.Item);
+        Drop(selectedItemSlot.ItemContainer);
     }
 
     public void Equip(ItemSlot itemSlot)
     {
-        if (itemSlot.Item == null)
+        if (itemSlot.ItemContainer == null)
         {
             return;
         }
@@ -174,25 +174,42 @@ private void OnTriggerEnter2D(Collider2D collision)
             equipedItem.transform.SetParent(itemContainer.transform);
         }
 
-        itemSlot.Item.transform.SetParent(equipContainer.transform);
-        itemSlot.Item.transform.localPosition = Vector3.zero;
-        itemSlot.Item.gameObject.SetActive(true);
-        equipedItem = itemSlot.Item;
+        Item item = itemSlot.ItemContainer.GetFirstItem();
+        item.transform.SetParent(equipContainer.transform);
+        //itemSlot.Item.transform.SetParent(equipContainer.transform);
+
+        item.transform.localPosition = Vector3.zero;
+        //itemSlot.Item.transform.localPosition = Vector3.zero;
+
+        item.gameObject.SetActive(true);
+        //itemSlot.Item.gameObject.SetActive(true);
+
+        equipedItem = item;
+        //equipedItem = itemSlot.Item;
+
         equipedItem.Equip(this);
     }
 
-    public void Drop(Item item)
+    public void Drop(ItemContainer itemContainer)
     {
-        if (item == null)
+        if (itemContainer == null)
         {
             return;
         }
 
+        Item item = itemContainer.GetFirstItem();
+
         item.transform.position += Vector3.up * 2;
+        //item.transform.position += Vector3.up * 2;
+
         item.transform.parent = null;
+        //item.transform.parent = null;
+
         item.gameObject.SetActive(true);
+        //item.gameObject.SetActive(true);
+
         equipedItem = null;
-        RemoveItem(item);
+        RemoveItem(itemContainer);
     }
 
     public void AddItem(Item item)
@@ -210,15 +227,15 @@ private void OnTriggerEnter2D(Collider2D collision)
         }
     }
 
-    public void RemoveItem(Item item)
+    public void RemoveItem(ItemContainer itemContainer)
     {
-        if (!pickups.Contains(item))
+        if (!itemContainers.Contains(itemContainer))
         {
             return;
         }
-        pickups.Remove(item);
+        itemContainers.Remove(itemContainer);
         SetupSlots();
-        item.transform.SetParent(null);
+        itemContainer.Items[0].transform.SetParent(null);
     }
 
 private void SetupSlots()
@@ -251,7 +268,7 @@ private void SetupSlots()
         selectedItemSlot = null;
     }
 
-    [ContextMenu("DropFirstItem")]
+    /*[ContextMenu("DropFirstItem")]
     private void DropFirstItem()
     {
         if(pickups.Count <= 0)
@@ -259,5 +276,5 @@ private void SetupSlots()
             return;
         }
         Drop(pickups[0]);
-    }
+    }*/
 }
