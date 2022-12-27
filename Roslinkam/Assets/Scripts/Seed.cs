@@ -26,7 +26,7 @@ public class Seed : Item
             return;
         }
 
-        //inventory.Drop(this);
+        inventory.Drop(this);
         farmland.SeedPlant(this);
         gameObject.SetActive(false);
     }

@@ -7311,6 +7311,11 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!1 &1007544038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1245823959, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
+  m_PrefabInstance: {fileID: 4073545168115996058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1027482444
 GameObject:
   m_ObjectHideFlags: 0
@@ -72119,6 +72124,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 266412653, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1245823959, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1583180381, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4073545166449340692, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
+      propertyPath: inventoryPanel
+      value: 
+      objectReference: {fileID: 1007544038}
     - target: {fileID: 4073545166449340692, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
       propertyPath: maxPickupsValue
       value: 5

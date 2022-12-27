@@ -17,7 +17,6 @@ public class ItemContainer
     public Item GetFirstItem()
     {
         Item firstItem = items[0];
-
         return firstItem;
     }
 
@@ -28,6 +27,10 @@ public class ItemContainer
 
     public void RemoveItem(Item item)
     {
+        if (!items.Contains(item))
+        {
+            return;
+        }
         items.Remove(item);
     }
 }

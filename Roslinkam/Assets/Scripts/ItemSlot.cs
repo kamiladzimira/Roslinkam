@@ -17,7 +17,7 @@ public class ItemSlot : MonoBehaviour
 
     private void Start()
     {
-        amountOfItems.text = "";
+        SetupAmountOfItems();
     }
 
     public void Select(bool isSelected)
@@ -25,27 +25,35 @@ public class ItemSlot : MonoBehaviour
         selectedImage.gameObject.SetActive(isSelected);
     }
 
-        public void Setup(Item item)
-        {
-            if (item == null)
-            {
-                Setup();
-                return;
-            }
-            image.sprite = item.Sprite;
-            image.gameObject.SetActive(true);
-            this.item = item;
-        }
-
-    public void Setup(ItemContainer itemContainer)
+    public void SetupAmountOfItems()
     {
-        if (itemContainer == null)
+        amountOfItems.text = "";
+    }
+
+    public void Setup(Item item)
+    {
+        if (item == null)
         {
             Setup();
             return;
         }
 
-        image.sprite = itemContainer.Items[0].Sprite;
+        image.sprite = item.Sprite;
+        image.gameObject.SetActive(true);
+        this.item = item;
+    }
+
+    public void Setup(ItemContainer itemContainer)
+    {
+        Item item = itemContainer.GetFirstItem();
+
+        if (item == null)
+        {
+            Setup();
+            return;
+        }
+
+        image.sprite = item.Sprite;
         image.gameObject.SetActive(true);
         this.itemContainer = itemContainer;
         amountOfItems.text = itemContainer.Items.Count.ToString();
@@ -56,5 +64,6 @@ public class ItemSlot : MonoBehaviour
         image.sprite = null;
         image.gameObject.SetActive(false);
         item = null;
+        SetupAmountOfItems();
     }
 }

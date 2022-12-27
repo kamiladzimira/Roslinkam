@@ -64,7 +64,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         NewOnTriggerEnter2D(collision);
     }
@@ -142,25 +142,6 @@ private void OnTriggerEnter2D(Collider2D collision)
         }
     }
 
-    public void EquipSelectedItem()
-    {
-        if (selectedItemSlot == null)
-        {
-            return;
-        }
-
-        Equip(selectedItemSlot);
-    }
-
-    public void DropSelectedItem()
-    {
-        if (selectedItemSlot == null)
-        {
-            return;
-        }
-        Drop(selectedItemSlot.ItemContainer);
-    }
-
     public void Equip(ItemSlot itemSlot)
     {
         if (itemSlot.ItemContainer == null)
@@ -197,19 +178,37 @@ private void OnTriggerEnter2D(Collider2D collision)
             return;
         }
 
-        Item item = itemContainer.GetFirstItem();
+        //Item item = itemContainer.GetFirstItem();
+
+        for (int i = 0; i < itemContainer.Items.Count; i++)
+        {
+
+            itemContainer.Items[i].transform.position += Vector3.up * 2;
+            //item.transform.position += Vector3.up * 2;
+
+            itemContainer.Items[i].transform.parent = null;
+            //item.transform.parent = null;
+
+            itemContainer.Items[i].gameObject.SetActive(true);
+            //item.gameObject.SetActive(true);
+
+        }
+        //equipedItem = null;
+        RemoveItem(itemContainer);
+    }
+
+    public void Drop(Item item)
+    {
+        if (itemContainer == null)
+        {
+            return;
+        }
 
         item.transform.position += Vector3.up * 2;
-        //item.transform.position += Vector3.up * 2;
-
         item.transform.parent = null;
-        //item.transform.parent = null;
-
         item.gameObject.SetActive(true);
-        //item.gameObject.SetActive(true);
 
-        equipedItem = null;
-        RemoveItem(itemContainer);
+        RemoveItem(item);
     }
 
     public void AddItem(Item item)
@@ -233,16 +232,56 @@ private void OnTriggerEnter2D(Collider2D collision)
         {
             return;
         }
+     
         itemContainers.Remove(itemContainer);
+
+        for (int i = 0; i < itemContainer.Items.Count; i++)
+        {
+            itemContainer.Items[i].transform.SetParent(null);
+        }
+
         SetupSlots();
-        itemContainer.Items[0].transform.SetParent(null);
     }
 
-private void SetupSlots()
+    public void RemoveItem(Item item)
+    {
+        ItemContainer itemContainer = null;
+
+
+        for (int i = 0; i < itemContainers.Count; i++)
+        {
+            ItemContainer tempContainer = itemContainers[i];
+            for (int j = 0; j < tempContainer.Items.Count; j++)
+            {
+                if (tempContainer.Items[j] == item)
+                {
+                    itemContainer = tempContainer;
+                }
+            }
+
+        }
+
+        if (itemContainer == null)
+        {
+            return;
+        }
+
+        itemContainer.RemoveItem(item);
+        item.transform.SetParent(null);
+
+        if (itemContainer.Items.Count <= 0)
+        {
+            itemContainers.Remove(itemContainer);
+        }
+
+        SetupSlots();
+    }
+
+    private void SetupSlots()
     {
         for (int i = 0; i < inventoryViews.Count; i++)
         {
-            inventoryViews[i].SetupSlots(itemContainers); 
+            inventoryViews[i].SetupSlots(itemContainers);
         }
 
         for (int i = 0; i < itemSlots.Count; i++)
