@@ -157,17 +157,9 @@ public class Inventory : MonoBehaviour
 
         Item item = itemSlot.ItemContainer.GetFirstItem();
         item.transform.SetParent(equipContainer.transform);
-        //itemSlot.Item.transform.SetParent(equipContainer.transform);
-
         item.transform.localPosition = Vector3.zero;
-        //itemSlot.Item.transform.localPosition = Vector3.zero;
-
         item.gameObject.SetActive(true);
-        //itemSlot.Item.gameObject.SetActive(true);
-
         equipedItem = item;
-        //equipedItem = itemSlot.Item;
-
         equipedItem.Equip(this);
     }
 
@@ -187,22 +179,12 @@ public class Inventory : MonoBehaviour
             return;
         }
 
-        //Item item = itemContainer.GetFirstItem();
-
         for (int i = 0; i < itemContainer.Items.Count; i++)
         {
-
             itemContainer.Items[i].transform.position += Vector3.up * 2;
-            //item.transform.position += Vector3.up * 2;
-
             itemContainer.Items[i].transform.parent = null;
-            //item.transform.parent = null;
-
             itemContainer.Items[i].gameObject.SetActive(true);
-            //item.gameObject.SetActive(true);
-
         }
-        //equipedItem = null;
         RemoveItem(itemContainer);
     }
 
@@ -256,7 +238,6 @@ public class Inventory : MonoBehaviour
     {
         ItemContainer itemContainer = null;
 
-
         for (int i = 0; i < itemContainers.Count; i++)
         {
             ItemContainer tempContainer = itemContainers[i];
@@ -267,7 +248,6 @@ public class Inventory : MonoBehaviour
                     itemContainer = tempContainer;
                 }
             }
-
         }
 
         if (itemContainer == null)

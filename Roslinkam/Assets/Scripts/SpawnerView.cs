@@ -22,7 +22,7 @@ public class SpawnerView : MonoBehaviour
     {
         if (timerValue <= 0)
         {
-            timerValue = 0;
+            //timerValue = 0;
             timer.text = "Ready!";
             return;
         }
