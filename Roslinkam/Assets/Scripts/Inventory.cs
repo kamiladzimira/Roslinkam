@@ -171,6 +171,15 @@ public class Inventory : MonoBehaviour
         equipedItem.Equip(this);
     }
 
+    public void Unequip()
+    {
+        if (equipedItem == null)
+        {
+            return;
+        }
+        equipedItem = null;
+    }
+
     public void Drop(ItemContainer itemContainer)
     {
         if (itemContainer == null)

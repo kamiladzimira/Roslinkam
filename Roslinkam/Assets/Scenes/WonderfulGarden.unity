@@ -70738,6 +70738,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 17619026952851788, guid: 2c6c5527db77a1446b7a5e20c1c90cae, type: 3}
+      propertyPath: seeds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 17619026952851788, guid: 2c6c5527db77a1446b7a5e20c1c90cae, type: 3}
+      propertyPath: seeds.Array.data[1]
+      value: 
+      objectReference: {fileID: 6034795465411040663, guid: 043067aaf2c20074e8a5a4108add1398, type: 3}
+    - target: {fileID: 17619026952851788, guid: 2c6c5527db77a1446b7a5e20c1c90cae, type: 3}
+      propertyPath: seeds.Array.data[2]
+      value: 
+      objectReference: {fileID: 6034795465411040663, guid: 3558b96c1fcac8946aee6a25cc39c84e, type: 3}
+    - target: {fileID: 17619026952851788, guid: 2c6c5527db77a1446b7a5e20c1c90cae, type: 3}
+      propertyPath: seeds.Array.data[3]
+      value: 
+      objectReference: {fileID: 6034795465411040663, guid: c245191b02340eb4aa0100be6b49c10e, type: 3}
     - target: {fileID: 17619026952851789, guid: 2c6c5527db77a1446b7a5e20c1c90cae, type: 3}
       propertyPath: m_RootOrder
       value: 4

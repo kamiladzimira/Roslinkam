@@ -27,6 +27,7 @@ public class Seed : Item
         }
 
         inventory.Drop(this);
+        inventory.Unequip();
         farmland.SeedPlant(this);
         gameObject.SetActive(false);
     }
