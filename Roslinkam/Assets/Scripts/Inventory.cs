@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
 
     [SerializeField] private List<InventoryView> inventoryViews;
 
-    private List<Item> pickups = new List<Item>();
+    //private List<Item> pickups = new List<Item>();
 
     private List<ItemContainer> itemContainers = new List<ItemContainer>();
 
@@ -21,7 +21,8 @@ public class Inventory : MonoBehaviour
     private ItemSlot selectedItemSlot;
 
     private int money = 0;
-    public IReadOnlyList<Item> Pickups => pickups;
+    //public IReadOnlyList<Item> Pickups => pickups;
+    public IReadOnlyList<ItemContainer> ItemContainers => itemContainers;
     public int Money => money;
 
     private void Start()
@@ -69,57 +70,11 @@ public class Inventory : MonoBehaviour
         NewOnTriggerEnter2D(collision);
     }
 
-    private void OldOnTriggerEnter2D(Collider2D collision)
-    {
-        Item item = collision.GetComponent<Item>();
-
-        if (pickups.Contains(item) || pickups.Count >= maxPickupsValue)
-        {
-            return;
-        }
-
-        if (item != null)
-        {
-            pickups.Add(item);
-            item.gameObject.SetActive(false);
-            item.transform.SetParent(itemContainer.transform);
-            SetupSlots();
-        }
-    }
-
     private void NewOnTriggerEnter2D(Collider2D collision)
     {
         Item item = collision.GetComponent<Item>();
 
-        if (item != null)
-        {
-            bool foundContainer = false;
-
-            for (int i = 0; i < itemContainers.Count; i++)
-            {
-                if (itemContainers[i].Items[0].name == item.name)
-                {
-                    itemContainers[i].AddItem(item);
-                    foundContainer = true;
-                    SetupSlots();
-                    break;
-                }
-            }
-
-            if (itemContainers.Count >= maxPickupsValue)
-            {
-                return;
-            }
-
-            if (!foundContainer)
-            {
-                ItemContainer itemContainer = new ItemContainer(item);
-                itemContainers.Add(itemContainer);
-                SetupSlots();
-            }
-            item.gameObject.SetActive(false);
-            item.transform.SetParent(itemContainer.transform);
-        }
+        AddItem(item);
     }
 
     public void Select(ItemSlot itemSlot)
@@ -204,18 +159,71 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
-        if (pickups.Contains(item))
+        if (item != null)
+        {
+            bool foundContainer = false;
+
+            for (int i = 0; i < itemContainers.Count; i++)
+            {
+                if (itemContainers[i].Items[0].name == item.name)
+                {
+                    itemContainers[i].AddItem(item);
+                    foundContainer = true;
+                    SetupSlots();
+                    break;
+                }
+            }
+
+            if (itemContainers.Count >= maxPickupsValue)
+            {
+                return;
+            }
+
+            if (!foundContainer)
+            {
+                ItemContainer itemContainer = new ItemContainer(item);
+                itemContainers.Add(itemContainer);
+                SetupSlots();
+            }
+            item.gameObject.SetActive(false);
+            item.transform.SetParent(itemContainer.transform);
+        }
+
+
+
+        /*if (item == null)
         {
             return;
         }
         if (item != null)
         {
-            pickups.Add(item);
+            
+            itemContainers.Add();
             item.gameObject.SetActive(false);
             item.transform.SetParent(itemContainer.transform);
             SetupSlots();
-        }
+        }*/
     }
+
+    /*public void AddItem(ItemContainer itemContainer)
+    {
+        if (itemContainers.Contains(itemContainer))
+        {
+            return;
+        }
+
+        if (itemContainer != null)
+        {
+            for (int i = 0; i < itemContainer.Items.Count; i++)
+            {
+                itemContainers.Add(itemContainer);
+                itemContainer.Items[i].transform.position += Vector3.up * 2;
+                itemContainer.Items[i].transform.SetParent(this.itemContainer.transform);
+                itemContainer.Items[i].gameObject.SetActive(false);
+            }
+            SetupSlots();
+        }
+    }*/
 
     public void RemoveItem(ItemContainer itemContainer)
     {
@@ -280,7 +288,7 @@ public class Inventory : MonoBehaviour
             if (i < itemContainers.Count)
             {
                 ItemContainer itemContainer = itemContainers[i];
-                itemSlot.Setup();
+                itemSlot.Setup(itemContainer);
             }
             else
             {

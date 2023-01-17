@@ -13,6 +13,7 @@ public class SeedSpawner : MonoBehaviour
     private float timer;
 
     private Seed currentSeed;
+    private Shop shop;
 
     private void Start()
     {

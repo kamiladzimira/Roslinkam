@@ -71,31 +71,5 @@ public class InventoryView : MonoBehaviour
 
         selectedItemSlot = null;
     }
-
-    /*public void SetupSlots(List<Item> pickups)
-    {
-        for (int i = 0; i < itemSlots.Count; i++)
-        {
-            ItemSlot itemSlot = itemSlots[i];
-
-            if (i < pickups.Count)
-            {
-                Item item = pickups[i];
-                itemSlot.Setup(item);
-            }
-            else
-            {
-                itemSlot.Setup();
-            }
-        }
-
-        for (int i = 0; i < itemSlots.Count; i++)
-        {
-            itemSlots[i].Select(false);
-        }
-
-        selectedItemSlot = null;
-    }*/
-
 }
 

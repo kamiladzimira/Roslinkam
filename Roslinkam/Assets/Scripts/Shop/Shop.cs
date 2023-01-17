@@ -10,11 +10,13 @@ public class Shop : MonoBehaviour
     [SerializeField] private List<ItemSlot> playerItemSlots;
     [SerializeField] List<Item> buyableItems = new List<Item>();
 
+    [SerializeField] List<ItemContainer> buyableItemsContainers = new List<ItemContainer>();
+
     private Inventory activePlayerInventory;
 
     private bool isEmpty = true;
     public bool IsEmpty => isEmpty;
-    
+
     private ItemSlot selectedItemSlot;
 
     void Start()
@@ -38,10 +40,10 @@ public class Shop : MonoBehaviour
         {
             ItemSlot itemSlot = itemSlots[i];
 
-            if (i < buyableItems.Count)
+            if (i < buyableItemsContainers.Count)
             {
-                Item item = buyableItems[i];
-                itemSlot.Setup(item);
+                //Item item = buyableItems[i];
+                itemSlot.Setup(buyableItemsContainers[i]);
             }
             else
             {
@@ -57,7 +59,7 @@ public class Shop : MonoBehaviour
 
     public void SetupPlayerSlots()
     {
-        if(activePlayerInventory == null)
+        if (activePlayerInventory == null)
         {
             return;
         }
@@ -66,10 +68,9 @@ public class Shop : MonoBehaviour
         {
             ItemSlot playerItemSlot = playerItemSlots[i];
 
-            if (i < activePlayerInventory.Pickups.Count)
+            if (i < activePlayerInventory.ItemContainers.Count)
             {
-                Item item = activePlayerInventory.Pickups[i];
-                playerItemSlot.Setup(item);
+                playerItemSlot.Setup(activePlayerInventory.ItemContainers[i]);
             }
             else
             {
@@ -77,15 +78,17 @@ public class Shop : MonoBehaviour
             }
         }
 
+
         for (int i = 0; i < playerItemSlots.Count; i++)
         {
+
             playerItemSlots[i].Select(false);
         }
     }
 
     public void SelectShopItem(ItemSlot itemSlot)
     {
-        if (itemSlot.Item == null)
+        if (itemSlot.Item == null && itemSlot.ItemContainer == null)
         {
             return;
         }
@@ -122,7 +125,7 @@ public class Shop : MonoBehaviour
             return;
         }
 
-        if(!buyableItems.Contains(selectedItemSlot.Item))
+        if (!buyableItems.Contains(selectedItemSlot.Item))
         {
             return;
         }
@@ -134,7 +137,7 @@ public class Shop : MonoBehaviour
 
         Item item = selectedItemSlot.Item;
 
-        if(activePlayerInventory.Money < item.BuyPrice)
+        if (activePlayerInventory.Money < item.BuyPrice)
         {
             Debug.Log("You dont have enough money");
             return;
@@ -147,7 +150,7 @@ public class Shop : MonoBehaviour
         activePlayerInventory.ChangeMoneyValue(-(item.BuyPrice));
     }
 
-    public void SellSelectedItem()
+   /* public void SellSelectedItem()
     {
         if (selectedItemSlot == null)
         {
@@ -156,14 +159,49 @@ public class Shop : MonoBehaviour
 
         Item item = selectedItemSlot.Item;
 
-        if (!activePlayerInventory.Pickups.Contains(item))
+        if (activePlayerInventory.ItemContainers == null)
         {
             return;
         }
 
-        //activePlayerInventory.RemoveItem(item);
+        activePlayerInventory.RemoveItem(item);
         Destroy(item.gameObject);
         SetupPlayerSlots();
         activePlayerInventory.ChangeMoneyValue(10);
+        SetupPlayerSlots();
+        SetupShopSlots();
+    }*/
+
+    public void SellSelectedItemFromItemContainer()
+    {
+        if (selectedItemSlot == null)
+        {
+            return;
+        }
+
+        ItemContainer itemContainer = selectedItemSlot.ItemContainer;
+
+        if (activePlayerInventory.ItemContainers == null)
+        {
+            return;
+        }
+
+        List<Item> itemToRemove = new List<Item>();
+
+        for (int i = 0; i < itemContainer.Items.Count; i++)
+        {
+            itemToRemove.Add(itemContainer.Items[i]);
+            activePlayerInventory.ChangeMoneyValue(10);
+  
+        }
+
+        for (int i = 0; i < itemToRemove.Count; i++)
+        {
+            activePlayerInventory.RemoveItem(itemToRemove[i]);
+            Destroy(itemToRemove[i].gameObject);
+        }
+
+        SetupPlayerSlots();
+        SetupShopSlots();
     }
 }

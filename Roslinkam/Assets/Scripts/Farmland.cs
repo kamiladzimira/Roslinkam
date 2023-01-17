@@ -30,9 +30,9 @@ public class Farmland : MonoBehaviour
         onTimerChangedAction?.Invoke(timer);
         if (timer <= 0)
         {
-            isEmpty = true;
             Instantiate(seed.Crop, transform.position, Quaternion.identity, null);
             Destroy(seed.gameObject);
+            isEmpty = true;
         }
     }
 

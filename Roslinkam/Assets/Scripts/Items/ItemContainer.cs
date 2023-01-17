@@ -1,10 +1,12 @@
 using System.Collections.Generic;
 using System;
+using UnityEngine;
 
 [Serializable]
 public class ItemContainer
 {
-    private List<Item> items;
+
+    [SerializeField] private List<Item> items;
 
     public IReadOnlyList<Item> Items => items;
 
