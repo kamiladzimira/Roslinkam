@@ -5,11 +5,13 @@ public abstract class Item : MonoBehaviour, ISellable, IBuyable
     [SerializeField] private Sprite sprite;
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private int price;
+    [SerializeField] private string name;
 
     protected Inventory inventory;
     public Sprite Sprite => sprite;
     public int BuyPrice => price;
     public int SellPrice => price;
+    public string Name => name;
 
     public void Sell()
     {
@@ -20,6 +22,7 @@ public abstract class Item : MonoBehaviour, ISellable, IBuyable
     {
         Debug.Log("Witaj swiecie");
     }
+
     protected virtual void Awake()
     {
         Setup();

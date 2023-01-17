@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
     private Item equipedItem;
     private ItemSlot selectedItemSlot;
 
-    private int money = 0;
+    private int money = 999;
     //public IReadOnlyList<Item> Pickups => pickups;
     public IReadOnlyList<ItemContainer> ItemContainers => itemContainers;
     public int Money => money;
@@ -165,7 +165,7 @@ public class Inventory : MonoBehaviour
 
             for (int i = 0; i < itemContainers.Count; i++)
             {
-                if (itemContainers[i].Items[0].name == item.name)
+                if (itemContainers[i].Items[0].Name == item.Name)
                 {
                     itemContainers[i].AddItem(item);
                     foundContainer = true;

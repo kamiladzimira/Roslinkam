@@ -5,7 +5,6 @@ using UnityEngine;
 [Serializable]
 public class ItemContainer
 {
-
     [SerializeField] private List<Item> items;
 
     public IReadOnlyList<Item> Items => items;
@@ -18,6 +17,10 @@ public class ItemContainer
 
     public Item GetFirstItem()
     {
+        if(items.Count <= 0)
+        {
+            return null;
+        }
         Item firstItem = items[0];
         return firstItem;
     }

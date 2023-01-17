@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using static UnityEditor.Progress;
 
 public class Shop : MonoBehaviour
 {
@@ -8,15 +9,10 @@ public class Shop : MonoBehaviour
     [SerializeField] private GameObject playerInventoryPanel;
     [SerializeField] private List<ItemSlot> itemSlots;
     [SerializeField] private List<ItemSlot> playerItemSlots;
-    [SerializeField] List<Item> buyableItems = new List<Item>();
-
     [SerializeField] List<ItemContainer> buyableItemsContainers = new List<ItemContainer>();
-
     private Inventory activePlayerInventory;
-
     private bool isEmpty = true;
     public bool IsEmpty => isEmpty;
-
     private ItemSlot selectedItemSlot;
 
     void Start()
@@ -42,7 +38,6 @@ public class Shop : MonoBehaviour
 
             if (i < buyableItemsContainers.Count)
             {
-                //Item item = buyableItems[i];
                 itemSlot.Setup(buyableItemsContainers[i]);
             }
             else
@@ -78,7 +73,6 @@ public class Shop : MonoBehaviour
             }
         }
 
-
         for (int i = 0; i < playerItemSlots.Count; i++)
         {
 
@@ -92,7 +86,9 @@ public class Shop : MonoBehaviour
         {
             return;
         }
+
         selectedItemSlot = itemSlot;
+
         foreach (ItemSlot slot in itemSlots)
         {
             if (slot == selectedItemSlot)
@@ -118,59 +114,38 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void BuySelectedItem()
+    public void BuySelectedItemFromItemContainer()
     {
-        if (activePlayerInventory.Money <= 0)
+        if (activePlayerInventory.Money <= 0 || selectedItemSlot == null)
         {
             return;
         }
 
-        if (!buyableItems.Contains(selectedItemSlot.Item))
-        {
-            return;
-        }
+        ItemContainer itemContainer = selectedItemSlot.ItemContainer;
+        Item itemToBuy = itemContainer.GetFirstItem();
+        Debug.Log(itemToBuy.BuyPrice);
 
-        if (selectedItemSlot == null)
-        {
-            return;
-        }
-
-        Item item = selectedItemSlot.Item;
-
-        if (activePlayerInventory.Money < item.BuyPrice)
+        if (activePlayerInventory.Money < itemToBuy.BuyPrice)
         {
             Debug.Log("You dont have enough money");
             return;
         }
+        RemoveFromBuyable(itemContainer, itemToBuy);
 
-        buyableItems.Remove(item);
-        activePlayerInventory.AddItem(item);
+        activePlayerInventory.AddItem(itemToBuy);
         SetupPlayerSlots();
         SetupShopSlots();
-        activePlayerInventory.ChangeMoneyValue(-(item.BuyPrice));
+        activePlayerInventory.ChangeMoneyValue(-(itemToBuy.BuyPrice));
     }
 
-   /* public void SellSelectedItem()
+    private void RemoveFromBuyable(ItemContainer itemContainer, Item item)
     {
-        if (selectedItemSlot == null)
+        itemContainer.RemoveItem(item);
+        if (itemContainer.Items.Count <= 0)
         {
-            return;
+            buyableItemsContainers.Remove(itemContainer);
         }
-
-        Item item = selectedItemSlot.Item;
-
-        if (activePlayerInventory.ItemContainers == null)
-        {
-            return;
-        }
-
-        activePlayerInventory.RemoveItem(item);
-        Destroy(item.gameObject);
-        SetupPlayerSlots();
-        activePlayerInventory.ChangeMoneyValue(10);
-        SetupPlayerSlots();
-        SetupShopSlots();
-    }*/
+    }
 
     public void SellSelectedItemFromItemContainer()
     {
@@ -180,7 +155,7 @@ public class Shop : MonoBehaviour
         }
 
         ItemContainer itemContainer = selectedItemSlot.ItemContainer;
-
+        Debug.Log(itemContainer);
         if (activePlayerInventory.ItemContainers == null)
         {
             return;
@@ -192,7 +167,6 @@ public class Shop : MonoBehaviour
         {
             itemToRemove.Add(itemContainer.Items[i]);
             activePlayerInventory.ChangeMoneyValue(10);
-  
         }
 
         for (int i = 0; i < itemToRemove.Count; i++)
@@ -200,7 +174,6 @@ public class Shop : MonoBehaviour
             activePlayerInventory.RemoveItem(itemToRemove[i]);
             Destroy(itemToRemove[i].gameObject);
         }
-
         SetupPlayerSlots();
         SetupShopSlots();
     }
