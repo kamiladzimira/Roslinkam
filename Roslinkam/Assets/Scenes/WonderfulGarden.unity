@@ -69842,7 +69842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 17619026952851788, guid: 2c6c5527db77a1446b7a5e20c1c90cae, type: 3}
       propertyPath: seeds.Array.size
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 17619026952851788, guid: 2c6c5527db77a1446b7a5e20c1c90cae, type: 3}
       propertyPath: seeds.Array.data[1]
@@ -69921,6 +69921,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 365240564404833281, guid: b7b0e1d8c525a1d449b43f24d41242dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 365240564404833281, guid: b7b0e1d8c525a1d449b43f24d41242dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365240564404833281, guid: b7b0e1d8c525a1d449b43f24d41242dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 365240564404833281, guid: b7b0e1d8c525a1d449b43f24d41242dd, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: InventoryView, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1202449607288610009, guid: b7b0e1d8c525a1d449b43f24d41242dd, type: 3}
       propertyPath: m_Name
       value: BottomInventory
@@ -71505,7 +71521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 83421623, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.53
+      value: 1.257
       objectReference: {fileID: 0}
     - target: {fileID: 266412653, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
       propertyPath: m_IsActive
