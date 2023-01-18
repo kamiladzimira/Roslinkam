@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.23584053}
   serializedVersion: 2
-  m_Radius: 0.4375
+  m_Radius: 0.31486294
 --- !u!114 &1329351012662633809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,3 +116,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 122649817, guid: dc0124ff37a4d6d42ab1c8bd2313c31d, type: 3}
   spriteRenderer: {fileID: 3655194828339109629}
+  price: 0
+  itemName: Sunflower

@@ -29,7 +29,7 @@ public class Seed : Item
         inventory.Drop(this);
         inventory.Unequip();
         farmland.SeedPlant(this);
-        gameObject.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

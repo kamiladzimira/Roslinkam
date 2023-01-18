@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.21921095}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.32080707
 --- !u!114 &6034795465411040663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,5 +117,6 @@ MonoBehaviour:
   sprite: {fileID: 1015623208, guid: dc0124ff37a4d6d42ab1c8bd2313c31d, type: 3}
   spriteRenderer: {fileID: 3655194828339109629}
   price: 5
+  itemName: Raspberry seed
   growingTime: 3
   crop: {fileID: 1329351012662633809, guid: e04b3b0dd81e34844bbbd5128cfdae73, type: 3}

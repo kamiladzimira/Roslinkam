@@ -99,9 +99,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.18919456}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.31080544
 --- !u!114 &6034795465411040663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,5 +117,6 @@ MonoBehaviour:
   sprite: {fileID: 1384118876, guid: dc0124ff37a4d6d42ab1c8bd2313c31d, type: 3}
   spriteRenderer: {fileID: 3655194828339109629}
   price: 4
+  itemName: Sunflower seed
   growingTime: 7
   crop: {fileID: 1329351012662633809, guid: 81894f8e13f24ae418e17dd1784e33e0, type: 3}

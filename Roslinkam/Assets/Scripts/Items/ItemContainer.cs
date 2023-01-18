@@ -6,9 +6,7 @@ using UnityEngine;
 public class ItemContainer
 {
     [SerializeField] private List<Item> items;
-
     public IReadOnlyList<Item> Items => items;
-
     public ItemContainer(Item item)
     {
         items = new List<Item>();

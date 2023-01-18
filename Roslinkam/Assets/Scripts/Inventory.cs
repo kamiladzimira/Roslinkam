@@ -165,7 +165,7 @@ public class Inventory : MonoBehaviour
 
             for (int i = 0; i < itemContainers.Count; i++)
             {
-                if (itemContainers[i].Items[0].Name == item.Name)
+                if (itemContainers[i].Items[0].ItemName == item.ItemName)
                 {
                     itemContainers[i].AddItem(item);
                     foundContainer = true;

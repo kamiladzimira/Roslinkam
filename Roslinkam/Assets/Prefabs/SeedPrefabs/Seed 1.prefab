@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3655194828339109628
 Transform:
   m_ObjectHideFlags: 0
@@ -117,5 +117,6 @@ MonoBehaviour:
   sprite: {fileID: -745354408, guid: 38ade5e51fcbd484981573f440f7a74e, type: 3}
   spriteRenderer: {fileID: 3655194828339109629}
   price: 2
+  itemName: Strawberry seed
   growingTime: 6
   crop: {fileID: 1329351012662633809, guid: 6ca8f3cdbaf91ac428ee2b110c673526, type: 3}
