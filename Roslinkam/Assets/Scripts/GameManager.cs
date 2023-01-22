@@ -9,9 +9,12 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     [SerializeField] private AudioClip background;
-    //[SerializeField] private TextMeshProUGUI displayedGameOver;
+    [SerializeField] private TextMeshProUGUI displayedGameOver;
+    [SerializeField] private GameObject gameOver;
     [SerializeField] private TextMeshProUGUI coins;
     [SerializeField] PlayerComponentsContainer playerComponentsContainer;
+    private HealthController playerHealthController;
+    private int loadSceneDelay = 2;
 
     private void Update()
     {
@@ -36,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        gameOver.SetActive(false);
         AudioManager.GetInstance().PlayBackgroundMusic(background);
     }
 
@@ -44,9 +48,28 @@ public class GameManager : MonoBehaviour
         return instance;
     }
 
-    public void DisplayScore(int value)
+    public void RegisterPlayer(HealthController healthController)
     {
-        coins.text = "Score: " + coins.ToString();
+       if(playerHealthController != null)
+        {
+            playerHealthController.OnDied -= OnPlayerDied;
+        }
+        playerHealthController = healthController;
+        playerHealthController.OnDied += OnPlayerDied;
+    }
+
+    private void OnPlayerDied()
+    {
+        gameOver.SetActive(true);
+        StartCoroutine(LoadSameSceneWithDelay());
+    }
+
+    IEnumerator LoadSameSceneWithDelay()
+    {
+        Scene activeScene = SceneManager.GetActiveScene();
+        int sceneToLoad = activeScene.buildIndex;
+        yield return new WaitForSecondsRealtime(loadSceneDelay);
+        SceneManager.LoadScene(sceneToLoad);   
     }
 
     /*public void RemoveElementFromList(EnemyHealthController enemyHealthController)
