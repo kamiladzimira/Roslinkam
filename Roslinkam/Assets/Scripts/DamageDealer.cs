@@ -23,7 +23,7 @@ public class DamageDealer : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        animator.SetTrigger("Idle");
+        animator.SetTrigger("Walk");
     }
 
     public void DealDamageToTarget()

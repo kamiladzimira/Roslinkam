@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void Update()
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyIdle") || animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack"))
         {
             return;
         }

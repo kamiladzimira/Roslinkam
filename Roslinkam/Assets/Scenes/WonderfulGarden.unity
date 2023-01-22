@@ -1157,7 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941512eb1a998c345a342c224b74c13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 8300000, guid: 3a67341171288974383be3003fafe87f, type: 3}
+  background: {fileID: 8300000, guid: 9fc64b7909f310e43b86a36bc9ed4ccc, type: 3}
   coins: {fileID: 1179671375}
   playerComponentsContainer: {fileID: 4073545168115996060}
 --- !u!4 &718243713 stripped
@@ -72237,7 +72237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4073545166449340694, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4073545166449340700, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
       propertyPath: m_SortingOrder
