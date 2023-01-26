@@ -6,7 +6,6 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] private List<Transform> route;
     [SerializeField] private float positionAccuracy = 0.5f;
-    [SerializeField] private float directionAccuracy = 0.1f;
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private int speed;

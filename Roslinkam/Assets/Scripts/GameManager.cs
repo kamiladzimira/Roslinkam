@@ -8,7 +8,6 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
-    [SerializeField] private AudioClip background;
     [SerializeField] private TextMeshProUGUI displayedGameOver;
     [SerializeField] private GameObject gameOver;
     [SerializeField] private TextMeshProUGUI coins;
@@ -16,14 +15,6 @@ public class GameManager : MonoBehaviour
     private HealthController playerHealthController;
     private int loadSceneDelay = 2;
 
-    private void Update()
-    {
-        CoinsValueDispay();
-    }
-    public void CoinsValueDispay()
-    {
-        coins.text = playerComponentsContainer.Inventory.Money.ToString();
-    }
 
     private void Awake()
     {
@@ -40,7 +31,15 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameOver.SetActive(false);
-        AudioManager.GetInstance().PlayBackgroundMusic(background);
+        AudioManager.GetInstance().PlayBackgroundMusic();
+    }
+    private void Update()
+    {
+        CoinsValueDispay();
+    }
+    public void CoinsValueDispay()
+    {
+        coins.text = playerComponentsContainer.Inventory.Money.ToString();
     }
 
     public static GameManager GetInstance()

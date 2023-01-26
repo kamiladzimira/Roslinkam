@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80915bdba3a10094597033a1e6055b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 1496498762}
+  audioSource: {fileID: 1496498762}
 --- !u!4 &45823829
 Transform:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 941512eb1a998c345a342c224b74c13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 8300000, guid: 9fc64b7909f310e43b86a36bc9ed4ccc, type: 3}
   displayedGameOver: {fileID: 1362592677}
   gameOver: {fileID: 1055709983}
   coins: {fileID: 1179671375}
@@ -6825,7 +6824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80915bdba3a10094597033a1e6055b3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!1 &1007544038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1245823959, guid: 8edc1cd3fff95f94a9bf3b9114d19c71, type: 3}
@@ -69568,7 +69567,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3a67341171288974383be3003fafe87f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioManager:MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
-    [SerializeField] private AudioSource backgroundMusic;
+    [SerializeField] private AudioSource audioSource;
 
     private void Awake()
     {
@@ -24,8 +24,10 @@ public class AudioManager:MonoBehaviour
         return instance;
     }
 
-    public void PlayBackgroundMusic(AudioClip clip)
+    public void PlayBackgroundMusic()
     {
-        backgroundMusic.PlayOneShot(clip);
+        audioSource.Play();
     }
 }
+
+

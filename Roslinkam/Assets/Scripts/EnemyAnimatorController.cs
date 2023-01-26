@@ -9,6 +9,8 @@ public class EnemyAnimatorController : MonoBehaviour
     private UnityEvent onAttack;
     public void OnAttack()
     {
-        onAttack.Invoke();
+        onAttack?.Invoke();
     }
 }
+
+
