@@ -38,7 +38,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -84.3, y: -397}
+  m_AnchoredPosition: {x: -84.3, y: -395.9}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &40979705
@@ -180,7 +180,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83421622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.023, y: 0.9, z: 0}
+  m_LocalPosition: {x: -0.023, y: 1.257, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -279,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 1.6064758, y: -36.96707}
+  m_AnchoredPosition: {x: 1.6064453, y: -36.96707}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &725816941
@@ -672,10 +672,10 @@ RectTransform:
   m_Father: {fileID: 1245823960}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -260, y: 226}
-  m_SizeDelta: {x: 430, y: 430}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 253.5, y: 8.25}
+  m_SizeDelta: {x: 437, y: 452.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1121919384
 CanvasRenderer:
@@ -1084,7 +1084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 88.4, y: -397}
+  m_AnchoredPosition: {x: 88.3999, y: -395.9}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1958557103
@@ -1221,6 +1221,8 @@ GameObject:
   - component: {fileID: 4073545166449340693}
   - component: {fileID: 2091443343}
   - component: {fileID: 4073545168115996060}
+  - component: {fileID: 4073545168115996070}
+  - component: {fileID: 4073545168115996080}
   m_Layer: 0
   m_Name: Kitty
   m_TagString: Player
@@ -1316,7 +1318,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &4073545166449340691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1439,18 +1441,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02849397, y: -0.30772936}
+  m_Offset: {x: 0.0016872138, y: 0.12687969}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0}
+    oldSize: {x: 0.875, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3535089, y: 0.21476007}
+  m_Size: {x: 0.45411286, y: 0.09403515}
   m_EdgeRadius: 0
 --- !u!50 &4073545166449340689
 Rigidbody2D:
@@ -1469,7 +1471,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -1498,7 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4884d4733d97f284994bc7cfa15ffa4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 266412653}
+  inventoryPanel: {fileID: 1245823959}
   itemSlots:
   - {fileID: 8058880351087657066}
   - {fileID: 8058880350647161425}
@@ -1527,7 +1529,7 @@ MonoBehaviour:
   - {fileID: 8058880351233113465}
   itemContainer: {fileID: 1583180381}
   equipContainer: {fileID: 83421622}
-  maxPickupsValue: 5
+  maxPickupsValue: 25
   inventoryViews:
   - {fileID: 0}
   - {fileID: 1245823961}
@@ -1588,6 +1590,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 4073545166449340695}
   inventory: {fileID: 4073545166449340692}
+--- !u!114 &4073545168115996070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073545166449340702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b9cd1106c52d74db0e0971d8cf36f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthValue: 50
+--- !u!114 &4073545168115996080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073545166449340702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5502a74f39ee8084db2983d49c1c6986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthController: {fileID: 4073545168115996070}
 --- !u!1 &4073545166479484477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2115,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4073545167050892930}
   m_Layer: 0
-  m_Name: Inventory
+  m_Name: OldInventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2788,6 +2816,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (8)
@@ -2875,6 +2911,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -3078,6 +3118,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (11)
@@ -3165,6 +3213,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -3948,6 +4000,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (18)
@@ -4036,6 +4096,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698989170475 stripped
@@ -4092,6 +4156,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -4180,6 +4252,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -4383,6 +4459,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (4)
@@ -4471,6 +4555,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699325840665 stripped
@@ -4527,6 +4615,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -4615,6 +4711,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -4818,6 +4918,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (20)
@@ -4906,6 +5014,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699254376502 stripped
@@ -4962,6 +5074,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -5051,6 +5171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699482651493 stripped
@@ -5107,6 +5231,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -5196,6 +5328,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699440932429 stripped
@@ -5252,6 +5388,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -5340,6 +5484,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -5543,6 +5691,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (14)
@@ -5630,6 +5786,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -5978,6 +6138,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (24)
@@ -6066,6 +6234,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699685513108 stripped
@@ -6122,6 +6294,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -6210,6 +6390,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -6558,6 +6742,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (12)
@@ -6645,6 +6837,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -6993,6 +7189,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (2)
@@ -7081,6 +7285,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698156103360 stripped
@@ -7137,6 +7345,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -7226,6 +7442,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698095685652 stripped
@@ -7282,6 +7502,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -7370,6 +7598,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -7718,6 +7950,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (5)
@@ -7805,6 +8045,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -8008,6 +8252,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (19)
@@ -8095,6 +8347,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -8588,6 +8844,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (15)
@@ -8676,6 +8940,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698304262217 stripped
@@ -8732,6 +9000,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -8820,6 +9096,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -9180,6 +9460,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (3)
@@ -9268,6 +9556,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698655048983 stripped
@@ -9297,6 +9589,26 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1245823961}
+    - target: {fileID: 4156263690902223539, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156263690902223539, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4156263690902223539, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot
@@ -9385,6 +9697,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698596076270 stripped
@@ -9441,6 +9757,14 @@ PrefabInstance:
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
@@ -9529,6 +9853,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
@@ -9732,6 +10060,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (22)
@@ -9819,6 +10155,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 8.29
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}

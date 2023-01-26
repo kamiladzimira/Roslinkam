@@ -36,7 +36,6 @@ public class ItemSlot : MonoBehaviour
         image.sprite = item.Sprite;
         image.gameObject.SetActive(true);
         this.item = item;
-        //amountOfItems.text = itemContainer.Items.Count.ToString();
     }
 
     public void Setup(ItemContainer itemContainer)

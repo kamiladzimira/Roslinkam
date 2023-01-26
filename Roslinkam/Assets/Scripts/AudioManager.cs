@@ -5,7 +5,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     private static AudioManager instance;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource backgroundMusicSource;
+    [SerializeField] private AudioSource hitSoundSource;
 
     private void Awake()
     {
@@ -26,7 +27,15 @@ public class AudioManager : MonoBehaviour
 
     public void PlayBackgroundMusic()
     {
-        audioSource.Play();
+        backgroundMusicSource.Play();
+    }
+
+    public void PlayHitSound()
+    {
+        hitSoundSource.Play();
+
+    }
+
     }
 }
 

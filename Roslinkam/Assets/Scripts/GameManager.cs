@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
     private HealthController playerHealthController;
     private int loadSceneDelay = 2;
 
-
     private void Awake()
     {
         if (instance != null)
@@ -27,11 +26,15 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
+    public static GameManager GetInstance()
+    {
+        return instance;
+    }
 
     private void Start()
     {
         gameOver.SetActive(false);
-        AudioManager.GetInstance().PlayBackgroundMusic();
+        PlayBackgroundMusic();
     }
     private void Update()
     {
@@ -42,9 +45,14 @@ public class GameManager : MonoBehaviour
         coins.text = playerComponentsContainer.Inventory.Money.ToString();
     }
 
-    public static GameManager GetInstance()
+    public void PlayHitSound()
     {
-        return instance;
+        AudioManager.GetInstance().PlayHitSound();
+    }
+
+    private void PlayBackgroundMusic()
+    {
+        AudioManager.GetInstance().PlayBackgroundMusic();
     }
 
     public void RegisterPlayer(HealthController healthController)

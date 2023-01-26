@@ -10,10 +10,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private GameObject itemContainer;
     [SerializeField] private GameObject equipContainer;
     [SerializeField] private int maxPickupsValue;
-
     [SerializeField] private List<InventoryView> inventoryViews;
-
-    //private List<Item> pickups = new List<Item>();
 
     private List<ItemContainer> itemContainers = new List<ItemContainer>();
 
@@ -21,7 +18,6 @@ public class Inventory : MonoBehaviour
     private ItemSlot selectedItemSlot;
 
     private int money = 999;
-    //public IReadOnlyList<Item> Pickups => pickups;
     public IReadOnlyList<ItemContainer> ItemContainers => itemContainers;
     public int Money => money;
 
@@ -66,11 +62,6 @@ public class Inventory : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        NewOnTriggerEnter2D(collision);
-    }
-
-    private void NewOnTriggerEnter2D(Collider2D collision)
     {
         Item item = collision.GetComponent<Item>();
 
@@ -188,21 +179,6 @@ public class Inventory : MonoBehaviour
             item.gameObject.SetActive(false);
             item.transform.SetParent(itemContainer.transform);
         }
-
-
-
-        /*if (item == null)
-        {
-            return;
-        }
-        if (item != null)
-        {
-            
-            itemContainers.Add();
-            item.gameObject.SetActive(false);
-            item.transform.SetParent(itemContainer.transform);
-            SetupSlots();
-        }*/
     }
 
     /*public void AddItem(ItemContainer itemContainer)
