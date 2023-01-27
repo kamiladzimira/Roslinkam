@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     private static AudioManager instance;
     [SerializeField] private AudioSource backgroundMusicSource;
     [SerializeField] private AudioSource hitSoundSource;
+    [SerializeField] private AudioSource itemPickUpSoundSource;
 
     private void Awake()
     {
@@ -35,6 +36,10 @@ public class AudioManager : MonoBehaviour
         hitSoundSource.Play();
 
     }
+
+    public void PlayPickUpSound()
+    {
+        itemPickUpSoundSource.Play();
 
     }
 }

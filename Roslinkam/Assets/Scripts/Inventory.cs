@@ -64,7 +64,16 @@ public class Inventory : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Item item = collision.GetComponent<Item>();
+        PickupItem(item);
+    }
 
+    private void PickupItem(Item item)
+    {
+        if (item == null)
+        {
+            return;
+        }
+        AudioManager.GetInstance().PlayPickUpSound();
         AddItem(item);
     }
 
