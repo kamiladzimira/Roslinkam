@@ -190,26 +190,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    /*public void AddItem(ItemContainer itemContainer)
-    {
-        if (itemContainers.Contains(itemContainer))
-        {
-            return;
-        }
-
-        if (itemContainer != null)
-        {
-            for (int i = 0; i < itemContainer.Items.Count; i++)
-            {
-                itemContainers.Add(itemContainer);
-                itemContainer.Items[i].transform.position += Vector3.up * 2;
-                itemContainer.Items[i].transform.SetParent(this.itemContainer.transform);
-                itemContainer.Items[i].gameObject.SetActive(false);
-            }
-            SetupSlots();
-        }
-    }*/
-
     public void RemoveItem(ItemContainer itemContainer)
     {
         if (!itemContainers.Contains(itemContainer))
@@ -288,14 +268,4 @@ public class Inventory : MonoBehaviour
 
         selectedItemSlot = null;
     }
-
-    /*[ContextMenu("DropFirstItem")]
-    private void DropFirstItem()
-    {
-        if(pickups.Count <= 0)
-        {
-            return;
-        }
-        Drop(pickups[0]);
-    }*/
 }
