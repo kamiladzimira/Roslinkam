@@ -26,10 +26,10 @@ public class EnemyMovement : MonoBehaviour
         {
             return;
         }
-        Movement();
+        Move();
     }
 
-    private void Movement()
+    private void Move()
     {
         lastPos = transform.position;
         transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
