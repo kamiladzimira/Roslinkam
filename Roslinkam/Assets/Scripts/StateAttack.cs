@@ -5,6 +5,8 @@ using UnityEngine;
 public class StateAttack : IEnemyState
 {
     EnemyComponentsContainer enemyComponentsContainer;
+    [SerializeField] private Animator animator;
+
 
     public StateAttack(EnemyComponentsContainer enemyComponentsContainer)
     {
@@ -13,13 +15,25 @@ public class StateAttack : IEnemyState
 
     public IEnemyState DoState()
     {
-        Debug.Log("jestem w stanie attack");
-        Debug.Log("wchodzê do stanu idle");
-        return enemyComponentsContainer.EnemyController.StateIdle;
+        if (enemyComponentsContainer.EnemyTargetFinder.Target == null)
+        {
+            return enemyComponentsContainer.EnemyController.StateIdle;
+        }
+
+        if (Vector2.Distance(enemyComponentsContainer.EnemyMovement.transform.position,
+                             enemyComponentsContainer.EnemyTargetFinder.Target.transform.position)
+                                > enemyComponentsContainer.EnemyController.AttackDistance + 0.2)
+        {
+            return enemyComponentsContainer.EnemyController.StateTrigger;
+        }
+
+        return this;
+        
     }
 
-    // TODO:
-    // jezeli enemy wejdzie w odpowiednia odleglosc od playera to zaczyna go atakowac
-    // atakuje playera dopoki jego stan nie zmieni sie w trigger jezeli odleglosc pomiedzy enemy a graczem sie odpowiednio zwiekszy
-    // albo zmieni sie w stan idle jezeli player zniknie np dzieki teleportacji
+    public void OnEnter()
+    {
+        enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+        enemyComponentsContainer.EnemyAnimator.SetTrigger("Attack");
+    }
 }

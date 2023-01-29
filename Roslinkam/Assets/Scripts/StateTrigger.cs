@@ -5,8 +5,8 @@ using UnityEngine;
 public class StateTrigger : IEnemyState
 {
     EnemyComponentsContainer enemyComponentsContainer;
-    float timer;
-    bool shouldMove;
+    private float _timer;
+    private bool _shouldMove;
 
     public StateTrigger(EnemyComponentsContainer enemyComponentsContainer)
     {
@@ -19,21 +19,28 @@ public class StateTrigger : IEnemyState
         {
             return enemyComponentsContainer.EnemyController.StateIdle;
         }
-        if(!shouldMove)
+        if(!_shouldMove)
         {
             return HandleBeforeMove();
         }
-        
+
+        if (Vector2.Distance(enemyComponentsContainer.EnemyMovement.transform.position,
+                             enemyComponentsContainer.EnemyTargetFinder.Target.transform.position)
+                                < enemyComponentsContainer.EnemyController.AttackDistance)
+        {
+            return enemyComponentsContainer.EnemyController.StateAttack;
+        }
+
         enemyComponentsContainer.EnemyMovement.Move(enemyComponentsContainer.EnemyTargetFinder.Target.transform);
         return this;
     }
 
     private IEnemyState HandleBeforeMove()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
+        _timer -= Time.deltaTime;
+        if (_timer <= 0)
         {
-            shouldMove = true;
+            _shouldMove = true;
             enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
             enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
         }
@@ -42,8 +49,8 @@ public class StateTrigger : IEnemyState
 
     public void OnEnter()
     {
-        timer = 1;
-        shouldMove = false;
+        _timer = 1;
+        _shouldMove = false;
         enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
         enemyComponentsContainer.EnemyAnimator.SetTrigger("Trigger");
     }

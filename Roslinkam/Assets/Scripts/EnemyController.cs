@@ -6,10 +6,12 @@ public class EnemyController : MonoBehaviour
 {
     [SerializeField] private Animator enemyMovementAnimator;
     [SerializeField] private EnemyComponentsContainer enemyComponentsContainer;
+    [SerializeField] private float attackDistance;
     public StateIdle StateIdle { get; private set; }
     public StateTrigger StateTrigger { get; private set; }
     public StateAttack StateAttack { get; private set; }
     public Animator EnemyMovementAnimator => enemyMovementAnimator;
+    public float AttackDistance => attackDistance;
 
     IEnemyState enemyState;
 
@@ -30,6 +32,7 @@ public class EnemyController : MonoBehaviour
         if (lastState != enemyState)
         {
             enemyState.OnEnter();
+            Debug.Log(enemyState);
         }
     }
 
