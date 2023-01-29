@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7556748518561914342}
   - component: {fileID: 3696726188244780906}
   - component: {fileID: 3696726188244780910}
-  - component: {fileID: 3696726188244780911}
   m_Layer: 0
   m_Name: Body
   m_TagString: Pickup
@@ -103,7 +102,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.123598814, y: -0.31018806}
   serializedVersion: 2
-  m_Radius: 4.4546843
+  m_Radius: 2.52
 --- !u!95 &3696726188244780906
 Animator:
   serializedVersion: 4
@@ -136,6 +135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5a10ba902887547820a1b83716e9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyAnimator: {fileID: 3696726188244780906}
   onAttack:
     m_PersistentCalls:
       m_Calls:
@@ -163,20 +163,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &3696726188244780911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4310683289684274366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28bd19b7d42e5c5428b9c11f3c56663a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyMovementAnimator: {fileID: 3696726188244780906}
-  enemyComponentsContainer: {fileID: 4496405546095714259}
 --- !u!1 &7916425355034553996
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,6 +177,7 @@ GameObject:
   - component: {fileID: 6814405879510346214}
   - component: {fileID: 6486743516667801665}
   - component: {fileID: 4496405546095714259}
+  - component: {fileID: 6302237475431390474}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Pickup
@@ -268,7 +255,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c1b94fcad7ec34687ee6b145c26106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 3696726188244780906}
   damage: 10
 --- !u!114 &6486743516667801665
 MonoBehaviour:
@@ -299,3 +285,17 @@ MonoBehaviour:
   enemyMovement: {fileID: 6313097431877225159}
   enemyAnimatorController: {fileID: 3696726188244780910}
   enemyController: {fileID: 6486743516667801665}
+  enemyAnimator: {fileID: 3696726188244780906}
+  enemyTargetFinder: {fileID: 6302237475431390474}
+--- !u!114 &6302237475431390474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916425355034553996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23924900b377a04494212ba2597d138, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IEnemyState
 {
+    void OnEnter();
     IEnemyState DoState();
 }
