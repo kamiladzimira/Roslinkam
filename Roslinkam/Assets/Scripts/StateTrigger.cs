@@ -5,6 +5,8 @@ using UnityEngine;
 public class StateTrigger : IEnemyState
 {
     EnemyComponentsContainer enemyComponentsContainer;
+    float timer;
+    bool shouldMove;
 
     public StateTrigger(EnemyComponentsContainer enemyComponentsContainer)
     {
@@ -13,12 +15,36 @@ public class StateTrigger : IEnemyState
 
     public IEnemyState DoState()
     {
-        Debug.Log("jestem w stanie trigger");
-        Debug.Log("wchodzê do stanu attack");
-        return enemyComponentsContainer.EnemyController.StateAttack;
+        if(enemyComponentsContainer.EnemyTargetFinder.Target == null)
+        {
+            return enemyComponentsContainer.EnemyController.StateIdle;
+        }
+        if(!shouldMove)
+        {
+            return HandleBeforeMove();
+        }
+        
+        enemyComponentsContainer.EnemyMovement.Move(enemyComponentsContainer.EnemyTargetFinder.Target.transform);
+        return this;
     }
 
-    // TODO:
-    // jezeli player wejdzie w collider enemiesa to enemy odtworzy animacje trigger i zacznie isc w strone playera
-    // jezeli player odejdzie od enemy to ten ciagle bedzie szedl w jego strone, dopoki player nie wyjdzie z collidera
+    private IEnemyState HandleBeforeMove()
+    {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            shouldMove = true;
+            enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+            enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
+        }
+        return this;
+    }
+
+    public void OnEnter()
+    {
+        timer = 1;
+        shouldMove = false;
+        enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+        enemyComponentsContainer.EnemyAnimator.SetTrigger("Trigger");
+    }
 }
