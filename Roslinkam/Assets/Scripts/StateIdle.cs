@@ -6,34 +6,41 @@ using UnityEngine;
 
 public class StateIdle : IEnemyState
 {
-    //[SerializeField] private Animator animator;
-    //private HealthController target;
-    EnemyComponentsContainer enemyComponentsContainer;
+    private EnemyComponentsContainer enemyComponentsContainer;
+    private Transform currentTarget;
+    private int routeIndex;
+    private EnemyMovement enemyMovement => enemyComponentsContainer.EnemyMovement;
 
     public StateIdle(EnemyComponentsContainer enemyComponentsContainer)
     {
         this.enemyComponentsContainer = enemyComponentsContainer;
+        routeIndex = 0;
+        currentTarget = enemyComponentsContainer.EnemyMovement.Route[routeIndex];
     }
 
     public IEnemyState DoState()
     {
-        Debug.Log("jestem w stanie idle");
-        Debug.Log("wchodzê do stanu trigger");
+
+        enemyMovement.Move(currentTarget);
+        Transform enemyTransform = enemyMovement.transform;
+        List<Transform> route = enemyMovement.Route;
+
+        if (Vector2.Distance(enemyTransform.position, currentTarget.position) < enemyMovement.PositionAccuracy)
+        {
+            routeIndex = (routeIndex + 1) % route.Count;
+            currentTarget = route[routeIndex];
+        }
+
+        if(enemyComponentsContainer.EnemyTargetFinder.Target == null)
+        {
+            return this;
+        }
         return enemyComponentsContainer.EnemyController.StateTrigger;
     }
 
-    /*private void OnTriggerEnter2D(Collider2D collision)
+    public void OnEnter()
     {
-        target = collision.GetComponent<HealthController>();
-        //float distance = Vector2.Distance(target.transform.position, gameObject.transform.position);
-        Debug.Log(distance);
-        if (target == null)
-        {
-            animator.SetTrigger("Walk");
-        }
-        
-    }*/
-    // TODO:
-    // jezeli playera nie ma w poblizu to enemy bedzie chodzil od punktu do punktu
-    // jezeli player wyjdzie z collidera enemy to stan powinien powrocic znow do idle 
+        enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+        enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
+    }   
 }

@@ -9,38 +9,20 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private int speed;
-    private Transform currentTarget;
     private Vector2 lastPos;
-    private int routeIndex;
 
+    public List<Transform> Route => route;
+    public float PositionAccuracy => positionAccuracy;
     private void Awake()
     {
         lastPos = transform.position;
-        routeIndex = 0;
-        currentTarget = route[routeIndex];
     }
 
-    public void Update()
-    {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("EnemyAttack"))
-        {
-            return;
-        }
-        Move();
-    }
-
-    private void Move()
+    public void Move(Transform currentTarget)
     {
         lastPos = transform.position;
         transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
-
         Vector2 movementdirection = ((Vector2)transform.position - lastPos).normalized;
-
-        if (Vector2.Distance(transform.position, currentTarget.position) < positionAccuracy)
-        {
-            routeIndex = (routeIndex + 1) % route.Count;
-            currentTarget = route[routeIndex];
-        }
         FlipSprite(movementdirection);
     }
 
