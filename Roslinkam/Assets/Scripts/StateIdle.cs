@@ -20,7 +20,6 @@ public class StateIdle : IEnemyState
 
     public IEnemyState DoState()
     {
-
         enemyMovement.Move(currentTarget);
         Transform enemyTransform = enemyMovement.transform;
         List<Transform> route = enemyMovement.Route;

@@ -19,19 +19,10 @@ public class StateTrigger : IEnemyState
         {
             return enemyComponentsContainer.EnemyController.StateIdle;
         }
-        if(!_shouldMove)
+        if (!_shouldMove)
         {
             return HandleBeforeMove();
         }
-
-        if (Vector2.Distance(enemyComponentsContainer.EnemyMovement.transform.position,
-                             enemyComponentsContainer.EnemyTargetFinder.Target.transform.position)
-                                < enemyComponentsContainer.EnemyController.AttackDistance)
-        {
-            return enemyComponentsContainer.EnemyController.StateAttack;
-        }
-
-        enemyComponentsContainer.EnemyMovement.Move(enemyComponentsContainer.EnemyTargetFinder.Target.transform);
         return this;
     }
 
@@ -41,8 +32,7 @@ public class StateTrigger : IEnemyState
         if (_timer <= 0)
         {
             _shouldMove = true;
-            enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
-            enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
+            return enemyComponentsContainer.EnemyController.StateWalkToTarget;
         }
         return this;
     }

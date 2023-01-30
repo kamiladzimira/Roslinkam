@@ -10,7 +10,6 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private int speed;
     private Vector2 lastPos;
-
     public List<Transform> Route => route;
     public float PositionAccuracy => positionAccuracy;
     private void Awake()
