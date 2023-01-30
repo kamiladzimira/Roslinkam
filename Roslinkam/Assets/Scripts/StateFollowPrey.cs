@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateWalkToTarget : IEnemyState
+public class StateFollowPrey : IEnemyState
 {
     EnemyComponentsContainer enemyComponentsContainer;
   
-    public StateWalkToTarget(EnemyComponentsContainer enemyComponentsContainer)
+    public StateFollowPrey(EnemyComponentsContainer enemyComponentsContainer)
     {
         this.enemyComponentsContainer = enemyComponentsContainer;
     }

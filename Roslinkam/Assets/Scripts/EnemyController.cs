@@ -10,7 +10,7 @@ public class EnemyController : MonoBehaviour
     public StateIdle StateIdle { get; private set; }
     public StateTrigger StateTrigger { get; private set; }
     public StateAttack StateAttack { get; private set; }
-    public StateWalkToTarget StateWalkToTarget { get; private set; }
+    public StateFollowPrey StateWalkToTarget { get; private set; }
     public Animator EnemyMovementAnimator => enemyMovementAnimator;
     public float AttackDistance => attackDistance;
 
@@ -21,7 +21,7 @@ public class EnemyController : MonoBehaviour
         StateIdle = new StateIdle(enemyComponentsContainer);
         StateTrigger = new StateTrigger(enemyComponentsContainer);
         StateAttack = new StateAttack(enemyComponentsContainer);
-        StateWalkToTarget = new StateWalkToTarget(enemyComponentsContainer);
+        StateWalkToTarget = new StateFollowPrey(enemyComponentsContainer);
         enemyState = StateIdle;
         enemyState.OnEnter();
     }
