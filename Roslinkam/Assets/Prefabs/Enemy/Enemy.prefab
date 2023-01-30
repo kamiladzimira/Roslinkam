@@ -102,7 +102,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.123598814, y: -0.31018806}
   serializedVersion: 2
-  m_Radius: 2.52
+  m_Radius: 4.375611
 --- !u!95 &3696726188244780906
 Animator:
   serializedVersion: 4
@@ -255,6 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c1b94fcad7ec34687ee6b145c26106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyComponentsContainer: {fileID: 4496405546095714259}
   damage: 10
 --- !u!114 &6486743516667801665
 MonoBehaviour:
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyMovementAnimator: {fileID: 3696726188244780906}
   enemyComponentsContainer: {fileID: 4496405546095714259}
-  attackDistance: 0
+  attackDistance: 1
 --- !u!114 &4496405546095714259
 MonoBehaviour:
   m_ObjectHideFlags: 0
