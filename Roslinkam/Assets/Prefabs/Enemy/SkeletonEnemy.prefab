@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8589371634148301015
+--- !u!1001 &2136429217067201291
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 3696726188244780906, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: b690e7fbdeb469d45b2fca3c8cc0b08d, type: 2}
+      objectReference: {fileID: 9100000, guid: 1db86c9c3d6eea04d9d3d057c7f6aaff, type: 2}
     - target: {fileID: 5357391145942792249, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -22,7 +22,7 @@ PrefabInstance:
     - target: {fileID: 6595474522198374687, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: attackType
       value: 
-      objectReference: {fileID: 4115210906732452769}
+      objectReference: {fileID: 6447535282238995495}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -69,53 +69,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553996, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_Name
-      value: SlimeEnemy
+      value: SkeletonEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_Size.x
-      value: 3
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -7078261816480267791, guid: bfeede70efd14484683f5956b4f1194b, type: 3}
+      objectReference: {fileID: 731258861, guid: 8eecbfa73102b4d41be4bf999b14c4dc, type: 3}
     - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
---- !u!1 &1940867910889322075 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7916425355034553996, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
-  m_PrefabInstance: {fileID: 8589371634148301015}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4115210906732452769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940867910889322075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1427c4d047d7f2041a116669e8c6fbdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyComponentsContainer: {fileID: 5284379306596255492}
-  damage: 20
---- !u!114 &5284379306596255492 stripped
+--- !u!114 &2576179971088182488 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4496405546095714259, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
-  m_PrefabInstance: {fileID: 8589371634148301015}
+  m_PrefabInstance: {fileID: 2136429217067201291}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1940867910889322075}
+  m_GameObject: {fileID: 8105025669176794503}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f47387af816788e45827a61bce475c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8105025669176794503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7916425355034553996, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+  m_PrefabInstance: {fileID: 2136429217067201291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6447535282238995495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8105025669176794503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46375d2a2bd7f0408b2a8a7f338dabe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyComponentsContainer: {fileID: 2576179971088182488}
+  damage: 10

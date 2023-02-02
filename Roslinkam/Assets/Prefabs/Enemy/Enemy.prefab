@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310683289684274366}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.274, y: 0.826, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 710168603
   m_SortingLayer: 3
   m_SortingOrder: 5
-  m_Sprite: {fileID: 731258861, guid: 8eecbfa73102b4d41be4bf999b14c4dc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 0.24, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!58 &7556748518561914342
@@ -100,9 +100,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.123598814, y: -0.31018806}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 4.375611
+  m_Radius: 4.38
 --- !u!95 &3696726188244780906
 Animator:
   serializedVersion: 4
@@ -113,7 +113,7 @@ Animator:
   m_GameObject: {fileID: 4310683289684274366}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1db86c9c3d6eea04d9d3d057c7f6aaff, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -138,31 +138,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 3696726188244780906}
   onAttack:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6814405879510346214}
-        m_TargetAssemblyTypeName: DamageDealer, Assembly-CSharp
-        m_MethodName: DealDamageToTarget
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: PlayHitSound
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &7916425355034553996
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,10 +150,10 @@ GameObject:
   - component: {fileID: 7916425355034553995}
   - component: {fileID: 3845563246501444638}
   - component: {fileID: 6313097431877225159}
-  - component: {fileID: 6814405879510346214}
   - component: {fileID: 6486743516667801665}
   - component: {fileID: 4496405546095714259}
   - component: {fileID: 6302237475431390474}
+  - component: {fileID: 6595474522198374687}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Pickup
@@ -234,29 +210,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dc581d295e438419073b10e97273f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  route:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  route: []
   positionAccuracy: 0.5
   animator: {fileID: 3696726188244780906}
   sprite: {fileID: 9205203490565964440}
   speed: 1
---- !u!114 &6814405879510346214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7916425355034553996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8c1b94fcad7ec34687ee6b145c26106, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyComponentsContainer: {fileID: 4496405546095714259}
-  damage: 10
 --- !u!114 &6486743516667801665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,3 +259,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23924900b377a04494212ba2597d138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6595474522198374687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7916425355034553996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06f0b817837ca84cb2cee9ba9b709b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackType: {fileID: 0}
