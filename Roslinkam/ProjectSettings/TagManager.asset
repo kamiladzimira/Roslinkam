@@ -45,18 +45,15 @@ TagManager:
   - name: Water
     uniqueID: 271295575
     locked: 0
-  - name: Grass
+  - name: GrassBase
     uniqueID: 1954335821
     locked: 0
-  - name: Dirt
+  - name: FloorUnderPlayer
     uniqueID: 710168603
     locked: 0
-  - name: Hills
+  - name: ThingsUnderPlayer
     uniqueID: 1640707751
     locked: 0
-  - name: Structure
-    uniqueID: 3282418665
-    locked: 0
-  - name: Player
+  - name: PlayerLayer
     uniqueID: 3470254335
     locked: 0
