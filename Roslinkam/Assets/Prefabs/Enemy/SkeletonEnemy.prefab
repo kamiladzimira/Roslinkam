@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 11500000, guid: 941512eb1a998c345a342c224b74c13b, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -44,15 +44,23 @@ PrefabInstance:
       value: TryDoAttack
       objectReference: {fileID: 0}
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayHitSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AttackController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: AttackController, Assembly-CSharp
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5357391145942792249, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
@@ -61,6 +69,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5357391145942792249, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6313097431877225159, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: route.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6595474522198374687, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
@@ -73,11 +85,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -9.083155
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 10.441809
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.z
@@ -89,15 +101,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -127,6 +139,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 731258861, guid: 8eecbfa73102b4d41be4bf999b14c4dc, type: 3}
+    - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -824712961
+      objectReference: {fileID: 0}
     - target: {fileID: 9205203490565964440, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
