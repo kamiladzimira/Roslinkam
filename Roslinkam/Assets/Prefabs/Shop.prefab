@@ -1533,7 +1533,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1807119848686701594}
         m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: BuySelectedItem
+        m_MethodName: BuySelectedItemFromItemContainer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -635,7 +635,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 1
-        width: 48
+        width: 16
         height: 13
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -713,6 +713,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Basic Furniture_29
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72b1d0fc04cdb6d479c173ff2df4ec9d
+      internalID: 874841626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basic Furniture_30
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f561537341dd37f4d851d50b952a6f41
+      internalID: -1322714681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -750,9 +792,11 @@ TextureImporter:
       Basic Furniture_8: -1457113027
       Basic Furniture_21: -1738089664
       Basic Furniture_10: -1019379737
+      Basic Furniture_30: -1322714681
       Basic Furniture_9: -947903778
       Basic Furniture_2: -1473567179
       Basic Furniture_0: -717250212
+      Basic Furniture_29: 874841626
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

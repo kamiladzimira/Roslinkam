@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17619026116900357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.65, z: 0}
+  m_LocalPosition: {x: 0, y: -1.09, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -167,7 +167,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.29}
+  m_AnchoredPosition: {x: 0, y: 2.32}
   m_SizeDelta: {x: 3, y: 0.5}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &17619026443447377
@@ -318,13 +318,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   seeds:
-  - {fileID: 6034795465411040663, guid: 0bc8348f1d3c76349bbda12011af20d1, type: 3}
-  - {fileID: 6034795465411040663, guid: 2c9323ec81eb99c42af9729a33dbc924, type: 3}
-  - {fileID: 6034795465411040663, guid: 043067aaf2c20074e8a5a4108add1398, type: 3}
+  - {fileID: 6034795465411040663, guid: 11d9483c5b05a0d438929faa5932a47e, type: 3}
+  - {fileID: 6034795465411040663, guid: 905705fbd57e17a448d1b1ab3c6615d4, type: 3}
+  - {fileID: 6034795465411040663, guid: 85881d5c1944f1b4fb325c3dc2c19b49, type: 3}
+  - {fileID: 6034795465411040663, guid: aa36d41c88c25a54badcedfce38e1cec, type: 3}
+  - {fileID: 6034795465411040663, guid: 7e3f4c7395e94bb4aab6e14a68f380ba, type: 3}
+  - {fileID: 6034795465411040663, guid: bf105da2ccd525e4c80715edbf209e50, type: 3}
+  - {fileID: 6034795465411040663, guid: 4113552136944314b9cb4a4dcccf85ca, type: 3}
+  - {fileID: 6034795465411040663, guid: b27689a32b4d4a845a497b4b015ffb83, type: 3}
+  - {fileID: 6034795465411040663, guid: 10191cdb319e94c40acd1de12401c745, type: 3}
+  - {fileID: 6034795465411040663, guid: b1d8a267ea85c8442aecaffb0f576db8, type: 3}
+  - {fileID: 6034795465411040663, guid: 5e39a758b4ed135468e8df71d21611a8, type: 3}
   - {fileID: 6034795465411040663, guid: 3558b96c1fcac8946aee6a25cc39c84e, type: 3}
-  - {fileID: 6034795465411040663, guid: c245191b02340eb4aa0100be6b49c10e, type: 3}
   spawnPoint: {fileID: 17619026116900356}
-  defaultTimer: 5
+  defaultTimer: 2
 --- !u!114 &17619026952851784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,20 +384,20 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1954335821
-  m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -297878444, guid: dc0124ff37a4d6d42ab1c8bd2313c31d, type: 3}
+  m_SortingLayerID: -824712961
+  m_SortingLayer: 5
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 220934582, guid: 0c58109fbdc26884ea759dab54f3e592, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.875}
+  m_Size: {x: 2.75, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!58 &17619026952851786
 CircleCollider2D:
   m_ObjectHideFlags: 0
