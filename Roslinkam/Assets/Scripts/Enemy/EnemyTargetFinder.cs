@@ -10,16 +10,12 @@ public class EnemyTargetFinder : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        HealthController tmpTarget = collision.GetComponent<HealthController>();
+        PlayerComponentsContainer tmpTarget = collision.GetComponent<PlayerComponentsContainer>();
         if (tmpTarget == null)
         {
             return;
         }
-        if (tmpTarget.GetComponent<PlayerComponentsContainer>() == null)
-        {
-            return;
-        }
-        target = tmpTarget;
+        target = tmpTarget.HealthController;
     }
 
     private void OnTriggerExit2D(Collider2D collision)

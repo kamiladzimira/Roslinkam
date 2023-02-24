@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private HealthController healthController;
+    [SerializeField] private PlayerComponentsContainer playerComponentsContainer;
 
     private void Start()
     {
-        GameManager.GetInstance().RegisterPlayer(healthController);
+        GameManager.GetInstance().RegisterPlayer(playerComponentsContainer.HealthController);
     }
 }
