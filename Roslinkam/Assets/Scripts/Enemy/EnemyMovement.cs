@@ -12,6 +12,7 @@ public class EnemyMovement : MonoBehaviour
     private Vector2 lastPos;
     public List<Transform> Route => route;
     public float PositionAccuracy => positionAccuracy;
+    public int Speed => speed;
     private void Awake()
     {
         lastPos = transform.position;
