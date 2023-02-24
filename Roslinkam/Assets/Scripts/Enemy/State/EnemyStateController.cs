@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyStateController : MonoBehaviour
 {
     [SerializeField] private Animator enemyMovementAnimator;
     [SerializeField] private EnemyComponentsContainer enemyComponentsContainer;
