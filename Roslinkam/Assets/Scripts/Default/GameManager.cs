@@ -45,14 +45,14 @@ public class GameManager : MonoBehaviour
         coins.text = playerComponentsContainer.Inventory.Money.ToString();
     }
 
-    public void PlayHitSound()
-    {
-        AudioManager.GetInstance().PlayHitSound();
-    }
-
     private void PlayBackgroundMusic()
     {
         AudioManager.GetInstance().PlayBackgroundMusic();
+    }
+
+    public void PlayHitSound()
+    {
+        AudioManager.GetInstance().PlayHitSound();
     }
 
     public void RegisterPlayer(HealthController healthController)

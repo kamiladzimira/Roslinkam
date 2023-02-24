@@ -34,14 +34,14 @@ public class AudioManager : MonoBehaviour
     public void PlayHitSound()
     {
         hitSoundSource.Play();
-
     }
 
     public void PlayPickUpSound()
     {
         itemPickUpSoundSource.Play();
-
     }
 }
+
+
 
 

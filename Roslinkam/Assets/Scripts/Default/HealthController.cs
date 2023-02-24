@@ -18,7 +18,6 @@ public class HealthController : MonoBehaviour
             if (healthValue <= 0)
             {
                 OnDied?.Invoke();
-                Debug.Log("nie zyjesz!");
             }
         }
     }

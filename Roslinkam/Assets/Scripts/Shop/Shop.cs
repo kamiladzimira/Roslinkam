@@ -45,10 +45,10 @@ public class Shop : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < itemSlots.Count; i++)
+        /*for (int i = 0; i < itemSlots.Count; i++)
         {
             itemSlots[i].Select(false);
-        }
+        }*/
     }
 
     public void SetupPlayerSlots()
@@ -72,11 +72,11 @@ public class Shop : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < playerItemSlots.Count; i++)
+        /*for (int i = 0; i < playerItemSlots.Count; i++)
         {
 
             playerItemSlots[i].Select(false);
-        }
+        }*/
     }
 
     public void SelectShopItem(ItemSlot itemSlot)
@@ -122,13 +122,16 @@ public class Shop : MonoBehaviour
 
         ItemContainer itemContainer = selectedItemSlot.ItemContainer;
         Item itemToBuy = itemContainer.GetFirstItem();
-        Debug.Log(itemToBuy.BuyPrice);
-
+        if (itemToBuy == null)
+        {
+            return;
+        }
         if (activePlayerInventory.Money < itemToBuy.BuyPrice)
         {
             Debug.Log("You dont have enough money");
             return;
         }
+        Debug.Log("You buy item for: " + itemToBuy.BuyPrice);
         RemoveFromBuyable(itemContainer, itemToBuy);
 
         activePlayerInventory.AddItem(itemToBuy);
@@ -154,15 +157,19 @@ public class Shop : MonoBehaviour
         }
 
         ItemContainer itemContainer = selectedItemSlot.ItemContainer;
-        Debug.Log(itemContainer);
-        if (activePlayerInventory.ItemContainers == null)
+        Item itemToSell = itemContainer.GetFirstItem();
+        if (  activePlayerInventory.ItemContainers == null || itemToSell == null)
         {
             return;
         }
+        Debug.Log("You sell item for: " + itemToSell.SellPrice);
+        activePlayerInventory.ChangeMoneyValue(itemToSell.SellPrice);
 
-        List<Item> itemToRemove = new List<Item>();
+        activePlayerInventory.RemoveItem(itemToSell);
+        Destroy(itemToSell.gameObject);
+        //List<Item> itemToRemove = new List<Item>();
 
-        for (int i = 0; i < itemContainer.Items.Count; i++)
+        /*for (int i = 0; i < itemContainer.Items.Count; i++)
         {
             itemToRemove.Add(itemContainer.Items[i]);
             activePlayerInventory.ChangeMoneyValue(10);
@@ -172,7 +179,7 @@ public class Shop : MonoBehaviour
         {
             activePlayerInventory.RemoveItem(itemToRemove[i]);
             Destroy(itemToRemove[i].gameObject);
-        }
+        }*/
         SetupPlayerSlots();
         SetupShopSlots();
     }

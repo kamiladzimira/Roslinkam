@@ -106,6 +106,10 @@ public class Inventory : MonoBehaviour
             equipedItem.transform.SetParent(itemContainer.transform);
         }
         Item item = itemSlot.ItemContainer.GetFirstItem();
+        if (item == null)
+        {
+            return;
+        }
         item.transform.SetParent(equipContainer.transform);
         item.transform.localPosition = Vector3.zero;
         item.gameObject.SetActive(true);
@@ -208,16 +212,23 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+        Debug.Log(itemContainer.Items.Count);
         if (itemContainer == null)
         {
             return;
         }
+        Debug.Log("za chwile sie usune");
         itemContainer.RemoveItem(item);
+        Debug.Log(itemContainer.Items.Count);
         item.transform.SetParent(null);
         if (itemContainer.Items.Count <= 0)
         {
+            Debug.Log("czy ja sie wykonuje?");
             itemContainers.Remove(itemContainer);
+            Debug.Log("jesli mnie widzisz to tak");
+
         }
+        Debug.Log("czas na setup");
         SetupSlots();
     }
 
