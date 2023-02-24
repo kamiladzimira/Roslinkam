@@ -39,13 +39,25 @@ PrefabInstance:
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4496405546095714259, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: enemyProjectileAnimator
+      value: 
+      objectReference: {fileID: 7266712276130995569, guid: bde5163ffc007ed47a629337fc4d1054, type: 3}
     - target: {fileID: 6313097431877225159, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: speed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6486743516667801665, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: attackDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6595474522198374687, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+      propertyPath: attackType
+      value: 
+      objectReference: {fileID: 1294893329}
     - target: {fileID: 7556748518561914342, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_Radius
-      value: 3.5091028
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_RootOrder
@@ -53,11 +65,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.32
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 15.16
       objectReference: {fileID: 0}
     - target: {fileID: 7916425355034553995, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: m_LocalPosition.z
@@ -113,12 +125,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+--- !u!114 &1215355223220919981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4496405546095714259, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+  m_PrefabInstance: {fileID: 3367494223499493758}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856979148425719794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f47387af816788e45827a61bce475c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &4856979148425719794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7916425355034553996, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
+  m_PrefabInstance: {fileID: 3367494223499493758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1294893329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4856979148425719794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfceb17cf8d9b6d4784e002fd3042076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyComponentsContainer: {fileID: 1215355223220919981}
+  bullet: {fileID: 1046342451282345398, guid: bde5163ffc007ed47a629337fc4d1054, type: 3}
 --- !u!114 &8447744673381611617 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6595474522198374687, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
   m_PrefabInstance: {fileID: 3367494223499493758}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 4856979148425719794}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d06f0b817837ca84cb2cee9ba9b709b5, type: 3}
