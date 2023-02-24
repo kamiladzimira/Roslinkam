@@ -15,5 +15,4 @@ public class EnemyComponentsContainer : MonoBehaviour
     public EnemyStateController EnemyController => enemyController;
     public Animator EnemyAnimator => enemyAnimator;
     public EnemyTargetFinder EnemyTargetFinder => enemyTargetFinder;
-
 }
