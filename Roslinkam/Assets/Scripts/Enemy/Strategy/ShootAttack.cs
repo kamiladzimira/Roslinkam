@@ -1,26 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShootAttack : AttackType
 {
     [SerializeField] private EnemyComponentsContainer enemyComponentsContainer;
-    [SerializeField] private int damage;
+    [SerializeField] private Bullet bullet;
+
     public override void DoAttack(int damage)
     {
-        DealDamage(enemyComponentsContainer.EnemyTargetFinder.Target);
+        CreateBullet(bullet);
     }
 
-    public void DealDamage(HealthController target)
+    public void CreateBullet(Bullet bullet)
     {
-        if (target == null)
-        {
-            return;
-        }
-        if (true)
-        {
-
-        }
-        target.GetDamage(damage);
+        Bullet currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        currentBullet.Setup(enemyComponentsContainer);
     }
 }
