@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8105025669176794503}
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -45,7 +45,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: PlayHitSound
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3696726188244780910, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
       propertyPath: onAttack.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

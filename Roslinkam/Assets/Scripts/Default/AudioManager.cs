@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour
     private static AudioManager instance;
     [SerializeField] private AudioSource backgroundMusicSource;
     [SerializeField] private AudioSource hitSoundSource;
+    [SerializeField] private AudioSource explodeSoundSource;
+    [SerializeField] private AudioSource shootSoundSource;
     [SerializeField] private AudioSource itemPickUpSoundSource;
 
     private void Awake()
@@ -39,6 +41,16 @@ public class AudioManager : MonoBehaviour
     public void PlayPickUpSound()
     {
         itemPickUpSoundSource.Play();
+    }
+
+    public void PlayExplodeSound()
+    {
+        explodeSoundSource.Play();
+    }
+
+    public void PlayShootSound()
+    {
+        shootSoundSource.Play();
     }
 }
 

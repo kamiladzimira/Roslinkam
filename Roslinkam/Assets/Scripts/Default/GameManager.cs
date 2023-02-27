@@ -55,6 +55,16 @@ public class GameManager : MonoBehaviour
         AudioManager.GetInstance().PlayHitSound();
     }
 
+    public void PlayExplodeSound()
+    {
+        AudioManager.GetInstance().PlayExplodeSound();
+    }
+
+    public void PlayShootSound()
+    {
+        AudioManager.GetInstance().PlayShootSound();
+    }
+
     public void RegisterPlayer(HealthController healthController)
     {
        if(playerHealthController != null)
