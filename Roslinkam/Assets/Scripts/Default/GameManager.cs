@@ -88,32 +88,4 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSecondsRealtime(loadSceneDelay);
         SceneManager.LoadScene(sceneToLoad);   
     }
-
-    /*public void RemoveElementFromList(EnemyHealthController enemyHealthController)
-    {
-        enemyHealthControllers.Remove(enemyHealthController);
-        HandleWinningCase();
-    }
-
-    public void AddElementToList(EnemyHealthController enemyHealthController)
-    {
-        enemyHealthControllers.Add(enemyHealthController);
-    }
-
-    public void PlayParticle(EnemyHealthController enemyHealthController)
-    {
-        ps.transform.position = enemyHealthController.transform.position;
-        ps.Play(true);
-    }
-
-    public void HandleWinningCase()
-    {
-        if (enemyHealthControllers.Count != 0)
-        {
-            return;
-        }
-        displayedCongrats.gameObject.SetActive(true);
-        StartCoroutine(LoadSameScene());
-    }*/
-
 }
