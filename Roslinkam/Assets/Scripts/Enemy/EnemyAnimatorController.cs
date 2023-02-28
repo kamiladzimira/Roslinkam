@@ -9,6 +9,7 @@ public class EnemyAnimatorController : MonoBehaviour
     [SerializeField] private Animator enemyAnimator;
     [SerializeField]
     private UnityEvent onAttack;
+
     public void OnAttack()
     {
         onAttack?.Invoke();

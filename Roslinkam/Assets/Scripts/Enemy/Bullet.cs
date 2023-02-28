@@ -23,12 +23,17 @@ public class Bullet : MonoBehaviour
     private void Update()
     {
         _timer += Time.deltaTime;
+        if(_target == null)
+        {
+            Spawner.Instance.ReturnBulletBackToPool(this);
+            return;
+        }
         CalculateRotation();
         ChangeRotation();
         MoveBullet(_speed);
         if (_timer > _lifeTime)
         {
-            Destroy(gameObject);
+            Spawner.Instance.ReturnBulletBackToPool(this);
         }
     }
 
@@ -43,6 +48,14 @@ public class Bullet : MonoBehaviour
         _target = _enemyComponentsContainer.EnemyTargetFinder.Target;
         CalculateRotation();
         transform.rotation = Quaternion.LookRotation(Vector3.back, _direction);
+    }
+
+    public void ResetBullet()
+    {
+        _timer = 0;
+        _target = null;
+        _direction = Vector3.zero;
+        _enemyComponentsContainer = null;
     }
 
     private void MoveBullet(int speed)
@@ -68,7 +81,7 @@ public class Bullet : MonoBehaviour
             return;
         }
         target.GetDamage(_damage);
-        Destroy(gameObject);
+        Spawner.Instance.ReturnBulletBackToPool(this);
     }
 
     private void ChangeRotation()

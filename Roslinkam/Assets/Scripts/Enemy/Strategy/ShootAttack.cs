@@ -15,7 +15,10 @@ public class ShootAttack : AttackType
 
     public void CreateBullet(Bullet bullet)
     {
-        Bullet currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        //Bullet currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
+        Bullet currentBullet = Spawner.Instance.GetBullet();
+        currentBullet.transform.SetParent(null);
+        currentBullet.transform.position = transform.position;
         currentBullet.Setup(enemyComponentsContainer);
     }
 }

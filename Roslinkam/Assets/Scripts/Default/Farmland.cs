@@ -9,8 +9,8 @@ public class Farmland : MonoBehaviour
     private float timer;
     private bool isEmpty = true;
 
-    [SerializeField] public Action<float> onTimerChangedAction;
-    [SerializeField] public Action onPlantSeededAction;
+    public event Action<float> onTimerChangedAction;
+    public event Action onPlantSeededAction;
 
     public Seed Seed => seed;
     public bool IsEmpty => isEmpty;
