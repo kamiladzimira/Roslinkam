@@ -11,41 +11,25 @@ public class Spawner : MonoBehaviour
     public static Spawner Instance { get; private set;}
 
     [SerializeField] private Bullet _bulletPrefab;
-    [SerializeField] private int _spawnAmount = 20;
+    //[SerializeField] private int _spawnAmount = 20;
+    [SerializeField] private int _defaultCapacity = 200;
+    [SerializeField] private int _maxCapacity = 500;
     private ObjectPool<Bullet> _bulletPool;
-    private ShootAttack _shootAttack;
-    Action<int, string> a;
-
-    Func<int, string> b;
-
+  
     private void Awake()
     {
-        if(Instance == null)
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
     }
     void Start()
     {
-        a += (i,s) => { };
-
-        b += (name) => { return "g"; };
-
-        string Example2(int y)
-        {
-            return "g";
-        }
-
-        void Example(int g, string t)
-        {
-
-        }
-
         _bulletPool = new ObjectPool<Bullet>(createFunc: CreateBullet, actionOnGet: (bullet) =>
         {
             bullet.gameObject.SetActive(true);
@@ -57,13 +41,12 @@ public class Spawner : MonoBehaviour
         }, (bullet) =>
         {
             Destroy(bullet.gameObject);
-        }, collectionCheck: false, 10, 20);
+        }, collectionCheck: false, _defaultCapacity, _maxCapacity);
     } 
 
     private Bullet CreateBullet()
     {
         var bullet = Instantiate(_bulletPrefab);
-        //bullet.Setup()
         return bullet;
     }
 
