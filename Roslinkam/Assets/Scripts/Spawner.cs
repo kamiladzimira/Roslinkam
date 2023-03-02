@@ -11,7 +11,6 @@ public class Spawner : MonoBehaviour
     public static Spawner Instance { get; private set;}
 
     [SerializeField] private Bullet _bulletPrefab;
-    //[SerializeField] private int _spawnAmount = 20;
     [SerializeField] private int _defaultCapacity = 200;
     [SerializeField] private int _maxCapacity = 500;
     private ObjectPool<Bullet> _bulletPool;
@@ -30,18 +29,18 @@ public class Spawner : MonoBehaviour
     }
     void Start()
     {
-        _bulletPool = new ObjectPool<Bullet>(createFunc: CreateBullet, actionOnGet: (bullet) =>
+        _bulletPool = new ObjectPool<Bullet>( CreateBullet, (bullet) =>
         {
             bullet.gameObject.SetActive(true);
-        }, (bullet) =>
+        },  (bullet) =>
         {
             bullet.gameObject.SetActive(false);
             bullet.transform.SetParent(transform);
             bullet.ResetBullet();
-        }, (bullet) =>
+        },  (bullet) =>
         {
             Destroy(bullet.gameObject);
-        }, collectionCheck: false, _defaultCapacity, _maxCapacity);
+        },  false,  _defaultCapacity, _maxCapacity);
     } 
 
     private Bullet CreateBullet()
