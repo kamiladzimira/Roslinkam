@@ -217,18 +217,14 @@ public class Inventory : MonoBehaviour
         {
             return;
         }
-        Debug.Log("za chwile sie usune");
         itemContainer.RemoveItem(item);
         Debug.Log(itemContainer.Items.Count);
         item.transform.SetParent(null);
         if (itemContainer.Items.Count <= 0)
         {
-            Debug.Log("czy ja sie wykonuje?");
             itemContainers.Remove(itemContainer);
-            Debug.Log("jesli mnie widzisz to tak");
 
         }
-        Debug.Log("czas na setup");
         SetupSlots();
     }
 

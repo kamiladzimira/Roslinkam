@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 40979704}
   - component: {fileID: 40979703}
   - component: {fileID: 40979702}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: EquipButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 725816941}
   - component: {fileID: 725816940}
   - component: {fileID: 725816939}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InventoryLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 919500160}
   - component: {fileID: 919500162}
   - component: {fileID: 919500161}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 936105939}
   - component: {fileID: 936105941}
   - component: {fileID: 936105940}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 1121919384}
   - component: {fileID: 1121919383}
   - component: {fileID: 1121919382}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -752,7 +752,7 @@ GameObject:
   - component: {fileID: 1245823963}
   - component: {fileID: 1245823962}
   - component: {fileID: 1245823961}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: InventoryPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   - component: {fileID: 1348242168}
   - component: {fileID: 1348242170}
   - component: {fileID: 1348242169}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1059,7 +1059,7 @@ GameObject:
   - component: {fileID: 1958557102}
   - component: {fileID: 1958557101}
   - component: {fileID: 1958557100}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DropButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1212,7 +1212,7 @@ GameObject:
   - component: {fileID: 4740551463536165024}
   - component: {fileID: 8134333317619449765}
   - component: {fileID: 4921056245043271001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,6 @@ GameObject:
   - component: {fileID: 4073545166449340703}
   - component: {fileID: 4073545166449340701}
   - component: {fileID: 4073545166449340700}
-  - component: {fileID: 4073545166449340691}
   - component: {fileID: 4073545166449340688}
   - component: {fileID: 4073545166449340694}
   - component: {fileID: 4073545166449340689}
@@ -1284,6 +1283,7 @@ GameObject:
   - component: {fileID: 2091443343}
   - component: {fileID: 4073545168115996060}
   - component: {fileID: 4073545168115996080}
+  - component: {fileID: 4073545166449340691}
   m_Layer: 0
   m_Name: Kitty
   m_TagString: Player
@@ -1380,21 +1380,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
---- !u!114 &4073545166449340691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4073545166449340702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!114 &4073545166449340688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1651,7 +1636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 4073545166449340695}
   inventory: {fileID: 4073545166449340692}
-  healthController: {fileID: 0}
+  healthController: {fileID: 4921056245043271001}
 --- !u!114 &4073545168115996080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1664,7 +1649,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5502a74f39ee8084db2983d49c1c6986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerComponentsContainer: {fileID: 0}
+  playerComponentsContainer: {fileID: 4073545168115996060}
+--- !u!114 &4073545166449340691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073545166449340702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1001 &4073545166235251354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1672,6 +1672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1704,9 +1708,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1715,6 +1727,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -1804,6 +1820,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698946145736 stripped
@@ -1829,6 +1849,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1861,9 +1885,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1872,6 +1904,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -1961,6 +1997,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698917989847 stripped
@@ -1986,6 +2026,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2018,9 +2062,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2029,6 +2081,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -2118,6 +2174,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698989170475 stripped
@@ -2143,6 +2203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2175,9 +2239,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2186,6 +2258,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -2275,6 +2351,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698980145015 stripped
@@ -2300,6 +2380,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2332,9 +2416,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2343,6 +2435,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -2432,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699325840665 stripped
@@ -2457,6 +2557,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2489,9 +2593,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2500,6 +2612,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -2589,6 +2705,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699231591743 stripped
@@ -2614,6 +2734,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2646,9 +2770,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2657,6 +2789,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -2746,6 +2882,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699254376502 stripped
@@ -2771,6 +2911,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2803,9 +2947,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2814,6 +2966,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -2903,6 +3059,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699482651493 stripped
@@ -2928,6 +3088,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -2960,9 +3124,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2971,6 +3143,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -3060,6 +3236,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699440932429 stripped
@@ -3085,6 +3265,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3117,9 +3301,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3128,6 +3320,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -3217,6 +3413,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699618872473 stripped
@@ -3242,6 +3442,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3274,9 +3478,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3285,6 +3497,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -3374,6 +3590,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699504776850 stripped
@@ -3399,6 +3619,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3431,9 +3655,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3442,6 +3674,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (24)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -3531,6 +3767,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699685513108 stripped
@@ -3556,6 +3796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3588,9 +3832,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3599,6 +3851,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -3688,6 +3944,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445699890991295 stripped
@@ -3713,6 +3973,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3745,9 +4009,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3756,6 +4028,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -3845,6 +4121,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698004940772 stripped
@@ -3870,6 +4150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3902,9 +4186,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3913,6 +4205,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -4002,6 +4298,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698156103360 stripped
@@ -4027,6 +4327,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4059,9 +4363,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4070,6 +4382,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -4159,6 +4475,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698095685652 stripped
@@ -4184,6 +4504,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4216,9 +4540,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4227,6 +4559,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -4316,6 +4652,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698110370119 stripped
@@ -4341,6 +4681,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4373,9 +4717,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4384,6 +4736,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -4473,6 +4829,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698278011205 stripped
@@ -4498,6 +4858,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4530,9 +4894,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4541,6 +4913,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -4630,6 +5006,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698182062175 stripped
@@ -4655,6 +5035,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4687,9 +5071,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4698,6 +5090,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -4787,6 +5183,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698304262217 stripped
@@ -4812,6 +5212,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -4844,9 +5248,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4855,6 +5267,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -4944,6 +5360,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698291563226 stripped
@@ -4969,6 +5389,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5001,9 +5425,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5012,6 +5444,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -5101,6 +5537,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698655048983 stripped
@@ -5126,10 +5566,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1245823961}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4156263690902223539, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Color.b
       value: 0.33333334
@@ -5146,6 +5594,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 13
@@ -5153,6 +5605,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -5242,6 +5698,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698596076270 stripped
@@ -5267,6 +5727,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5299,9 +5763,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5310,6 +5782,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -5399,6 +5875,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 8.29
       objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
 --- !u!224 &6515445698619452871 stripped
@@ -5424,6 +5904,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
+    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -5456,9 +5940,17 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: ItemSlot, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715956585174737, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715956585174738, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5467,6 +5959,10 @@ PrefabInstance:
     - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Name
       value: InventorySlot (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7125715957061660497, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7125715957061660498, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Pivot.x
@@ -5555,6 +6051,10 @@ PrefabInstance:
     - target: {fileID: 8611856736759352309, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 8.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
