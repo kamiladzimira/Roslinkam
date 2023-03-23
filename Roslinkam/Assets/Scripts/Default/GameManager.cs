@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         gameOver.SetActive(false);
-        PlayBackgroundMusic();
     }
     private void Update()
     {
@@ -43,11 +42,6 @@ public class GameManager : MonoBehaviour
     public void CoinsValueDispay()
     {
         coins.text = playerComponentsContainer.Inventory.Money.ToString();
-    }
-
-    private void PlayBackgroundMusic()
-    {
-        AudioManager.GetInstance().PlayBackgroundMusic();
     }
 
     public void PlayHitSound()

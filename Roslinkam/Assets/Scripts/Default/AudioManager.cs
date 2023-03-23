@@ -20,12 +20,18 @@ public class AudioManager : MonoBehaviour
         else
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
     public static AudioManager GetInstance()
     {
         return instance;
+    }
+
+    private void Start()
+    {
+        PlayBackgroundMusic();
     }
 
     public void PlayBackgroundMusic()
