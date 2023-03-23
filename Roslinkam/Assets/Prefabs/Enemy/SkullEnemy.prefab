@@ -171,6 +171,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyComponentsContainer: {fileID: 1215355223220919981}
   bullet: {fileID: 1046342451282345398, guid: bde5163ffc007ed47a629337fc4d1054, type: 3}
+  _amountOfBullet: 100
 --- !u!114 &8447744673381611617 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6595474522198374687, guid: 4a9cf41172697744aa127e19b17a6683, type: 3}
