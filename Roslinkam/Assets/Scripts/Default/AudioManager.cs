@@ -16,6 +16,7 @@ public class AudioManager : MonoBehaviour
         if (instance != null)
         {
             Destroy(this);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
