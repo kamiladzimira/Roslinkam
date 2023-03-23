@@ -1,9 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
@@ -61,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void RegisterPlayer(HealthController healthController)
     {
-       if(playerHealthController != null)
+        if (playerHealthController != null)
         {
             playerHealthController.OnDied -= OnPlayerDied;
         }
@@ -73,6 +72,14 @@ public class GameManager : MonoBehaviour
     {
         gameOver.SetActive(true);
         StartCoroutine(LoadSameSceneWithDelay());
+    }
+
+    public void OnApplicationQuit(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Application.Quit();
+        }
     }
 
     IEnumerator LoadSameSceneWithDelay()

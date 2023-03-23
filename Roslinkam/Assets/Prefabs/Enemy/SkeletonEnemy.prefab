@@ -197,4 +197,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyComponentsContainer: {fileID: 2576179971088182488}
-  damage: 10
+  damage: 5

@@ -93,7 +93,6 @@ public class Inventory : MonoBehaviour
             }
         }
     }
-
     public void Equip(ItemSlot itemSlot)
     {
         if (itemSlot.ItemContainer == null)

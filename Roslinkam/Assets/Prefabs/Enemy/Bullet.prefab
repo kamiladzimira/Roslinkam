@@ -170,6 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _rotationSpeed: 45
-  _damage: 5
+  _damage: 10
   _followTime: 2
-  _lifeTime: 6
+  _lifeTime: 3
