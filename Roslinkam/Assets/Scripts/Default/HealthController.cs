@@ -14,7 +14,7 @@ public class HealthController : MonoBehaviour
         if (healthValue > 0)
         {
             healthValue -= value;
-            Debug.Log(healthValue);
+            Debug.Log( "Your health value is: " + healthValue);
             if (healthValue <= 0)
             {
                 OnDied?.Invoke();

@@ -33,7 +33,7 @@ public class EnemyStateController : MonoBehaviour
         if (lastState != enemyState)
         {
             enemyState.OnEnter();
-            Debug.Log(enemyState);
+            Debug.Log("Current enemy state: " + enemyState);
         }
     }
 }
