@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 35, y: 35}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4256712738136756520
 CanvasRenderer:
@@ -112,8 +112,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 2.7}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7125715956585174740
 CanvasRenderer:
@@ -189,10 +189,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 379, y: -176}
-  m_SizeDelta: {x: 80, y: 80}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -581, y: 364}
+  m_SizeDelta: {x: 90, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6295688424787298478
 MonoBehaviour:
@@ -292,7 +292,7 @@ RectTransform:
   m_GameObject: {fileID: 9099397320748819939}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.65, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7125715957061660498}
@@ -300,8 +300,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.2}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 90, y: 96}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8796528572837727869
 CanvasRenderer:
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7169812, g: 0.63477075, b: 0.33481666, a: 1}
+  m_Color: {r: 0.029625222, g: 0.16981131, b: 0.00080099865, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -350,11 +350,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_RootOrder
@@ -382,7 +382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 32.4444
+      value: 32.444397
       objectReference: {fileID: 0}
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_LocalPosition.x
@@ -414,11 +414,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 4.4
+      value: 32.4
       objectReference: {fileID: 0}
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -6.1
+      value: -41.4
       objectReference: {fileID: 0}
     - target: {fileID: 1973143703101291419, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -434,11 +434,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6537996651261207551, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_fontSize
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6537996651261207551, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_fontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537996651261207551, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6956349107447787826, guid: d7d7186c2b180474cbfd89c9ae5a8529, type: 3}
       propertyPath: m_Name
