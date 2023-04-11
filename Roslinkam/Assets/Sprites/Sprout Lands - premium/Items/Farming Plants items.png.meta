@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -724,35 +748,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Farming Plants items_11: 253879215
-      Farming Plants items_9: -361250048
-      Farming Plants items_7: 663741182
-      Farming Plants items_14: -391175478
-      Farming Plants items_10: -1917578668
-      Farming Plants items_20: 859657434
-      Farming Plants items_2: -1756356121
       Farming Plants items_0: -1283575235
-      Farming Plants items_24: -1728784961
-      Farming Plants items_6: -1332178205
-      Farming Plants items_19: -27800149
-      Farming Plants items_26: -325257758
-      Farming Plants items_27: -800280385
-      Farming Plants items_18: -1951169559
-      Farming Plants items_16: 1458272162
-      Farming Plants items_4: -763396845
-      Farming Plants items_5: 890381412
-      Farming Plants items_13: -282253982
       Farming Plants items_1: 894945337
-      Farming Plants items_3: 1071865128
-      Farming Plants items_8: 1133846998
+      Farming Plants items_10: -1917578668
+      Farming Plants items_11: 253879215
+      Farming Plants items_12: 213918976
+      Farming Plants items_13: -282253982
+      Farming Plants items_14: -391175478
+      Farming Plants items_15: -35120563
+      Farming Plants items_16: 1458272162
       Farming Plants items_17: 1352595140
+      Farming Plants items_18: -1951169559
+      Farming Plants items_19: -27800149
+      Farming Plants items_2: -1756356121
+      Farming Plants items_20: 859657434
       Farming Plants items_21: 673980117
       Farming Plants items_22: 2090861891
       Farming Plants items_23: -2138603253
-      Farming Plants items_28: -130211678
-      Farming Plants items_15: -35120563
+      Farming Plants items_24: -1728784961
       Farming Plants items_25: -1664663590
-      Farming Plants items_12: 213918976
+      Farming Plants items_26: -325257758
+      Farming Plants items_27: -800280385
+      Farming Plants items_28: -130211678
+      Farming Plants items_3: 1071865128
+      Farming Plants items_4: -763396845
+      Farming Plants items_5: 890381412
+      Farming Plants items_6: -1332178205
+      Farming Plants items_7: 663741182
+      Farming Plants items_8: 1133846998
+      Farming Plants items_9: -361250048
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
