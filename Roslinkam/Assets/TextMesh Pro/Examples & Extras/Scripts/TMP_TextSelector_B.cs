@@ -347,9 +347,9 @@ namespace TMPro.Examples
                 UIVertex[] uiVertices = m_TextMeshPro.textInfo.meshInfo.uiVertices;
 
                 // Iterate through each of the characters of the word.
-                for (int i = 0; i < wInfo.characterCount; i++)
+                for (int _currentMonsterIndex = 0; _currentMonsterIndex < wInfo.characterCount; _currentMonsterIndex++)
                 {
-                    int vertexIndex = m_TextMeshPro.textInfo.characterInfo[wInfo.firstCharacterIndex + i].vertexIndex;
+                    int vertexIndex = m_TextMeshPro.textInfo.characterInfo[wInfo.firstCharacterIndex + _currentMonsterIndex].vertexIndex;
 
                     Color32 c = uiVertices[vertexIndex + 0].color.Tint(1.33333f);
 
@@ -375,9 +375,9 @@ namespace TMPro.Examples
                 UIVertex[] uiVertices = m_TextMeshPro.textInfo.meshInfo.uiVertices;
 
                 // Iterate through each of the characters of the word.
-                for (int i = 0; i < wInfo.characterCount; i++)
+                for (int _currentMonsterIndex = 0; _currentMonsterIndex < wInfo.characterCount; _currentMonsterIndex++)
                 {
-                    int vertexIndex = m_TextMeshPro.textInfo.characterInfo[wInfo.firstCharacterIndex + i].vertexIndex;
+                    int vertexIndex = m_TextMeshPro.textInfo.characterInfo[wInfo.firstCharacterIndex + _currentMonsterIndex].vertexIndex;
 
                     Color32 c = uiVertices[vertexIndex + 0].color.Tint(0.75f);
 
@@ -425,9 +425,9 @@ namespace TMPro.Examples
                 UIVertex[] uiVertices = m_TextMeshPro.textInfo.meshInfo.uiVertices;
 
                 Color32 c = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
-                for (int i = 0; i < linkInfo.characterCount; i++)
+                for (int _currentMonsterIndex = 0; _currentMonsterIndex < linkInfo.characterCount; _currentMonsterIndex++)
                 {
-                    TMP_CharacterInfo cInfo = m_TextMeshPro.textInfo.characterInfo[linkInfo.firstCharacterIndex + i];
+                    TMP_CharacterInfo cInfo = m_TextMeshPro.textInfo.characterInfo[linkInfo.firstCharacterIndex + _currentMonsterIndex];
 
                     if (!cInfo.isVisible) continue; // Skip invisible characters.
 

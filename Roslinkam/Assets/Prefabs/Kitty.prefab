@@ -1310,7 +1310,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &4073545166449340701
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1327,7 +1327,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &4073545166449340700
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1549,7 +1550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1c6599bd1b17a40a7298adedb97c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 4.5
 --- !u!114 &4073545166449340692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5494,10 +5495,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1121919381}
     m_Modifications:
-    - target: {fileID: 894139371236213084, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1566810493283018557, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5505,18 +5502,6 @@ PrefabInstance:
     - target: {fileID: 4052640523381624980, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Layer
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156263690902223539, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
-      propertyPath: m_Color.b
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156263690902223539, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
-      propertyPath: m_Color.g
-      value: 0.63529414
-      objectReference: {fileID: 0}
-    - target: {fileID: 4156263690902223539, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
-      propertyPath: m_Color.r
-      value: 0.7176471
       objectReference: {fileID: 0}
     - target: {fileID: 5322984501838283820, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5624,6 +5609,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9099397320748819939, guid: d439c606ce2d73243b1b7dd942ccd325, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

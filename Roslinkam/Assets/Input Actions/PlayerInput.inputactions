@@ -176,7 +176,7 @@
                 {
                     "name": "up",
                     "id": "8a168c3b-ed7f-4e76-be11-816e97b0780c",
-                    "path": "<AndroidJoystick>/stick/up",
+                    "path": "<Joystick>/stick/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -187,7 +187,7 @@
                 {
                     "name": "down",
                     "id": "3798b9ac-d392-4f2c-88be-e05f2aca140c",
-                    "path": "<AndroidJoystick>/stick/down",
+                    "path": "<Joystick>/stick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -198,7 +198,7 @@
                 {
                     "name": "left",
                     "id": "ca63928d-cb96-46f0-a224-8e2681bbfdeb",
-                    "path": "<AndroidJoystick>/stick/left",
+                    "path": "<Joystick>/stick/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -209,7 +209,7 @@
                 {
                     "name": "right",
                     "id": "464bb487-0855-4799-9a10-f2386cee7569",
-                    "path": "<AndroidJoystick>/stick/right",
+                    "path": "<Joystick>/stick/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
