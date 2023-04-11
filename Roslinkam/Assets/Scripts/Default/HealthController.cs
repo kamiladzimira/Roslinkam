@@ -1,24 +1,33 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
-    [SerializeField] private int healthValue;
-    [SerializeField] private Sprite healthValueImage;
+    private float _healthValue;
+    [SerializeField] private float _maxHealthValue;
+    [SerializeField] private Image _healthValueImage;
 
     public event Action OnDied;
-
-    public void GetDamage(int value)
+    private void Start()
     {
-        if (healthValue > 0)
+        _healthValue = _maxHealthValue;
+        SetHealthBar();
+    }
+    public void SetHealthBar()
+    {
+        _healthValueImage.fillAmount = _healthValue/_maxHealthValue;
+    }
+    public void GetDamage(float value)
+    {
+        if (_healthValue > 0)
         {
-            
-            healthValue -= value;
-            Debug.Log( "Your health value is: " + healthValue);
-            if (healthValue <= 0)
+            _healthValueImage.fillAmount -= value;
+            _healthValue -= value;
+            SetHealthBar();
+            if (_healthValue <= 0)
             {
+                _healthValueImage.fillAmount = 0;
                 OnDied?.Invoke();
             }
         }
