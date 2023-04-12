@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1354,65 +1378,65 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Darker Grass tiles v.2_48: -1536495009
-      Darker Grass tiles v.2_1: -1092496024
       Darker Grass tiles v.2_0: 866936706
+      Darker Grass tiles v.2_1: -1092496024
+      Darker Grass tiles v.2_10: -78390241
+      Darker Grass tiles v.2_11: 1584047578
+      Darker Grass tiles v.2_12: -2092252497
+      Darker Grass tiles v.2_13: -1456880207
+      Darker Grass tiles v.2_14: -935970722
+      Darker Grass tiles v.2_15: 549443008
+      Darker Grass tiles v.2_16: 791019450
+      Darker Grass tiles v.2_17: -188637959
+      Darker Grass tiles v.2_18: -761047371
+      Darker Grass tiles v.2_19: 53202777
+      Darker Grass tiles v.2_2: 486222081
+      Darker Grass tiles v.2_20: -1807845780
+      Darker Grass tiles v.2_21: -1743881351
+      Darker Grass tiles v.2_22: 794952419
+      Darker Grass tiles v.2_23: -1991562506
       Darker Grass tiles v.2_24: 1771094239
       Darker Grass tiles v.2_25: 933597736
-      Darker Grass tiles v.2_37: 787643716
-      Darker Grass tiles v.2_57: 1202316837
-      Darker Grass tiles v.2_55: 2031456080
-      Darker Grass tiles v.2_28: -509387871
       Darker Grass tiles v.2_26: -1681401022
-      Darker Grass tiles v.2_22: 794952419
-      Darker Grass tiles v.2_17: -188637959
-      Darker Grass tiles v.2_14: -935970722
-      Darker Grass tiles v.2_32: -440844994
-      Darker Grass tiles v.2_53: 727367615
-      Darker Grass tiles v.2_2: 486222081
-      Darker Grass tiles v.2_35: 1404251592
-      Darker Grass tiles v.2_56: 1094074460
-      Darker Grass tiles v.2_40: 1473915486
-      Darker Grass tiles v.2_13: -1456880207
-      Darker Grass tiles v.2_15: 549443008
-      Darker Grass tiles v.2_42: -79027118
-      Darker Grass tiles v.2_18: -761047371
-      Darker Grass tiles v.2_34: 401132708
-      Darker Grass tiles v.2_52: -566927675
-      Darker Grass tiles v.2_29: 1059327503
-      Darker Grass tiles v.2_47: 569210455
-      Darker Grass tiles v.2_5: -1938282968
-      Darker Grass tiles v.2_46: -410415031
-      Darker Grass tiles v.2_33: 235503587
-      Darker Grass tiles v.2_36: -189865676
-      Darker Grass tiles v.2_21: -1743881351
-      Darker Grass tiles v.2_39: -275260141
-      Darker Grass tiles v.2_43: 1511836070
-      Darker Grass tiles v.2_9: -1427288102
-      Darker Grass tiles v.2_19: 53202777
-      Darker Grass tiles v.2_16: 791019450
-      Darker Grass tiles v.2_38: 1992951416
-      Darker Grass tiles v.2_3: 276785436
-      Darker Grass tiles v.2_41: 44045527
-      Darker Grass tiles v.2_10: -78390241
-      Darker Grass tiles v.2_30: -135809138
-      Darker Grass tiles v.2_12: -2092252497
       Darker Grass tiles v.2_27: 1777013411
-      Darker Grass tiles v.2_4: -475108271
-      Darker Grass tiles v.2_58: -1214189643
-      Darker Grass tiles v.2_23: -1991562506
-      Darker Grass tiles v.2_44: 2012933551
-      Darker Grass tiles v.2_54: 1869719657
-      Darker Grass tiles v.2_7: 1218424993
-      Darker Grass tiles v.2_51: -2047018856
-      Darker Grass tiles v.2_50: 1562027247
+      Darker Grass tiles v.2_28: -509387871
+      Darker Grass tiles v.2_29: 1059327503
+      Darker Grass tiles v.2_3: 276785436
+      Darker Grass tiles v.2_30: -135809138
       Darker Grass tiles v.2_31: 2083410102
-      Darker Grass tiles v.2_49: 1801699463
-      Darker Grass tiles v.2_8: 1993236763
+      Darker Grass tiles v.2_32: -440844994
+      Darker Grass tiles v.2_33: 235503587
+      Darker Grass tiles v.2_34: 401132708
+      Darker Grass tiles v.2_35: 1404251592
+      Darker Grass tiles v.2_36: -189865676
+      Darker Grass tiles v.2_37: 787643716
+      Darker Grass tiles v.2_38: 1992951416
+      Darker Grass tiles v.2_39: -275260141
+      Darker Grass tiles v.2_4: -475108271
+      Darker Grass tiles v.2_40: 1473915486
+      Darker Grass tiles v.2_41: 44045527
+      Darker Grass tiles v.2_42: -79027118
+      Darker Grass tiles v.2_43: 1511836070
+      Darker Grass tiles v.2_44: 2012933551
       Darker Grass tiles v.2_45: -878727147
-      Darker Grass tiles v.2_11: 1584047578
+      Darker Grass tiles v.2_46: -410415031
+      Darker Grass tiles v.2_47: 569210455
+      Darker Grass tiles v.2_48: -1536495009
+      Darker Grass tiles v.2_49: 1801699463
+      Darker Grass tiles v.2_5: -1938282968
+      Darker Grass tiles v.2_50: 1562027247
+      Darker Grass tiles v.2_51: -2047018856
+      Darker Grass tiles v.2_52: -566927675
+      Darker Grass tiles v.2_53: 727367615
+      Darker Grass tiles v.2_54: 1869719657
+      Darker Grass tiles v.2_55: 2031456080
+      Darker Grass tiles v.2_56: 1094074460
+      Darker Grass tiles v.2_57: 1202316837
+      Darker Grass tiles v.2_58: -1214189643
       Darker Grass tiles v.2_6: -873905208
-      Darker Grass tiles v.2_20: -1807845780
+      Darker Grass tiles v.2_7: 1218424993
+      Darker Grass tiles v.2_8: 1993236763
+      Darker Grass tiles v.2_9: -1427288102
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

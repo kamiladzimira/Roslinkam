@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1354,65 +1378,65 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Darker Grass hill tiles v.2_3: -1401086491
-      Darker Grass hill tiles v.2_31: 303415855
-      Darker Grass hill tiles v.2_57: 1151523419
-      Darker Grass hill tiles v.2_10: -1169102285
-      Darker Grass hill tiles v.2_44: -520888171
-      Darker Grass hill tiles v.2_20: 821556527
-      Darker Grass hill tiles v.2_16: -2933813
-      Darker Grass hill tiles v.2_8: -318526525
-      Darker Grass hill tiles v.2_45: 1524037852
-      Darker Grass hill tiles v.2_55: 2091484146
-      Darker Grass hill tiles v.2_40: 1216327585
-      Darker Grass hill tiles v.2_4: -1929537764
-      Darker Grass hill tiles v.2_35: -1764347496
-      Darker Grass hill tiles v.2_6: -1555332822
-      Darker Grass hill tiles v.2_25: 104965475
-      Darker Grass hill tiles v.2_27: 1770495785
       Darker Grass hill tiles v.2_0: 904090123
-      Darker Grass hill tiles v.2_18: 1778425874
-      Darker Grass hill tiles v.2_30: 1139322722
-      Darker Grass hill tiles v.2_42: 1773958824
-      Darker Grass hill tiles v.2_21: -1144690482
-      Darker Grass hill tiles v.2_36: 267509080
-      Darker Grass hill tiles v.2_49: -22397377
-      Darker Grass hill tiles v.2_50: -505023818
-      Darker Grass hill tiles v.2_33: 738674632
-      Darker Grass hill tiles v.2_23: 36273258
-      Darker Grass hill tiles v.2_38: 1269947673
-      Darker Grass hill tiles v.2_41: -2042727997
-      Darker Grass hill tiles v.2_26: 761089333
-      Darker Grass hill tiles v.2_39: 1225217738
-      Darker Grass hill tiles v.2_13: 1627100110
-      Darker Grass hill tiles v.2_56: -993171516
-      Darker Grass hill tiles v.2_46: 352561860
-      Darker Grass hill tiles v.2_52: 155249012
-      Darker Grass hill tiles v.2_22: 1582588889
-      Darker Grass hill tiles v.2_2: 1634233787
       Darker Grass hill tiles v.2_1: -524459189
-      Darker Grass hill tiles v.2_28: -629025614
-      Darker Grass hill tiles v.2_9: 11792527
-      Darker Grass hill tiles v.2_32: 396790468
-      Darker Grass hill tiles v.2_37: -1145843126
-      Darker Grass hill tiles v.2_17: 1014089244
-      Darker Grass hill tiles v.2_5: -1889429893
-      Darker Grass hill tiles v.2_51: 199265345
-      Darker Grass hill tiles v.2_54: -1230786800
-      Darker Grass hill tiles v.2_29: -1475506932
-      Darker Grass hill tiles v.2_43: -1140248837
-      Darker Grass hill tiles v.2_53: 1996568044
-      Darker Grass hill tiles v.2_7: -247969523
+      Darker Grass hill tiles v.2_10: -1169102285
+      Darker Grass hill tiles v.2_11: -402051829
       Darker Grass hill tiles v.2_12: -273238787
+      Darker Grass hill tiles v.2_13: 1627100110
+      Darker Grass hill tiles v.2_14: 562433470
       Darker Grass hill tiles v.2_15: 601235054
+      Darker Grass hill tiles v.2_16: -2933813
+      Darker Grass hill tiles v.2_17: 1014089244
+      Darker Grass hill tiles v.2_18: 1778425874
+      Darker Grass hill tiles v.2_19: -1142834882
+      Darker Grass hill tiles v.2_2: 1634233787
+      Darker Grass hill tiles v.2_20: 821556527
+      Darker Grass hill tiles v.2_21: -1144690482
+      Darker Grass hill tiles v.2_22: 1582588889
+      Darker Grass hill tiles v.2_23: 36273258
+      Darker Grass hill tiles v.2_24: 1128364082
+      Darker Grass hill tiles v.2_25: 104965475
+      Darker Grass hill tiles v.2_26: 761089333
+      Darker Grass hill tiles v.2_27: 1770495785
+      Darker Grass hill tiles v.2_28: -629025614
+      Darker Grass hill tiles v.2_29: -1475506932
+      Darker Grass hill tiles v.2_3: -1401086491
+      Darker Grass hill tiles v.2_30: 1139322722
+      Darker Grass hill tiles v.2_31: 303415855
+      Darker Grass hill tiles v.2_32: 396790468
+      Darker Grass hill tiles v.2_33: 738674632
+      Darker Grass hill tiles v.2_34: 1098695614
+      Darker Grass hill tiles v.2_35: -1764347496
+      Darker Grass hill tiles v.2_36: 267509080
+      Darker Grass hill tiles v.2_37: -1145843126
+      Darker Grass hill tiles v.2_38: 1269947673
+      Darker Grass hill tiles v.2_39: 1225217738
+      Darker Grass hill tiles v.2_4: -1929537764
+      Darker Grass hill tiles v.2_40: 1216327585
+      Darker Grass hill tiles v.2_41: -2042727997
+      Darker Grass hill tiles v.2_42: 1773958824
+      Darker Grass hill tiles v.2_43: -1140248837
+      Darker Grass hill tiles v.2_44: -520888171
+      Darker Grass hill tiles v.2_45: 1524037852
+      Darker Grass hill tiles v.2_46: 352561860
       Darker Grass hill tiles v.2_47: 1426040939
       Darker Grass hill tiles v.2_48: -913957869
-      Darker Grass hill tiles v.2_14: 562433470
-      Darker Grass hill tiles v.2_11: -402051829
+      Darker Grass hill tiles v.2_49: -22397377
+      Darker Grass hill tiles v.2_5: -1889429893
+      Darker Grass hill tiles v.2_50: -505023818
+      Darker Grass hill tiles v.2_51: 199265345
+      Darker Grass hill tiles v.2_52: 155249012
+      Darker Grass hill tiles v.2_53: 1996568044
+      Darker Grass hill tiles v.2_54: -1230786800
+      Darker Grass hill tiles v.2_55: 2091484146
+      Darker Grass hill tiles v.2_56: -993171516
+      Darker Grass hill tiles v.2_57: 1151523419
       Darker Grass hill tiles v.2_58: -2023960408
-      Darker Grass hill tiles v.2_24: 1128364082
-      Darker Grass hill tiles v.2_34: 1098695614
-      Darker Grass hill tiles v.2_19: -1142834882
+      Darker Grass hill tiles v.2_6: -1555332822
+      Darker Grass hill tiles v.2_7: -247969523
+      Darker Grass hill tiles v.2_8: -318526525
+      Darker Grass hill tiles v.2_9: 11792527
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1354,65 +1378,65 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass hill tiles v.2_15: -1888795326
-      Grass hill tiles v.2_53: -1659929644
-      Grass hill tiles v.2_35: 844033926
-      Grass hill tiles v.2_6: -818171253
-      Grass hill tiles v.2_47: -1943158581
-      Grass hill tiles v.2_49: -1264782333
-      Grass hill tiles v.2_55: 651213482
-      Grass hill tiles v.2_9: -310393233
-      Grass hill tiles v.2_40: -1905119143
-      Grass hill tiles v.2_43: -1350877848
-      Grass hill tiles v.2_7: -616942956
-      Grass hill tiles v.2_42: 641981558
-      Grass hill tiles v.2_51: 1442289930
-      Grass hill tiles v.2_13: -592757389
-      Grass hill tiles v.2_16: -1515654215
-      Grass hill tiles v.2_20: 533393452
-      Grass hill tiles v.2_26: -1606168775
-      Grass hill tiles v.2_58: -938716530
-      Grass hill tiles v.2_32: -1052621789
-      Grass hill tiles v.2_14: 479599559
-      Grass hill tiles v.2_1: 1318532705
-      Grass hill tiles v.2_2: 366963758
-      Grass hill tiles v.2_36: 1472014283
-      Grass hill tiles v.2_25: -957637864
-      Grass hill tiles v.2_52: -215607688
-      Grass hill tiles v.2_37: 194192945
-      Grass hill tiles v.2_39: -1947634044
-      Grass hill tiles v.2_33: -1079016900
-      Grass hill tiles v.2_23: 952861360
-      Grass hill tiles v.2_48: 102089458
       Grass hill tiles v.2_0: 1030330234
-      Grass hill tiles v.2_30: 1704666528
-      Grass hill tiles v.2_12: 1056382832
-      Grass hill tiles v.2_28: -1139850720
-      Grass hill tiles v.2_18: -1378666648
-      Grass hill tiles v.2_17: 272967116
+      Grass hill tiles v.2_1: 1318532705
       Grass hill tiles v.2_10: -866936581
-      Grass hill tiles v.2_22: -57284655
-      Grass hill tiles v.2_34: -1078091365
-      Grass hill tiles v.2_50: -879318507
-      Grass hill tiles v.2_4: -776074903
-      Grass hill tiles v.2_38: 1888178174
-      Grass hill tiles v.2_57: 1012778401
-      Grass hill tiles v.2_19: 1073525383
-      Grass hill tiles v.2_5: -1556718870
-      Grass hill tiles v.2_8: -498203477
-      Grass hill tiles v.2_46: 50140371
-      Grass hill tiles v.2_56: -119568220
-      Grass hill tiles v.2_44: 2057830147
-      Grass hill tiles v.2_54: -610853701
-      Grass hill tiles v.2_41: -28469996
-      Grass hill tiles v.2_31: 1118685
-      Grass hill tiles v.2_24: -194137508
-      Grass hill tiles v.2_27: -152742820
-      Grass hill tiles v.2_21: 1187567564
       Grass hill tiles v.2_11: -561574946
+      Grass hill tiles v.2_12: 1056382832
+      Grass hill tiles v.2_13: -592757389
+      Grass hill tiles v.2_14: 479599559
+      Grass hill tiles v.2_15: -1888795326
+      Grass hill tiles v.2_16: -1515654215
+      Grass hill tiles v.2_17: 272967116
+      Grass hill tiles v.2_18: -1378666648
+      Grass hill tiles v.2_19: 1073525383
+      Grass hill tiles v.2_2: 366963758
+      Grass hill tiles v.2_20: 533393452
+      Grass hill tiles v.2_21: 1187567564
+      Grass hill tiles v.2_22: -57284655
+      Grass hill tiles v.2_23: 952861360
+      Grass hill tiles v.2_24: -194137508
+      Grass hill tiles v.2_25: -957637864
+      Grass hill tiles v.2_26: -1606168775
+      Grass hill tiles v.2_27: -152742820
+      Grass hill tiles v.2_28: -1139850720
       Grass hill tiles v.2_29: -2130343178
-      Grass hill tiles v.2_45: -1257927166
       Grass hill tiles v.2_3: -926246367
+      Grass hill tiles v.2_30: 1704666528
+      Grass hill tiles v.2_31: 1118685
+      Grass hill tiles v.2_32: -1052621789
+      Grass hill tiles v.2_33: -1079016900
+      Grass hill tiles v.2_34: -1078091365
+      Grass hill tiles v.2_35: 844033926
+      Grass hill tiles v.2_36: 1472014283
+      Grass hill tiles v.2_37: 194192945
+      Grass hill tiles v.2_38: 1888178174
+      Grass hill tiles v.2_39: -1947634044
+      Grass hill tiles v.2_4: -776074903
+      Grass hill tiles v.2_40: -1905119143
+      Grass hill tiles v.2_41: -28469996
+      Grass hill tiles v.2_42: 641981558
+      Grass hill tiles v.2_43: -1350877848
+      Grass hill tiles v.2_44: 2057830147
+      Grass hill tiles v.2_45: -1257927166
+      Grass hill tiles v.2_46: 50140371
+      Grass hill tiles v.2_47: -1943158581
+      Grass hill tiles v.2_48: 102089458
+      Grass hill tiles v.2_49: -1264782333
+      Grass hill tiles v.2_5: -1556718870
+      Grass hill tiles v.2_50: -879318507
+      Grass hill tiles v.2_51: 1442289930
+      Grass hill tiles v.2_52: -215607688
+      Grass hill tiles v.2_53: -1659929644
+      Grass hill tiles v.2_54: -610853701
+      Grass hill tiles v.2_55: 651213482
+      Grass hill tiles v.2_56: -119568220
+      Grass hill tiles v.2_57: 1012778401
+      Grass hill tiles v.2_58: -938716530
+      Grass hill tiles v.2_6: -818171253
+      Grass hill tiles v.2_7: -616942956
+      Grass hill tiles v.2_8: -498203477
+      Grass hill tiles v.2_9: -310393233
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

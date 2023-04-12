@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1354,65 +1378,65 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass tile layers 2_51: 137101701
-      Grass tile layers 2_34: -311739018
+      Grass tile layers 2_0: -1396093233
       Grass tile layers 2_1: 1400749874
-      Grass tile layers 2_5: 1862790360
+      Grass tile layers 2_10: -209200110
       Grass tile layers 2_11: -1245043051
-      Grass tile layers 2_57: -767521261
-      Grass tile layers 2_33: -1140411974
-      Grass tile layers 2_50: 1336354367
-      Grass tile layers 2_39: 1545250509
+      Grass tile layers 2_12: -218501586
+      Grass tile layers 2_13: 1673655316
+      Grass tile layers 2_14: -666475505
+      Grass tile layers 2_15: -961110482
+      Grass tile layers 2_16: -1561788270
+      Grass tile layers 2_17: -530624680
+      Grass tile layers 2_18: -29974917
+      Grass tile layers 2_19: -1692354988
+      Grass tile layers 2_2: 1874231265
+      Grass tile layers 2_20: -1109232486
+      Grass tile layers 2_21: -1453222258
+      Grass tile layers 2_22: 749252495
+      Grass tile layers 2_23: 1183910634
+      Grass tile layers 2_24: -1492371826
       Grass tile layers 2_25: -900113140
       Grass tile layers 2_26: -164579988
       Grass tile layers 2_27: 417191844
-      Grass tile layers 2_42: 699404507
-      Grass tile layers 2_41: 1369355729
-      Grass tile layers 2_6: 436311997
-      Grass tile layers 2_38: -103878832
-      Grass tile layers 2_4: 575945220
-      Grass tile layers 2_49: 203495372
-      Grass tile layers 2_2: 1874231265
-      Grass tile layers 2_10: -209200110
-      Grass tile layers 2_45: 859295607
-      Grass tile layers 2_9: -1537399406
-      Grass tile layers 2_53: -773187685
-      Grass tile layers 2_44: 1824258199
-      Grass tile layers 2_56: 2147323566
-      Grass tile layers 2_36: -639643302
-      Grass tile layers 2_23: 1183910634
-      Grass tile layers 2_52: -1964827054
-      Grass tile layers 2_19: -1692354988
-      Grass tile layers 2_54: -597308738
-      Grass tile layers 2_46: 1099672548
-      Grass tile layers 2_32: 857291636
-      Grass tile layers 2_21: -1453222258
-      Grass tile layers 2_3: -523789230
-      Grass tile layers 2_47: -1546539223
-      Grass tile layers 2_31: -1750105098
-      Grass tile layers 2_58: 1862207894
-      Grass tile layers 2_16: -1561788270
       Grass tile layers 2_28: 1673955630
-      Grass tile layers 2_48: -2129721497
-      Grass tile layers 2_18: -29974917
       Grass tile layers 2_29: 1435736480
-      Grass tile layers 2_8: 1740725140
-      Grass tile layers 2_22: 749252495
-      Grass tile layers 2_0: -1396093233
-      Grass tile layers 2_40: -573576099
-      Grass tile layers 2_14: -666475505
-      Grass tile layers 2_43: -1440810877
-      Grass tile layers 2_37: 87773527
-      Grass tile layers 2_24: -1492371826
-      Grass tile layers 2_17: -530624680
-      Grass tile layers 2_7: -1371500939
-      Grass tile layers 2_35: -325379107
-      Grass tile layers 2_20: -1109232486
-      Grass tile layers 2_13: 1673655316
-      Grass tile layers 2_55: 137124277
+      Grass tile layers 2_3: -523789230
       Grass tile layers 2_30: 1986544559
-      Grass tile layers 2_15: -961110482
-      Grass tile layers 2_12: -218501586
+      Grass tile layers 2_31: -1750105098
+      Grass tile layers 2_32: 857291636
+      Grass tile layers 2_33: -1140411974
+      Grass tile layers 2_34: -311739018
+      Grass tile layers 2_35: -325379107
+      Grass tile layers 2_36: -639643302
+      Grass tile layers 2_37: 87773527
+      Grass tile layers 2_38: -103878832
+      Grass tile layers 2_39: 1545250509
+      Grass tile layers 2_4: 575945220
+      Grass tile layers 2_40: -573576099
+      Grass tile layers 2_41: 1369355729
+      Grass tile layers 2_42: 699404507
+      Grass tile layers 2_43: -1440810877
+      Grass tile layers 2_44: 1824258199
+      Grass tile layers 2_45: 859295607
+      Grass tile layers 2_46: 1099672548
+      Grass tile layers 2_47: -1546539223
+      Grass tile layers 2_48: -2129721497
+      Grass tile layers 2_49: 203495372
+      Grass tile layers 2_5: 1862790360
+      Grass tile layers 2_50: 1336354367
+      Grass tile layers 2_51: 137101701
+      Grass tile layers 2_52: -1964827054
+      Grass tile layers 2_53: -773187685
+      Grass tile layers 2_54: -597308738
+      Grass tile layers 2_55: 137124277
+      Grass tile layers 2_56: 2147323566
+      Grass tile layers 2_57: -767521261
+      Grass tile layers 2_58: 1862207894
+      Grass tile layers 2_6: 436311997
+      Grass tile layers 2_7: -1371500939
+      Grass tile layers 2_8: 1740725140
+      Grass tile layers 2_9: -1537399406
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1438,69 +1462,69 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Darker Grass tiles with animates water_13: -481996547
-      Darker Grass tiles with animates water_31: 1526171855
-      Darker Grass tiles with animates water_25: -1692707486
-      Darker Grass tiles with animates water_46: 1707083278
-      Darker Grass tiles with animates water_33: -1621252927
-      Darker Grass tiles with animates water_55: 804574282
-      Darker Grass tiles with animates water_48: 878297508
-      Darker Grass tiles with animates water_14: 1403919874
-      Darker Grass tiles with animates water_7: 336869290
-      Darker Grass tiles with animates water_16: -1353229579
-      Darker Grass tiles with animates water_58: -1762370592
-      Darker Grass tiles with animates water_5: -162440724
-      Darker Grass tiles with animates water_23: 572794654
-      Darker Grass tiles with animates water_32: -1299997295
-      Darker Grass tiles with animates water_26: 1986419935
-      Darker Grass tiles with animates water_47: -681222073
-      Darker Grass tiles with animates water_28: -1609545793
-      Darker Grass tiles with animates water_62: 1962417325
-      Darker Grass tiles with animates water_6: -721194523
-      Darker Grass tiles with animates water_56: -1742330899
-      Darker Grass tiles with animates water_36: 161686345
-      Darker Grass tiles with animates water_20: 1281103781
-      Darker Grass tiles with animates water_61: -420542180
-      Darker Grass tiles with animates water_44: 507260107
-      Darker Grass tiles with animates water_49: 897620381
-      Darker Grass tiles with animates water_4: -1637073027
-      Darker Grass tiles with animates water_60: -1320446773
-      Darker Grass tiles with animates water_19: -749204408
-      Darker Grass tiles with animates water_1: 1089182421
-      Darker Grass tiles with animates water_45: 1991041759
-      Darker Grass tiles with animates water_18: 1268825875
-      Darker Grass tiles with animates water_10: 862840207
-      Darker Grass tiles with animates water_8: -1676264057
-      Darker Grass tiles with animates water_43: -355468131
-      Darker Grass tiles with animates water_42: -1625755889
-      Darker Grass tiles with animates water_15: -1070904232
-      Darker Grass tiles with animates water_11: 243075708
-      Darker Grass tiles with animates water_21: 1780123061
-      Darker Grass tiles with animates water_30: 970759419
-      Darker Grass tiles with animates water_51: -814031558
-      Darker Grass tiles with animates water_38: -1793835583
-      Darker Grass tiles with animates water_59: -394837061
-      Darker Grass tiles with animates water_37: -1414404553
-      Darker Grass tiles with animates water_53: 957581340
-      Darker Grass tiles with animates water_2: -574905999
-      Darker Grass tiles with animates water_57: -1503642489
-      Darker Grass tiles with animates water_54: -1313900157
-      Darker Grass tiles with animates water_12: 2146972558
-      Darker Grass tiles with animates water_39: 178687770
-      Darker Grass tiles with animates water_35: 1006354118
-      Darker Grass tiles with animates water_22: 1233513227
-      Darker Grass tiles with animates water_50: 1307946537
       Darker Grass tiles with animates water_0: -118530243
-      Darker Grass tiles with animates water_27: -926552132
-      Darker Grass tiles with animates water_52: 856225869
-      Darker Grass tiles with animates water_3: 1488908645
-      Darker Grass tiles with animates water_34: 61749178
-      Darker Grass tiles with animates water_40: 1029626534
-      Darker Grass tiles with animates water_24: 1633713883
-      Darker Grass tiles with animates water_29: -108227166
-      Darker Grass tiles with animates water_41: 1305363477
-      Darker Grass tiles with animates water_9: -678698359
+      Darker Grass tiles with animates water_1: 1089182421
+      Darker Grass tiles with animates water_10: 862840207
+      Darker Grass tiles with animates water_11: 243075708
+      Darker Grass tiles with animates water_12: 2146972558
+      Darker Grass tiles with animates water_13: -481996547
+      Darker Grass tiles with animates water_14: 1403919874
+      Darker Grass tiles with animates water_15: -1070904232
+      Darker Grass tiles with animates water_16: -1353229579
       Darker Grass tiles with animates water_17: 890904705
+      Darker Grass tiles with animates water_18: 1268825875
+      Darker Grass tiles with animates water_19: -749204408
+      Darker Grass tiles with animates water_2: -574905999
+      Darker Grass tiles with animates water_20: 1281103781
+      Darker Grass tiles with animates water_21: 1780123061
+      Darker Grass tiles with animates water_22: 1233513227
+      Darker Grass tiles with animates water_23: 572794654
+      Darker Grass tiles with animates water_24: 1633713883
+      Darker Grass tiles with animates water_25: -1692707486
+      Darker Grass tiles with animates water_26: 1986419935
+      Darker Grass tiles with animates water_27: -926552132
+      Darker Grass tiles with animates water_28: -1609545793
+      Darker Grass tiles with animates water_29: -108227166
+      Darker Grass tiles with animates water_3: 1488908645
+      Darker Grass tiles with animates water_30: 970759419
+      Darker Grass tiles with animates water_31: 1526171855
+      Darker Grass tiles with animates water_32: -1299997295
+      Darker Grass tiles with animates water_33: -1621252927
+      Darker Grass tiles with animates water_34: 61749178
+      Darker Grass tiles with animates water_35: 1006354118
+      Darker Grass tiles with animates water_36: 161686345
+      Darker Grass tiles with animates water_37: -1414404553
+      Darker Grass tiles with animates water_38: -1793835583
+      Darker Grass tiles with animates water_39: 178687770
+      Darker Grass tiles with animates water_4: -1637073027
+      Darker Grass tiles with animates water_40: 1029626534
+      Darker Grass tiles with animates water_41: 1305363477
+      Darker Grass tiles with animates water_42: -1625755889
+      Darker Grass tiles with animates water_43: -355468131
+      Darker Grass tiles with animates water_44: 507260107
+      Darker Grass tiles with animates water_45: 1991041759
+      Darker Grass tiles with animates water_46: 1707083278
+      Darker Grass tiles with animates water_47: -681222073
+      Darker Grass tiles with animates water_48: 878297508
+      Darker Grass tiles with animates water_49: 897620381
+      Darker Grass tiles with animates water_5: -162440724
+      Darker Grass tiles with animates water_50: 1307946537
+      Darker Grass tiles with animates water_51: -814031558
+      Darker Grass tiles with animates water_52: 856225869
+      Darker Grass tiles with animates water_53: 957581340
+      Darker Grass tiles with animates water_54: -1313900157
+      Darker Grass tiles with animates water_55: 804574282
+      Darker Grass tiles with animates water_56: -1742330899
+      Darker Grass tiles with animates water_57: -1503642489
+      Darker Grass tiles with animates water_58: -1762370592
+      Darker Grass tiles with animates water_59: -394837061
+      Darker Grass tiles with animates water_6: -721194523
+      Darker Grass tiles with animates water_60: -1320446773
+      Darker Grass tiles with animates water_61: -420542180
+      Darker Grass tiles with animates water_62: 1962417325
+      Darker Grass tiles with animates water_7: 336869290
+      Darker Grass tiles with animates water_8: -1676264057
+      Darker Grass tiles with animates water_9: -678698359
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1417,68 +1441,68 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tilled Dirt_5: 642747962
-      Tilled Dirt_45: 930155060
-      Tilled Dirt_10: 750340314
-      Tilled Dirt_31: -1253452202
-      Tilled Dirt_22: -1970412859
-      Tilled Dirt_56: 894665861
-      Tilled Dirt_52: 322107860
-      Tilled Dirt_3: -414624278
-      Tilled Dirt_59: -218248405
-      Tilled Dirt_34: 1931338295
-      Tilled Dirt_27: 1590369114
-      Tilled Dirt_60: -1676750059
-      Tilled Dirt_23: 514492131
       Tilled Dirt_0: 1549480821
-      Tilled Dirt_4: 15538145
-      Tilled Dirt_13: -286009668
-      Tilled Dirt_58: 645448321
-      Tilled Dirt_11: 1407268847
-      Tilled Dirt_39: -549545061
-      Tilled Dirt_36: -540392269
-      Tilled Dirt_49: -1921672443
       Tilled Dirt_1: 897733700
-      Tilled Dirt_9: 518978452
-      Tilled Dirt_42: 1688271193
-      Tilled Dirt_30: -78396328
-      Tilled Dirt_47: -27744375
-      Tilled Dirt_14: 1657754652
-      Tilled Dirt_53: 1216966653
-      Tilled Dirt_41: -1928953914
-      Tilled Dirt_35: -937344606
-      Tilled Dirt_48: -1116481073
-      Tilled Dirt_33: 696161846
-      Tilled Dirt_54: -1316316850
-      Tilled Dirt_37: -592510131
-      Tilled Dirt_57: -1579845406
+      Tilled Dirt_10: 750340314
+      Tilled Dirt_11: 1407268847
       Tilled Dirt_12: -1733540243
-      Tilled Dirt_32: 2012960563
-      Tilled Dirt_18: -759756274
-      Tilled Dirt_8: -193887927
-      Tilled Dirt_43: 260616686
-      Tilled Dirt_51: 1667464582
-      Tilled Dirt_6: 429897500
-      Tilled Dirt_7: -572615028
-      Tilled Dirt_61: -1236569186
-      Tilled Dirt_19: -1024117799
-      Tilled Dirt_20: 1410206783
-      Tilled Dirt_55: 593929598
-      Tilled Dirt_28: 800866011
-      Tilled Dirt_26: -1481746842
-      Tilled Dirt_17: 860472498
-      Tilled Dirt_25: -952096266
-      Tilled Dirt_38: -798044397
-      Tilled Dirt_46: 1515046493
-      Tilled Dirt_2: 1099999819
-      Tilled Dirt_21: 1492075786
-      Tilled Dirt_16: -1529842049
-      Tilled Dirt_40: -243900219
-      Tilled Dirt_29: 757518677
-      Tilled Dirt_50: -1437222199
+      Tilled Dirt_13: -286009668
+      Tilled Dirt_14: 1657754652
       Tilled Dirt_15: 2112643624
+      Tilled Dirt_16: -1529842049
+      Tilled Dirt_17: 860472498
+      Tilled Dirt_18: -759756274
+      Tilled Dirt_19: -1024117799
+      Tilled Dirt_2: 1099999819
+      Tilled Dirt_20: 1410206783
+      Tilled Dirt_21: 1492075786
+      Tilled Dirt_22: -1970412859
+      Tilled Dirt_23: 514492131
       Tilled Dirt_24: 558116689
+      Tilled Dirt_25: -952096266
+      Tilled Dirt_26: -1481746842
+      Tilled Dirt_27: 1590369114
+      Tilled Dirt_28: 800866011
+      Tilled Dirt_29: 757518677
+      Tilled Dirt_3: -414624278
+      Tilled Dirt_30: -78396328
+      Tilled Dirt_31: -1253452202
+      Tilled Dirt_32: 2012960563
+      Tilled Dirt_33: 696161846
+      Tilled Dirt_34: 1931338295
+      Tilled Dirt_35: -937344606
+      Tilled Dirt_36: -540392269
+      Tilled Dirt_37: -592510131
+      Tilled Dirt_38: -798044397
+      Tilled Dirt_39: -549545061
+      Tilled Dirt_4: 15538145
+      Tilled Dirt_40: -243900219
+      Tilled Dirt_41: -1928953914
+      Tilled Dirt_42: 1688271193
+      Tilled Dirt_43: 260616686
       Tilled Dirt_44: 1891473812
+      Tilled Dirt_45: 930155060
+      Tilled Dirt_46: 1515046493
+      Tilled Dirt_47: -27744375
+      Tilled Dirt_48: -1116481073
+      Tilled Dirt_49: -1921672443
+      Tilled Dirt_5: 642747962
+      Tilled Dirt_50: -1437222199
+      Tilled Dirt_51: 1667464582
+      Tilled Dirt_52: 322107860
+      Tilled Dirt_53: 1216966653
+      Tilled Dirt_54: -1316316850
+      Tilled Dirt_55: 593929598
+      Tilled Dirt_56: 894665861
+      Tilled Dirt_57: -1579845406
+      Tilled Dirt_58: 645448321
+      Tilled Dirt_59: -218248405
+      Tilled Dirt_6: 429897500
+      Tilled Dirt_60: -1676750059
+      Tilled Dirt_61: -1236569186
+      Tilled Dirt_7: -572615028
+      Tilled Dirt_8: -193887927
+      Tilled Dirt_9: 518978452
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

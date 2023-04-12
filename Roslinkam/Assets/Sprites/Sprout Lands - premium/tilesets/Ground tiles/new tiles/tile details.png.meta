@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1669,80 +1693,80 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tile details_13: 935680964
-      tile details_73: -1311719539
-      tile details_64: -274058519
-      tile details_26: 1699059735
-      tile details_14: 1930446295
-      tile details_5: 863423286
-      tile details_54: 73969831
+      tile details_0: -2038368280
+      tile details_1: 291569401
+      tile details_10: 326007168
+      tile details_11: 832175520
       tile details_12: 1426632875
-      tile details_47: 679022182
-      tile details_38: 665975672
-      tile details_58: 1929224455
+      tile details_13: 935680964
+      tile details_14: 1930446295
+      tile details_15: -1056285284
+      tile details_16: -839038744
+      tile details_17: 687827980
+      tile details_18: 78479605
+      tile details_19: -357257561
+      tile details_2: 2051291702
+      tile details_20: -712963148
+      tile details_21: 1848933115
+      tile details_22: -776518520
+      tile details_23: -481006996
+      tile details_24: -1510766493
+      tile details_25: 328877906
+      tile details_26: 1699059735
+      tile details_27: -100328330
+      tile details_28: -678110037
+      tile details_29: -879334838
       tile details_3: 606749463
-      tile details_34: 502887392
-      tile details_36: -1515885733
-      tile details_53: 113716583
-      tile details_40: 1851117125
-      tile details_4: 31623039
-      tile details_37: -464983707
-      tile details_48: -282793721
-      tile details_46: 1258650719
-      tile details_62: 125998394
+      tile details_30: 148909281
       tile details_31: 269554805
-      tile details_66: -1483187780
+      tile details_32: -842906779
+      tile details_33: 2041758785
+      tile details_34: 502887392
+      tile details_35: -1214593702
+      tile details_36: -1515885733
+      tile details_37: -464983707
+      tile details_38: 665975672
+      tile details_39: 1070997791
+      tile details_4: 31623039
+      tile details_40: 1851117125
+      tile details_41: -1911552175
       tile details_42: -426605055
       tile details_43: -1411494283
-      tile details_11: 832175520
-      tile details_28: -678110037
-      tile details_1: 291569401
-      tile details_41: -1911552175
-      tile details_32: -842906779
-      tile details_15: -1056285284
+      tile details_44: -644334427
       tile details_45: 1181097013
-      tile details_33: 2041758785
-      tile details_56: 1940863696
-      tile details_22: -776518520
-      tile details_8: 1234433578
-      tile details_20: -712963148
-      tile details_59: 1825513465
-      tile details_71: -1357874537
-      tile details_50: -2069006794
-      tile details_67: -869991772
-      tile details_7: -1679288183
-      tile details_63: -1956717195
-      tile details_29: -879334838
-      tile details_0: -2038368280
-      tile details_21: 1848933115
+      tile details_46: 1258650719
+      tile details_47: 679022182
+      tile details_48: -282793721
       tile details_49: 1144828838
+      tile details_5: 863423286
+      tile details_50: -2069006794
+      tile details_51: 971315725
+      tile details_52: -750840306
+      tile details_53: 113716583
+      tile details_54: 73969831
+      tile details_55: 616890060
+      tile details_56: 1940863696
+      tile details_57: -1347025078
+      tile details_58: 1929224455
+      tile details_59: 1825513465
+      tile details_6: 1168309221
+      tile details_60: 160426360
+      tile details_61: -2128673334
+      tile details_62: 125998394
+      tile details_63: -1956717195
+      tile details_64: -274058519
+      tile details_65: -139851833
+      tile details_66: -1483187780
+      tile details_67: -869991772
       tile details_68: 1704299678
       tile details_69: -1821064545
-      tile details_17: 687827980
-      tile details_61: -2128673334
-      tile details_57: -1347025078
-      tile details_2: 2051291702
-      tile details_39: 1070997791
-      tile details_18: 78479605
-      tile details_44: -644334427
-      tile details_30: 148909281
-      tile details_52: -750840306
-      tile details_19: -357257561
-      tile details_10: 326007168
-      tile details_35: -1214593702
-      tile details_55: 616890060
-      tile details_23: -481006996
-      tile details_65: -139851833
-      tile details_9: -166129947
-      tile details_16: -839038744
-      tile details_24: -1510766493
-      tile details_51: 971315725
-      tile details_6: 1168309221
-      tile details_27: -100328330
-      tile details_25: 328877906
+      tile details_7: -1679288183
       tile details_70: -1622811900
+      tile details_71: -1357874537
       tile details_72: -1734729214
-      tile details_60: 160426360
+      tile details_73: -1311719539
+      tile details_8: 1234433578
+      tile details_9: -166129947
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

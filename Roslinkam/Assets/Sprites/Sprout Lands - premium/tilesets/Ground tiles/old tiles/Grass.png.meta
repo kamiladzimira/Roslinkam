@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1606,77 +1630,77 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass_62: 1659912652
-      Grass_33: 1085528660
-      Grass_5: -336998856
-      Grass_22: 193531258
-      Grass_39: -1715000293
       Grass_0: -846636214
-      Grass_20: 1759068014
-      Grass_2: 595099335
-      Grass_43: 430167309
-      Grass_49: -788967481
-      Grass_53: -1784122089
-      Grass_32: -2021452207
-      Grass_67: -1558157211
       Grass_1: -490774004
-      Grass_63: 1560654926
-      Grass_3: 1509338969
-      Grass_7: 496549279
+      Grass_10: 471574215
+      Grass_11: 52666328
+      Grass_12: -32550560
+      Grass_13: 836527916
+      Grass_14: -1701669478
+      Grass_15: -1426509613
+      Grass_16: -1545085175
+      Grass_17: 1323593580
+      Grass_18: 938395838
+      Grass_19: 635212117
+      Grass_2: 595099335
+      Grass_20: 1759068014
+      Grass_21: -306421779
+      Grass_22: 193531258
+      Grass_23: 1495801707
+      Grass_24: -1714788205
+      Grass_25: 498336011
+      Grass_26: -1122584181
+      Grass_27: -1624205289
+      Grass_28: -1353421017
       Grass_29: 2029540556
+      Grass_3: 1509338969
+      Grass_30: -2097279683
+      Grass_31: -1180599493
+      Grass_32: -2021452207
+      Grass_33: 1085528660
+      Grass_34: 1356466883
+      Grass_35: -1133916575
+      Grass_36: 1967620881
+      Grass_37: -444338951
+      Grass_38: -382749933
+      Grass_39: -1715000293
+      Grass_4: -793320590
+      Grass_40: -1762502641
+      Grass_41: -854717801
+      Grass_42: -1049548925
+      Grass_43: 430167309
+      Grass_44: 699087752
+      Grass_45: -1179585305
+      Grass_46: 1354569242
+      Grass_47: -97302868
+      Grass_48: -1245243683
+      Grass_49: -788967481
+      Grass_5: -336998856
+      Grass_50: 1534724465
+      Grass_51: 1780197034
+      Grass_52: 789220721
+      Grass_53: -1784122089
+      Grass_54: 322143602
+      Grass_55: 774986249
+      Grass_56: -1465071523
+      Grass_57: -1100264759
+      Grass_58: 1228049474
+      Grass_59: 417983167
+      Grass_6: -1344786970
       Grass_60: 1682840192
       Grass_61: 1526694926
-      Grass_11: 52666328
-      Grass_14: -1701669478
-      Grass_51: 1780197034
-      Grass_26: -1122584181
-      Grass_50: 1534724465
-      Grass_54: 322143602
-      Grass_66: 1498058381
-      Grass_15: -1426509613
-      Grass_13: 836527916
-      Grass_40: -1762502641
-      Grass_42: -1049548925
-      Grass_25: 498336011
-      Grass_30: -2097279683
+      Grass_62: 1659912652
+      Grass_63: 1560654926
       Grass_64: -1875590731
-      Grass_27: -1624205289
-      Grass_19: 635212117
-      Grass_23: 1495801707
-      Grass_8: -1729178523
-      Grass_24: -1714788205
-      Grass_52: 789220721
-      Grass_9: -145340339
-      Grass_70: 216787088
-      Grass_58: 1228049474
-      Grass_35: -1133916575
-      Grass_38: -382749933
-      Grass_21: -306421779
-      Grass_28: -1353421017
-      Grass_36: 1967620881
-      Grass_34: 1356466883
-      Grass_59: 417983167
-      Grass_45: -1179585305
-      Grass_6: -1344786970
-      Grass_69: -76930709
-      Grass_68: -1008446518
-      Grass_10: 471574215
-      Grass_12: -32550560
-      Grass_57: -1100264759
-      Grass_18: 938395838
-      Grass_48: -1245243683
-      Grass_31: -1180599493
-      Grass_41: -854717801
-      Grass_4: -793320590
       Grass_65: -246657744
-      Grass_56: -1465071523
-      Grass_44: 699087752
-      Grass_55: 774986249
-      Grass_37: -444338951
-      Grass_47: -97302868
-      Grass_17: 1323593580
-      Grass_16: -1545085175
-      Grass_46: 1354569242
+      Grass_66: 1498058381
+      Grass_67: -1558157211
+      Grass_68: -1008446518
+      Grass_69: -76930709
+      Grass_7: 496549279
+      Grass_70: 216787088
+      Grass_8: -1729178523
+      Grass_9: -145340339
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

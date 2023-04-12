@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1312,63 +1336,63 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Darker Soil ground tiles_29: -551060459
-      Darker Soil ground tiles_21: 1087312688
-      Darker Soil ground tiles_12: 621122070
-      Darker Soil ground tiles_4: -878476183
-      Darker Soil ground tiles_26: 585335592
-      Darker Soil ground tiles_30: 907360099
-      Darker Soil ground tiles_53: 1010131786
-      Darker Soil ground tiles_25: -1442721761
       Darker Soil ground tiles_0: -2129057060
-      Darker Soil ground tiles_6: -1455834257
-      Darker Soil ground tiles_2: -999433735
-      Darker Soil ground tiles_7: 1475405017
-      Darker Soil ground tiles_44: 434161879
-      Darker Soil ground tiles_22: -1834736936
-      Darker Soil ground tiles_35: -35995986
-      Darker Soil ground tiles_39: 1639601583
-      Darker Soil ground tiles_46: -1204075367
-      Darker Soil ground tiles_43: -994672764
-      Darker Soil ground tiles_28: 697597215
-      Darker Soil ground tiles_50: 904012360
-      Darker Soil ground tiles_41: -51224251
-      Darker Soil ground tiles_55: 965066634
-      Darker Soil ground tiles_15: -1774897320
-      Darker Soil ground tiles_11: 1505594104
-      Darker Soil ground tiles_31: -1884161573
-      Darker Soil ground tiles_9: -1217684139
-      Darker Soil ground tiles_49: 1963542982
-      Darker Soil ground tiles_40: 1855683948
-      Darker Soil ground tiles_18: -654610638
-      Darker Soil ground tiles_56: -1752717875
-      Darker Soil ground tiles_23: -316795448
-      Darker Soil ground tiles_5: 1156264911
-      Darker Soil ground tiles_37: -142994822
-      Darker Soil ground tiles_3: -1070681054
-      Darker Soil ground tiles_14: -1723885346
-      Darker Soil ground tiles_34: -1373285744
-      Darker Soil ground tiles_27: 415933825
-      Darker Soil ground tiles_20: 803882626
       Darker Soil ground tiles_1: 1264120760
-      Darker Soil ground tiles_33: -416522670
-      Darker Soil ground tiles_32: -946862059
-      Darker Soil ground tiles_36: 296783753
-      Darker Soil ground tiles_52: 1086233737
-      Darker Soil ground tiles_19: -310663917
-      Darker Soil ground tiles_24: -1308812297
-      Darker Soil ground tiles_45: -173991044
-      Darker Soil ground tiles_54: 1625004040
-      Darker Soil ground tiles_16: -855464704
-      Darker Soil ground tiles_47: -1014244157
-      Darker Soil ground tiles_8: -921695438
-      Darker Soil ground tiles_17: -1266579643
       Darker Soil ground tiles_10: 1451308133
-      Darker Soil ground tiles_38: -1434483832
-      Darker Soil ground tiles_48: 1226940559
+      Darker Soil ground tiles_11: 1505594104
+      Darker Soil ground tiles_12: 621122070
       Darker Soil ground tiles_13: -1749489725
+      Darker Soil ground tiles_14: -1723885346
+      Darker Soil ground tiles_15: -1774897320
+      Darker Soil ground tiles_16: -855464704
+      Darker Soil ground tiles_17: -1266579643
+      Darker Soil ground tiles_18: -654610638
+      Darker Soil ground tiles_19: -310663917
+      Darker Soil ground tiles_2: -999433735
+      Darker Soil ground tiles_20: 803882626
+      Darker Soil ground tiles_21: 1087312688
+      Darker Soil ground tiles_22: -1834736936
+      Darker Soil ground tiles_23: -316795448
+      Darker Soil ground tiles_24: -1308812297
+      Darker Soil ground tiles_25: -1442721761
+      Darker Soil ground tiles_26: 585335592
+      Darker Soil ground tiles_27: 415933825
+      Darker Soil ground tiles_28: 697597215
+      Darker Soil ground tiles_29: -551060459
+      Darker Soil ground tiles_3: -1070681054
+      Darker Soil ground tiles_30: 907360099
+      Darker Soil ground tiles_31: -1884161573
+      Darker Soil ground tiles_32: -946862059
+      Darker Soil ground tiles_33: -416522670
+      Darker Soil ground tiles_34: -1373285744
+      Darker Soil ground tiles_35: -35995986
+      Darker Soil ground tiles_36: 296783753
+      Darker Soil ground tiles_37: -142994822
+      Darker Soil ground tiles_38: -1434483832
+      Darker Soil ground tiles_39: 1639601583
+      Darker Soil ground tiles_4: -878476183
+      Darker Soil ground tiles_40: 1855683948
+      Darker Soil ground tiles_41: -51224251
       Darker Soil ground tiles_42: 1196372843
+      Darker Soil ground tiles_43: -994672764
+      Darker Soil ground tiles_44: 434161879
+      Darker Soil ground tiles_45: -173991044
+      Darker Soil ground tiles_46: -1204075367
+      Darker Soil ground tiles_47: -1014244157
+      Darker Soil ground tiles_48: 1226940559
+      Darker Soil ground tiles_49: 1963542982
+      Darker Soil ground tiles_5: 1156264911
+      Darker Soil ground tiles_50: 904012360
       Darker Soil ground tiles_51: -348702410
+      Darker Soil ground tiles_52: 1086233737
+      Darker Soil ground tiles_53: 1010131786
+      Darker Soil ground tiles_54: 1625004040
+      Darker Soil ground tiles_55: 965066634
+      Darker Soil ground tiles_56: -1752717875
+      Darker Soil ground tiles_6: -1455834257
+      Darker Soil ground tiles_7: 1475405017
+      Darker Soil ground tiles_8: -921695438
+      Darker Soil ground tiles_9: -1217684139
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

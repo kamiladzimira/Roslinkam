@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1438,69 +1462,69 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grass tiles with animates water-export_56: 559379763
+      Grass tiles with animates water-export_0: 1721465902
+      Grass tiles with animates water-export_1: 670031326
+      Grass tiles with animates water-export_10: -2016389010
+      Grass tiles with animates water-export_11: -1088038996
+      Grass tiles with animates water-export_12: -246001651
+      Grass tiles with animates water-export_13: 1897743330
+      Grass tiles with animates water-export_14: -585783749
+      Grass tiles with animates water-export_15: -1188017149
+      Grass tiles with animates water-export_16: 1876820574
+      Grass tiles with animates water-export_17: 1502450149
+      Grass tiles with animates water-export_18: 121390622
+      Grass tiles with animates water-export_19: -1812218620
+      Grass tiles with animates water-export_2: -1294119802
+      Grass tiles with animates water-export_20: 1055710205
+      Grass tiles with animates water-export_21: -1020645377
+      Grass tiles with animates water-export_22: -436529759
+      Grass tiles with animates water-export_23: -1076046293
+      Grass tiles with animates water-export_24: -801129870
+      Grass tiles with animates water-export_25: 1102788854
+      Grass tiles with animates water-export_26: 813804183
+      Grass tiles with animates water-export_27: -2119830142
+      Grass tiles with animates water-export_28: 422587475
+      Grass tiles with animates water-export_29: 572337722
+      Grass tiles with animates water-export_3: -1717996097
+      Grass tiles with animates water-export_30: 1179078635
+      Grass tiles with animates water-export_31: 1582429484
+      Grass tiles with animates water-export_32: -394393804
+      Grass tiles with animates water-export_33: 234296082
+      Grass tiles with animates water-export_34: 1968543553
+      Grass tiles with animates water-export_35: -1462894325
+      Grass tiles with animates water-export_36: 765637676
+      Grass tiles with animates water-export_37: -1520223588
+      Grass tiles with animates water-export_38: -1128007096
+      Grass tiles with animates water-export_39: -1527613136
+      Grass tiles with animates water-export_4: -658960667
+      Grass tiles with animates water-export_40: 1746463774
+      Grass tiles with animates water-export_41: 983436975
+      Grass tiles with animates water-export_42: 1809009605
+      Grass tiles with animates water-export_43: -462390379
+      Grass tiles with animates water-export_44: -1270066941
+      Grass tiles with animates water-export_45: 194681931
       Grass tiles with animates water-export_46: 142119421
+      Grass tiles with animates water-export_47: 10774533
+      Grass tiles with animates water-export_48: -294690612
+      Grass tiles with animates water-export_49: -2043199196
+      Grass tiles with animates water-export_5: -747624385
+      Grass tiles with animates water-export_50: -2057550338
+      Grass tiles with animates water-export_51: 613971010
+      Grass tiles with animates water-export_52: 862611842
+      Grass tiles with animates water-export_53: -1462866240
+      Grass tiles with animates water-export_54: 1123608301
+      Grass tiles with animates water-export_55: 1522804420
+      Grass tiles with animates water-export_56: 559379763
+      Grass tiles with animates water-export_57: 1769594677
+      Grass tiles with animates water-export_58: -457985800
+      Grass tiles with animates water-export_59: -1729481334
+      Grass tiles with animates water-export_6: 378682188
+      Grass tiles with animates water-export_60: -104368657
+      Grass tiles with animates water-export_61: -528653110
+      Grass tiles with animates water-export_62: 785521388
       Grass tiles with animates water-export_7: 667628170
       Grass tiles with animates water-export_8: -1834459613
       Grass tiles with animates water-export_9: -729261525
-      Grass tiles with animates water-export_23: -1076046293
-      Grass tiles with animates water-export_62: 785521388
-      Grass tiles with animates water-export_6: 378682188
-      Grass tiles with animates water-export_22: -436529759
-      Grass tiles with animates water-export_16: 1876820574
-      Grass tiles with animates water-export_61: -528653110
-      Grass tiles with animates water-export_60: -104368657
-      Grass tiles with animates water-export_0: 1721465902
-      Grass tiles with animates water-export_20: 1055710205
-      Grass tiles with animates water-export_36: 765637676
-      Grass tiles with animates water-export_43: -462390379
-      Grass tiles with animates water-export_3: -1717996097
-      Grass tiles with animates water-export_5: -747624385
-      Grass tiles with animates water-export_12: -246001651
-      Grass tiles with animates water-export_15: -1188017149
-      Grass tiles with animates water-export_32: -394393804
-      Grass tiles with animates water-export_58: -457985800
-      Grass tiles with animates water-export_49: -2043199196
-      Grass tiles with animates water-export_18: 121390622
-      Grass tiles with animates water-export_50: -2057550338
-      Grass tiles with animates water-export_51: 613971010
-      Grass tiles with animates water-export_48: -294690612
-      Grass tiles with animates water-export_45: 194681931
-      Grass tiles with animates water-export_26: 813804183
-      Grass tiles with animates water-export_57: 1769594677
-      Grass tiles with animates water-export_17: 1502450149
-      Grass tiles with animates water-export_4: -658960667
-      Grass tiles with animates water-export_44: -1270066941
-      Grass tiles with animates water-export_30: 1179078635
-      Grass tiles with animates water-export_19: -1812218620
-      Grass tiles with animates water-export_47: 10774533
-      Grass tiles with animates water-export_35: -1462894325
-      Grass tiles with animates water-export_33: 234296082
-      Grass tiles with animates water-export_28: 422587475
-      Grass tiles with animates water-export_21: -1020645377
-      Grass tiles with animates water-export_10: -2016389010
-      Grass tiles with animates water-export_1: 670031326
-      Grass tiles with animates water-export_29: 572337722
-      Grass tiles with animates water-export_13: 1897743330
-      Grass tiles with animates water-export_37: -1520223588
-      Grass tiles with animates water-export_27: -2119830142
-      Grass tiles with animates water-export_55: 1522804420
-      Grass tiles with animates water-export_42: 1809009605
-      Grass tiles with animates water-export_2: -1294119802
-      Grass tiles with animates water-export_54: 1123608301
-      Grass tiles with animates water-export_53: -1462866240
-      Grass tiles with animates water-export_41: 983436975
-      Grass tiles with animates water-export_59: -1729481334
-      Grass tiles with animates water-export_52: 862611842
-      Grass tiles with animates water-export_31: 1582429484
-      Grass tiles with animates water-export_11: -1088038996
-      Grass tiles with animates water-export_25: 1102788854
-      Grass tiles with animates water-export_38: -1128007096
-      Grass tiles with animates water-export_39: -1527613136
-      Grass tiles with animates water-export_14: -585783749
-      Grass tiles with animates water-export_24: -801129870
-      Grass tiles with animates water-export_34: 1968543553
-      Grass tiles with animates water-export_40: 1746463774
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

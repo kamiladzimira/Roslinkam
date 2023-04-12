@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2404,115 +2428,115 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      blue bush tiles_18: 1134704141
-      blue bush tiles_59: 1438910242
-      blue bush tiles_72: -560955323
-      blue bush tiles_17: 1807955795
-      blue bush tiles_61: -1170612964
-      blue bush tiles_52: -828882644
-      blue bush tiles_99: 1063527781
-      blue bush tiles_19: 1622096579
-      blue bush tiles_48: -843236620
-      blue bush tiles_67: 1245547879
-      blue bush tiles_68: 690620222
-      blue bush tiles_92: 1775558377
-      blue bush tiles_49: 264416440
-      blue bush tiles_86: 102093686
-      blue bush tiles_27: 150325435
-      blue bush tiles_56: -904153053
-      blue bush tiles_25: 1439904407
-      blue bush tiles_101: -2052744375
-      blue bush tiles_9: 469726046
-      blue bush tiles_58: -384041575
-      blue bush tiles_93: 1388218923
-      blue bush tiles_14: -133474289
-      blue bush tiles_57: 2096097236
-      blue bush tiles_11: 1745905490
-      blue bush tiles_7: -1585399501
-      blue bush tiles_28: -447865671
-      blue bush tiles_70: -1025829664
-      blue bush tiles_97: -1194005174
-      blue bush tiles_103: 1820250218
-      blue bush tiles_85: 232414321
-      blue bush tiles_79: -669632921
-      blue bush tiles_74: -176904520
-      blue bush tiles_96: -1370961155
-      blue bush tiles_91: 1936745949
-      blue bush tiles_44: -1821419805
-      blue bush tiles_94: 1368748658
-      blue bush tiles_88: 1750512552
-      blue bush tiles_8: 1197355740
-      blue bush tiles_98: 1022650109
-      blue bush tiles_35: -1870662428
-      blue bush tiles_78: -1392009167
-      blue bush tiles_62: 883065939
-      blue bush tiles_45: -249577436
-      blue bush tiles_31: -1994525910
-      blue bush tiles_60: 2074179255
-      blue bush tiles_53: 637469344
-      blue bush tiles_81: -1174313930
-      blue bush tiles_105: -1939193381
-      blue bush tiles_13: -669659244
-      blue bush tiles_106: -1730593918
-      blue bush tiles_80: -326368166
-      blue bush tiles_43: -1361436697
-      blue bush tiles_104: -88403880
-      blue bush tiles_77: -1501845887
-      blue bush tiles_6: -995756921
-      blue bush tiles_36: 1928989313
-      blue bush tiles_33: 2003393801
-      blue bush tiles_90: -1163467499
-      blue bush tiles_87: -450763751
-      blue bush tiles_29: 1103972884
-      blue bush tiles_107: -1358133158
-      blue bush tiles_76: -321932671
-      blue bush tiles_89: -2037739132
-      blue bush tiles_95: -1790287942
-      blue bush tiles_46: -1939455199
-      blue bush tiles_32: 1318935427
-      blue bush tiles_63: 1731412840
-      blue bush tiles_30: -1071287886
-      blue bush tiles_4: 792459279
-      blue bush tiles_75: -1343112110
-      blue bush tiles_41: -2001280797
-      blue bush tiles_100: -1597517793
+      blue bush tiles_0: -125690545
       blue bush tiles_1: 1032506290
-      blue bush tiles_39: -831132312
-      blue bush tiles_16: 153499704
-      blue bush tiles_34: -1126880279
-      blue bush tiles_108: -680972415
-      blue bush tiles_26: 1132409847
-      blue bush tiles_82: -1139556060
-      blue bush tiles_42: 800700340
       blue bush tiles_10: 1237195336
-      blue bush tiles_23: 1788700687
-      blue bush tiles_20: 1493240868
+      blue bush tiles_100: -1597517793
+      blue bush tiles_101: -2052744375
       blue bush tiles_102: 1128315344
-      blue bush tiles_84: 377520244
-      blue bush tiles_64: 580518652
-      blue bush tiles_37: 733912266
-      blue bush tiles_66: -1415130153
-      blue bush tiles_73: 356800932
-      blue bush tiles_65: -603305610
-      blue bush tiles_24: 210626184
-      blue bush tiles_71: 1437820574
-      blue bush tiles_55: 345610774
-      blue bush tiles_69: -1636497805
-      blue bush tiles_15: -471500323
-      blue bush tiles_40: 105212035
-      blue bush tiles_51: -1325015529
-      blue bush tiles_50: -632192384
-      blue bush tiles_2: -1864251751
+      blue bush tiles_103: 1820250218
+      blue bush tiles_104: -88403880
+      blue bush tiles_105: -1939193381
+      blue bush tiles_106: -1730593918
+      blue bush tiles_107: -1358133158
+      blue bush tiles_108: -680972415
+      blue bush tiles_11: 1745905490
       blue bush tiles_12: -691038060
-      blue bush tiles_5: -902129503
+      blue bush tiles_13: -669659244
+      blue bush tiles_14: -133474289
+      blue bush tiles_15: -471500323
+      blue bush tiles_16: 153499704
+      blue bush tiles_17: 1807955795
+      blue bush tiles_18: 1134704141
+      blue bush tiles_19: 1622096579
+      blue bush tiles_2: -1864251751
+      blue bush tiles_20: 1493240868
       blue bush tiles_21: -2088324041
       blue bush tiles_22: 1450306689
-      blue bush tiles_0: -125690545
+      blue bush tiles_23: 1788700687
+      blue bush tiles_24: 210626184
+      blue bush tiles_25: 1439904407
+      blue bush tiles_26: 1132409847
+      blue bush tiles_27: 150325435
+      blue bush tiles_28: -447865671
+      blue bush tiles_29: 1103972884
       blue bush tiles_3: 691119120
-      blue bush tiles_47: 1243429208
-      blue bush tiles_83: -699388948
-      blue bush tiles_54: 1485076307
+      blue bush tiles_30: -1071287886
+      blue bush tiles_31: -1994525910
+      blue bush tiles_32: 1318935427
+      blue bush tiles_33: 2003393801
+      blue bush tiles_34: -1126880279
+      blue bush tiles_35: -1870662428
+      blue bush tiles_36: 1928989313
+      blue bush tiles_37: 733912266
       blue bush tiles_38: -1382212944
+      blue bush tiles_39: -831132312
+      blue bush tiles_4: 792459279
+      blue bush tiles_40: 105212035
+      blue bush tiles_41: -2001280797
+      blue bush tiles_42: 800700340
+      blue bush tiles_43: -1361436697
+      blue bush tiles_44: -1821419805
+      blue bush tiles_45: -249577436
+      blue bush tiles_46: -1939455199
+      blue bush tiles_47: 1243429208
+      blue bush tiles_48: -843236620
+      blue bush tiles_49: 264416440
+      blue bush tiles_5: -902129503
+      blue bush tiles_50: -632192384
+      blue bush tiles_51: -1325015529
+      blue bush tiles_52: -828882644
+      blue bush tiles_53: 637469344
+      blue bush tiles_54: 1485076307
+      blue bush tiles_55: 345610774
+      blue bush tiles_56: -904153053
+      blue bush tiles_57: 2096097236
+      blue bush tiles_58: -384041575
+      blue bush tiles_59: 1438910242
+      blue bush tiles_6: -995756921
+      blue bush tiles_60: 2074179255
+      blue bush tiles_61: -1170612964
+      blue bush tiles_62: 883065939
+      blue bush tiles_63: 1731412840
+      blue bush tiles_64: 580518652
+      blue bush tiles_65: -603305610
+      blue bush tiles_66: -1415130153
+      blue bush tiles_67: 1245547879
+      blue bush tiles_68: 690620222
+      blue bush tiles_69: -1636497805
+      blue bush tiles_7: -1585399501
+      blue bush tiles_70: -1025829664
+      blue bush tiles_71: 1437820574
+      blue bush tiles_72: -560955323
+      blue bush tiles_73: 356800932
+      blue bush tiles_74: -176904520
+      blue bush tiles_75: -1343112110
+      blue bush tiles_76: -321932671
+      blue bush tiles_77: -1501845887
+      blue bush tiles_78: -1392009167
+      blue bush tiles_79: -669632921
+      blue bush tiles_8: 1197355740
+      blue bush tiles_80: -326368166
+      blue bush tiles_81: -1174313930
+      blue bush tiles_82: -1139556060
+      blue bush tiles_83: -699388948
+      blue bush tiles_84: 377520244
+      blue bush tiles_85: 232414321
+      blue bush tiles_86: 102093686
+      blue bush tiles_87: -450763751
+      blue bush tiles_88: 1750512552
+      blue bush tiles_89: -2037739132
+      blue bush tiles_9: 469726046
+      blue bush tiles_90: -1163467499
+      blue bush tiles_91: 1936745949
+      blue bush tiles_92: 1775558377
+      blue bush tiles_93: 1388218923
+      blue bush tiles_94: 1368748658
+      blue bush tiles_95: -1790287942
+      blue bush tiles_96: -1370961155
+      blue bush tiles_97: -1194005174
+      blue bush tiles_98: 1022650109
+      blue bush tiles_99: 1063527781
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1312,63 +1336,63 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Stone ground tiles_21: 786296682
-      Stone ground tiles_28: -414386084
-      Stone ground tiles_51: -1464922679
-      Stone ground tiles_10: 1417161804
-      Stone ground tiles_4: 1346580145
-      Stone ground tiles_53: -1679348764
-      Stone ground tiles_36: 2107069715
-      Stone ground tiles_29: 1475431196
       Stone ground tiles_0: -2087212025
-      Stone ground tiles_55: -32008297
-      Stone ground tiles_44: -439081124
-      Stone ground tiles_32: 1080773182
-      Stone ground tiles_47: 1198204728
-      Stone ground tiles_54: 988051112
-      Stone ground tiles_46: -1213460599
-      Stone ground tiles_50: 767419909
-      Stone ground tiles_13: -1385897130
-      Stone ground tiles_31: 495186241
-      Stone ground tiles_39: 1257284012
-      Stone ground tiles_8: 1605508811
+      Stone ground tiles_1: -2074097617
+      Stone ground tiles_10: 1417161804
       Stone ground tiles_11: 1077021663
-      Stone ground tiles_27: 685980012
-      Stone ground tiles_25: -475026638
-      Stone ground tiles_26: 1554048407
+      Stone ground tiles_12: -1099710284
+      Stone ground tiles_13: -1385897130
       Stone ground tiles_14: -1666627547
       Stone ground tiles_15: 1541776454
-      Stone ground tiles_35: -9875768
-      Stone ground tiles_12: -1099710284
-      Stone ground tiles_7: 1958246587
-      Stone ground tiles_34: 1019806897
-      Stone ground tiles_1: -2074097617
+      Stone ground tiles_16: 403567905
+      Stone ground tiles_17: 170022366
+      Stone ground tiles_18: 1762547888
+      Stone ground tiles_19: -738836256
+      Stone ground tiles_2: -1042123740
       Stone ground tiles_20: -1934876542
+      Stone ground tiles_21: 786296682
+      Stone ground tiles_22: -392335680
+      Stone ground tiles_23: 848421572
+      Stone ground tiles_24: -1732720627
+      Stone ground tiles_25: -475026638
+      Stone ground tiles_26: 1554048407
+      Stone ground tiles_27: 685980012
+      Stone ground tiles_28: -414386084
+      Stone ground tiles_29: 1475431196
+      Stone ground tiles_3: 881601662
+      Stone ground tiles_30: 1307560019
+      Stone ground tiles_31: 495186241
+      Stone ground tiles_32: 1080773182
+      Stone ground tiles_33: -1752700833
+      Stone ground tiles_34: 1019806897
+      Stone ground tiles_35: -9875768
+      Stone ground tiles_36: 2107069715
+      Stone ground tiles_37: -883668884
+      Stone ground tiles_38: -415952655
+      Stone ground tiles_39: 1257284012
+      Stone ground tiles_4: 1346580145
       Stone ground tiles_40: 671546139
       Stone ground tiles_41: -994590537
-      Stone ground tiles_38: -415952655
-      Stone ground tiles_48: -1864470035
-      Stone ground tiles_23: 848421572
-      Stone ground tiles_30: 1307560019
-      Stone ground tiles_52: 425605057
-      Stone ground tiles_5: 814997647
-      Stone ground tiles_45: -1297536561
-      Stone ground tiles_24: -1732720627
-      Stone ground tiles_17: 170022366
-      Stone ground tiles_43: 1282422815
-      Stone ground tiles_16: 403567905
-      Stone ground tiles_22: -392335680
-      Stone ground tiles_19: -738836256
-      Stone ground tiles_6: 1000789986
-      Stone ground tiles_18: 1762547888
-      Stone ground tiles_33: -1752700833
-      Stone ground tiles_37: -883668884
-      Stone ground tiles_2: -1042123740
-      Stone ground tiles_9: -845139430
-      Stone ground tiles_3: 881601662
       Stone ground tiles_42: 1603710546
-      Stone ground tiles_56: 1979417920
+      Stone ground tiles_43: 1282422815
+      Stone ground tiles_44: -439081124
+      Stone ground tiles_45: -1297536561
+      Stone ground tiles_46: -1213460599
+      Stone ground tiles_47: 1198204728
+      Stone ground tiles_48: -1864470035
       Stone ground tiles_49: -2079467423
+      Stone ground tiles_5: 814997647
+      Stone ground tiles_50: 767419909
+      Stone ground tiles_51: -1464922679
+      Stone ground tiles_52: 425605057
+      Stone ground tiles_53: -1679348764
+      Stone ground tiles_54: 988051112
+      Stone ground tiles_55: -32008297
+      Stone ground tiles_56: 1979417920
+      Stone ground tiles_6: 1000789986
+      Stone ground tiles_7: 1958246587
+      Stone ground tiles_8: 1605508811
+      Stone ground tiles_9: -845139430
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

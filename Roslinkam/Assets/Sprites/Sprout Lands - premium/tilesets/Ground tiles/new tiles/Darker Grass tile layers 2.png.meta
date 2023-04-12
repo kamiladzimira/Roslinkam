@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1354,65 +1378,65 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Darker Grass tile layers 2_21: 2107397015
-      Darker Grass tile layers 2_43: 908167803
-      Darker Grass tile layers 2_50: 300943550
-      Darker Grass tile layers 2_54: -1991361725
-      Darker Grass tile layers 2_53: 2043626520
-      Darker Grass tile layers 2_10: 1330204001
-      Darker Grass tile layers 2_24: 1513150955
-      Darker Grass tile layers 2_22: 254159506
-      Darker Grass tile layers 2_46: -655314261
-      Darker Grass tile layers 2_4: 1318315627
-      Darker Grass tile layers 2_31: -606945656
-      Darker Grass tile layers 2_27: 1617311691
-      Darker Grass tile layers 2_5: -561296054
-      Darker Grass tile layers 2_38: 1540835850
-      Darker Grass tile layers 2_26: -1528318380
-      Darker Grass tile layers 2_1: -1054091262
-      Darker Grass tile layers 2_36: -55080962
-      Darker Grass tile layers 2_34: -216528460
-      Darker Grass tile layers 2_49: 1831589236
-      Darker Grass tile layers 2_3: 136288405
-      Darker Grass tile layers 2_45: -460246546
-      Darker Grass tile layers 2_58: -1202439860
-      Darker Grass tile layers 2_25: 1606299035
-      Darker Grass tile layers 2_15: 1584491813
-      Darker Grass tile layers 2_44: 889028389
-      Darker Grass tile layers 2_29: 289342268
-      Darker Grass tile layers 2_2: -1376679074
-      Darker Grass tile layers 2_20: -1257442473
-      Darker Grass tile layers 2_32: 1293696586
-      Darker Grass tile layers 2_14: -627313576
-      Darker Grass tile layers 2_12: 1582346703
-      Darker Grass tile layers 2_35: -340992870
-      Darker Grass tile layers 2_28: -1773896331
-      Darker Grass tile layers 2_33: -582161799
-      Darker Grass tile layers 2_56: -443698216
-      Darker Grass tile layers 2_42: 924322699
-      Darker Grass tile layers 2_18: 484386143
-      Darker Grass tile layers 2_37: -1503823848
       Darker Grass tile layers 2_0: 791494888
-      Darker Grass tile layers 2_51: -1146548461
-      Darker Grass tile layers 2_39: 80121860
-      Darker Grass tile layers 2_9: -1512461236
-      Darker Grass tile layers 2_13: -1710523640
-      Darker Grass tile layers 2_7: -1279566408
+      Darker Grass tile layers 2_1: -1054091262
+      Darker Grass tile layers 2_10: 1330204001
       Darker Grass tile layers 2_11: -1979998834
-      Darker Grass tile layers 2_41: 732281465
+      Darker Grass tile layers 2_12: 1582346703
+      Darker Grass tile layers 2_13: -1710523640
+      Darker Grass tile layers 2_14: -627313576
+      Darker Grass tile layers 2_15: 1584491813
       Darker Grass tile layers 2_16: 811838736
       Darker Grass tile layers 2_17: 912296784
-      Darker Grass tile layers 2_52: -407353759
-      Darker Grass tile layers 2_23: 739066725
-      Darker Grass tile layers 2_47: 2056786271
-      Darker Grass tile layers 2_57: -1897486617
-      Darker Grass tile layers 2_55: 2022994252
-      Darker Grass tile layers 2_8: -1268113670
-      Darker Grass tile layers 2_40: 766950976
-      Darker Grass tile layers 2_6: 2110999526
-      Darker Grass tile layers 2_48: 553413124
+      Darker Grass tile layers 2_18: 484386143
       Darker Grass tile layers 2_19: 1173400605
+      Darker Grass tile layers 2_2: -1376679074
+      Darker Grass tile layers 2_20: -1257442473
+      Darker Grass tile layers 2_21: 2107397015
+      Darker Grass tile layers 2_22: 254159506
+      Darker Grass tile layers 2_23: 739066725
+      Darker Grass tile layers 2_24: 1513150955
+      Darker Grass tile layers 2_25: 1606299035
+      Darker Grass tile layers 2_26: -1528318380
+      Darker Grass tile layers 2_27: 1617311691
+      Darker Grass tile layers 2_28: -1773896331
+      Darker Grass tile layers 2_29: 289342268
+      Darker Grass tile layers 2_3: 136288405
       Darker Grass tile layers 2_30: 1085672595
+      Darker Grass tile layers 2_31: -606945656
+      Darker Grass tile layers 2_32: 1293696586
+      Darker Grass tile layers 2_33: -582161799
+      Darker Grass tile layers 2_34: -216528460
+      Darker Grass tile layers 2_35: -340992870
+      Darker Grass tile layers 2_36: -55080962
+      Darker Grass tile layers 2_37: -1503823848
+      Darker Grass tile layers 2_38: 1540835850
+      Darker Grass tile layers 2_39: 80121860
+      Darker Grass tile layers 2_4: 1318315627
+      Darker Grass tile layers 2_40: 766950976
+      Darker Grass tile layers 2_41: 732281465
+      Darker Grass tile layers 2_42: 924322699
+      Darker Grass tile layers 2_43: 908167803
+      Darker Grass tile layers 2_44: 889028389
+      Darker Grass tile layers 2_45: -460246546
+      Darker Grass tile layers 2_46: -655314261
+      Darker Grass tile layers 2_47: 2056786271
+      Darker Grass tile layers 2_48: 553413124
+      Darker Grass tile layers 2_49: 1831589236
+      Darker Grass tile layers 2_5: -561296054
+      Darker Grass tile layers 2_50: 300943550
+      Darker Grass tile layers 2_51: -1146548461
+      Darker Grass tile layers 2_52: -407353759
+      Darker Grass tile layers 2_53: 2043626520
+      Darker Grass tile layers 2_54: -1991361725
+      Darker Grass tile layers 2_55: 2022994252
+      Darker Grass tile layers 2_56: -443698216
+      Darker Grass tile layers 2_57: -1897486617
+      Darker Grass tile layers 2_58: -1202439860
+      Darker Grass tile layers 2_6: 2110999526
+      Darker Grass tile layers 2_7: -1279566408
+      Darker Grass tile layers 2_8: -1268113670
+      Darker Grass tile layers 2_9: -1512461236
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

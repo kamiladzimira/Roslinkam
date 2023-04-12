@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1312,63 +1336,63 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Soil ground tiles_12: 601779870
-      Soil ground tiles_27: 1658582210
-      Soil ground tiles_53: -1111180814
-      Soil ground tiles_41: 1418559283
-      Soil ground tiles_19: -1987578582
-      Soil ground tiles_30: 530563153
-      Soil ground tiles_14: -639935551
-      Soil ground tiles_28: 1368144837
+      Soil ground tiles_0: 2003989895
+      Soil ground tiles_1: -1206077680
+      Soil ground tiles_10: 201635026
       Soil ground tiles_11: -1837621091
+      Soil ground tiles_12: 601779870
       Soil ground tiles_13: 1013896747
+      Soil ground tiles_14: -639935551
+      Soil ground tiles_15: -199687307
+      Soil ground tiles_16: -1923166844
+      Soil ground tiles_17: 1979161639
+      Soil ground tiles_18: -2000782277
+      Soil ground tiles_19: -1987578582
+      Soil ground tiles_2: -732374977
       Soil ground tiles_20: 232058013
-      Soil ground tiles_48: -958528597
-      Soil ground tiles_34: -2109340532
+      Soil ground tiles_21: 546357459
+      Soil ground tiles_22: 602824943
+      Soil ground tiles_23: -538987700
+      Soil ground tiles_24: -107467509
+      Soil ground tiles_25: 1316404512
+      Soil ground tiles_26: 612035909
+      Soil ground tiles_27: 1658582210
+      Soil ground tiles_28: 1368144837
+      Soil ground tiles_29: 1093349126
+      Soil ground tiles_3: -2014139017
+      Soil ground tiles_30: 530563153
       Soil ground tiles_31: 1934520207
       Soil ground tiles_32: 788896733
-      Soil ground tiles_35: -1776012568
-      Soil ground tiles_6: -827686849
-      Soil ground tiles_25: 1316404512
-      Soil ground tiles_38: 1449153408
-      Soil ground tiles_21: 546357459
-      Soil ground tiles_3: -2014139017
-      Soil ground tiles_10: 201635026
-      Soil ground tiles_18: -2000782277
-      Soil ground tiles_23: -538987700
-      Soil ground tiles_50: -1786738249
-      Soil ground tiles_45: -1864293150
-      Soil ground tiles_54: 701440335
-      Soil ground tiles_49: -1789613637
-      Soil ground tiles_55: -1177896279
-      Soil ground tiles_46: 2026570034
-      Soil ground tiles_52: 1802939376
-      Soil ground tiles_40: 158898616
-      Soil ground tiles_37: 447360261
-      Soil ground tiles_43: -1684799948
-      Soil ground tiles_26: 612035909
-      Soil ground tiles_29: 1093349126
-      Soil ground tiles_51: 1509606158
-      Soil ground tiles_7: 384095284
-      Soil ground tiles_9: -10426145
-      Soil ground tiles_4: -1208964114
-      Soil ground tiles_44: -2102621785
       Soil ground tiles_33: -828942186
-      Soil ground tiles_0: 2003989895
-      Soil ground tiles_15: -199687307
-      Soil ground tiles_17: 1979161639
-      Soil ground tiles_1: -1206077680
-      Soil ground tiles_22: 602824943
-      Soil ground tiles_5: 1839837364
-      Soil ground tiles_39: 511728165
-      Soil ground tiles_42: -294929875
-      Soil ground tiles_8: -1746910105
-      Soil ground tiles_16: -1923166844
-      Soil ground tiles_47: -906859516
-      Soil ground tiles_2: -732374977
+      Soil ground tiles_34: -2109340532
+      Soil ground tiles_35: -1776012568
       Soil ground tiles_36: 1242864957
+      Soil ground tiles_37: 447360261
+      Soil ground tiles_38: 1449153408
+      Soil ground tiles_39: 511728165
+      Soil ground tiles_4: -1208964114
+      Soil ground tiles_40: 158898616
+      Soil ground tiles_41: 1418559283
+      Soil ground tiles_42: -294929875
+      Soil ground tiles_43: -1684799948
+      Soil ground tiles_44: -2102621785
+      Soil ground tiles_45: -1864293150
+      Soil ground tiles_46: 2026570034
+      Soil ground tiles_47: -906859516
+      Soil ground tiles_48: -958528597
+      Soil ground tiles_49: -1789613637
+      Soil ground tiles_5: 1839837364
+      Soil ground tiles_50: -1786738249
+      Soil ground tiles_51: 1509606158
+      Soil ground tiles_52: 1802939376
+      Soil ground tiles_53: -1111180814
+      Soil ground tiles_54: 701440335
+      Soil ground tiles_55: -1177896279
       Soil ground tiles_56: 1556296585
-      Soil ground tiles_24: -107467509
+      Soil ground tiles_6: -827686849
+      Soil ground tiles_7: 384095284
+      Soil ground tiles_8: -1746910105
+      Soil ground tiles_9: -10426145
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

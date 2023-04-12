@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -976,47 +1000,47 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Tall Grass hill tiles v.2_0: -1997818482
+      Tall Grass hill tiles v.2_1: -1975606474
+      Tall Grass hill tiles v.2_10: 182076716
+      Tall Grass hill tiles v.2_11: 798334137
+      Tall Grass hill tiles v.2_12: -947462321
+      Tall Grass hill tiles v.2_13: 1337571634
+      Tall Grass hill tiles v.2_14: -531122557
+      Tall Grass hill tiles v.2_15: 1209411276
+      Tall Grass hill tiles v.2_16: -1750048543
+      Tall Grass hill tiles v.2_17: 1601072275
       Tall Grass hill tiles v.2_18: -1203287106
-      Tall Grass hill tiles v.2_3: 682339139
-      Tall Grass hill tiles v.2_37: 73513769
-      Tall Grass hill tiles v.2_35: -253128977
-      Tall Grass hill tiles v.2_26: 1156865080
-      Tall Grass hill tiles v.2_29: -1221264447
-      Tall Grass hill tiles v.2_31: 1942534959
+      Tall Grass hill tiles v.2_19: -293845916
       Tall Grass hill tiles v.2_2: 2094503472
       Tall Grass hill tiles v.2_20: 1439417471
-      Tall Grass hill tiles v.2_13: 1337571634
-      Tall Grass hill tiles v.2_16: -1750048543
-      Tall Grass hill tiles v.2_24: -1072519803
-      Tall Grass hill tiles v.2_11: 798334137
-      Tall Grass hill tiles v.2_32: -1019493635
-      Tall Grass hill tiles v.2_25: 463901504
-      Tall Grass hill tiles v.2_10: 182076716
-      Tall Grass hill tiles v.2_19: -293845916
-      Tall Grass hill tiles v.2_38: -1961323913
-      Tall Grass hill tiles v.2_14: -531122557
-      Tall Grass hill tiles v.2_0: -1997818482
-      Tall Grass hill tiles v.2_8: -2089161731
-      Tall Grass hill tiles v.2_30: 303069772
-      Tall Grass hill tiles v.2_4: 896371295
-      Tall Grass hill tiles v.2_9: 444555972
-      Tall Grass hill tiles v.2_34: -1421039883
-      Tall Grass hill tiles v.2_39: 474650746
-      Tall Grass hill tiles v.2_7: -838038443
       Tall Grass hill tiles v.2_21: -314127923
-      Tall Grass hill tiles v.2_28: -1790755396
-      Tall Grass hill tiles v.2_17: 1601072275
-      Tall Grass hill tiles v.2_36: -2001886900
-      Tall Grass hill tiles v.2_33: -999227573
-      Tall Grass hill tiles v.2_1: -1975606474
       Tall Grass hill tiles v.2_22: -1483961894
-      Tall Grass hill tiles v.2_6: 720199297
-      Tall Grass hill tiles v.2_15: 1209411276
-      Tall Grass hill tiles v.2_27: 657194228
       Tall Grass hill tiles v.2_23: 2033528735
-      Tall Grass hill tiles v.2_5: -242043916
-      Tall Grass hill tiles v.2_12: -947462321
+      Tall Grass hill tiles v.2_24: -1072519803
+      Tall Grass hill tiles v.2_25: 463901504
+      Tall Grass hill tiles v.2_26: 1156865080
+      Tall Grass hill tiles v.2_27: 657194228
+      Tall Grass hill tiles v.2_28: -1790755396
+      Tall Grass hill tiles v.2_29: -1221264447
+      Tall Grass hill tiles v.2_3: 682339139
+      Tall Grass hill tiles v.2_30: 303069772
+      Tall Grass hill tiles v.2_31: 1942534959
+      Tall Grass hill tiles v.2_32: -1019493635
+      Tall Grass hill tiles v.2_33: -999227573
+      Tall Grass hill tiles v.2_34: -1421039883
+      Tall Grass hill tiles v.2_35: -253128977
+      Tall Grass hill tiles v.2_36: -2001886900
+      Tall Grass hill tiles v.2_37: 73513769
+      Tall Grass hill tiles v.2_38: -1961323913
+      Tall Grass hill tiles v.2_39: 474650746
+      Tall Grass hill tiles v.2_4: 896371295
       Tall Grass hill tiles v.2_40: 1542465742
+      Tall Grass hill tiles v.2_5: -242043916
+      Tall Grass hill tiles v.2_6: 720199297
+      Tall Grass hill tiles v.2_7: -838038443
+      Tall Grass hill tiles v.2_8: -2089161731
+      Tall Grass hill tiles v.2_9: 444555972
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

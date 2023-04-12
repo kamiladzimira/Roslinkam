@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -556,34 +580,34 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Mailbox Animation Frames_6: 148726424
-      Mailbox Animation Frames_15: 699274093
-      Mailbox Animation Frames_23: -839667423
-      Mailbox Animation Frames_27: 1383200078
-      Mailbox Animation Frames_1: -451140307
-      Mailbox Animation Frames_16: -1007975547
-      Mailbox Animation Frames_14: 1002746939
-      Mailbox Animation Frames_26: -1628237261
-      Mailbox Animation Frames_2: 999350099
-      Mailbox Animation Frames_19: 1088154143
-      Mailbox Animation Frames_10: 286734477
-      Mailbox Animation Frames_7: 1572332436
-      Mailbox Animation Frames_9: 1865982634
-      Mailbox Animation Frames_22: -384774387
-      Mailbox Animation Frames_25: 51004368
-      Mailbox Animation Frames_21: 2104285350
       Mailbox Animation Frames_0: 2112028401
-      Mailbox Animation Frames_4: 542901147
-      Mailbox Animation Frames_3: 1137515543
-      Mailbox Animation Frames_13: -508861074
-      Mailbox Animation Frames_18: -1210084494
+      Mailbox Animation Frames_1: -451140307
+      Mailbox Animation Frames_10: 286734477
       Mailbox Animation Frames_11: -1887498910
       Mailbox Animation Frames_12: 1448471044
-      Mailbox Animation Frames_24: 475038423
-      Mailbox Animation Frames_5: 234757125
-      Mailbox Animation Frames_8: 1636198829
+      Mailbox Animation Frames_13: -508861074
+      Mailbox Animation Frames_14: 1002746939
+      Mailbox Animation Frames_15: 699274093
+      Mailbox Animation Frames_16: -1007975547
       Mailbox Animation Frames_17: 1679855301
+      Mailbox Animation Frames_18: -1210084494
+      Mailbox Animation Frames_19: 1088154143
+      Mailbox Animation Frames_2: 999350099
       Mailbox Animation Frames_20: -849723920
+      Mailbox Animation Frames_21: 2104285350
+      Mailbox Animation Frames_22: -384774387
+      Mailbox Animation Frames_23: -839667423
+      Mailbox Animation Frames_24: 475038423
+      Mailbox Animation Frames_25: 51004368
+      Mailbox Animation Frames_26: -1628237261
+      Mailbox Animation Frames_27: 1383200078
+      Mailbox Animation Frames_3: 1137515543
+      Mailbox Animation Frames_4: 542901147
+      Mailbox Animation Frames_5: 234757125
+      Mailbox Animation Frames_6: 148726424
+      Mailbox Animation Frames_7: 1572332436
+      Mailbox Animation Frames_8: 1636198829
+      Mailbox Animation Frames_9: 1865982634
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
