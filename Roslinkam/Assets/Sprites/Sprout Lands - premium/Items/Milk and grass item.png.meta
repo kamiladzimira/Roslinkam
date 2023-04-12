@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -997,48 +1021,48 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Milk and grass item_6: -343433265
-      Milk and grass item_13: 1395282674
-      Milk and grass item_17: 256727537
-      Milk and grass item_12: 618381508
-      Milk and grass item_3: -2065243144
-      Milk and grass item_4: -1287909448
+      Milk and grass item_0: 1784642641
+      Milk and grass item_1: 1911208353
       Milk and grass item_10: -1364514823
-      Milk and grass item_14: 34466583
-      Milk and grass item_5: 566407295
-      Milk and grass item_25: 1818546635
-      Milk and grass item_36: 1705931303
-      Milk and grass item_39: -1713187748
       Milk and grass item_11: 2054973269
-      Milk and grass item_31: -453519459
-      Milk and grass item_38: 785674772
-      Milk and grass item_18: 658060113
-      Milk and grass item_41: 752901540
+      Milk and grass item_12: 618381508
+      Milk and grass item_13: 1395282674
+      Milk and grass item_14: 34466583
       Milk and grass item_15: -753489097
       Milk and grass item_16: 1311086352
-      Milk and grass item_28: -2107069698
-      Milk and grass item_8: -1430191068
-      Milk and grass item_7: 1824282721
+      Milk and grass item_17: 256727537
+      Milk and grass item_18: 658060113
       Milk and grass item_19: 1781792381
-      Milk and grass item_21: -1630261178
-      Milk and grass item_40: -358910562
-      Milk and grass item_35: -136231872
-      Milk and grass item_24: -1910830995
-      Milk and grass item_34: -1907462921
-      Milk and grass item_9: 1016976634
-      Milk and grass item_0: 1784642641
-      Milk and grass item_26: -252716704
-      Milk and grass item_32: -598306702
-      Milk and grass item_1: 1911208353
-      Milk and grass item_27: 1963391637
-      Milk and grass item_23: 1219005427
-      Milk and grass item_20: 240357747
-      Milk and grass item_22: 1539730286
-      Milk and grass item_37: 1692322052
       Milk and grass item_2: 1820613390
-      Milk and grass item_30: -854959492
+      Milk and grass item_20: 240357747
+      Milk and grass item_21: -1630261178
+      Milk and grass item_22: 1539730286
+      Milk and grass item_23: 1219005427
+      Milk and grass item_24: -1910830995
+      Milk and grass item_25: 1818546635
+      Milk and grass item_26: -252716704
+      Milk and grass item_27: 1963391637
+      Milk and grass item_28: -2107069698
       Milk and grass item_29: 1655824110
+      Milk and grass item_3: -2065243144
+      Milk and grass item_30: -854959492
+      Milk and grass item_31: -453519459
+      Milk and grass item_32: -598306702
       Milk and grass item_33: -29469357
+      Milk and grass item_34: -1907462921
+      Milk and grass item_35: -136231872
+      Milk and grass item_36: 1705931303
+      Milk and grass item_37: 1692322052
+      Milk and grass item_38: 785674772
+      Milk and grass item_39: -1713187748
+      Milk and grass item_4: -1287909448
+      Milk and grass item_40: -358910562
+      Milk and grass item_41: 752901540
+      Milk and grass item_5: 566407295
+      Milk and grass item_6: -343433265
+      Milk and grass item_7: 1824282721
+      Milk and grass item_8: -1430191068
+      Milk and grass item_9: 1016976634
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

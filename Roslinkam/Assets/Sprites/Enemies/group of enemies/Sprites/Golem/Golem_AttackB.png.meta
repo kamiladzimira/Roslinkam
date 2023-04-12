@@ -63,7 +63,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -148,6 +148,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -319,13 +331,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Golem_AttackB_0: -3896344676062522950
+      Golem_AttackB_1: 4546366264713694302
       Golem_AttackB_2: -8317540468478450464
       Golem_AttackB_3: 6566527696532606207
-      Golem_AttackB_0: -3896344676062522950
-      Golem_AttackB_6: 6040437511144115857
-      Golem_AttackB_5: -9167346489589242355
-      Golem_AttackB_1: 4546366264713694302
       Golem_AttackB_4: -6527732671301259807
+      Golem_AttackB_5: -9167346489589242355
+      Golem_AttackB_6: 6040437511144115857
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

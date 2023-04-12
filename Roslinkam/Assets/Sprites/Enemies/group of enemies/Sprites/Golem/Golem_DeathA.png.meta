@@ -69,7 +69,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -154,6 +154,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -367,15 +379,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Golem_DeathA_8: 7429024813292269697
-      Golem_DeathA_6: -1959914090961040170
-      Golem_DeathA_5: -2697951598644830015
-      Golem_DeathA_2: 358624408652620325
       Golem_DeathA_0: -2208575386617526276
-      Golem_DeathA_3: -6960492609824681224
       Golem_DeathA_1: 1720141246944928757
-      Golem_DeathA_7: 1666243299255332216
+      Golem_DeathA_2: 358624408652620325
+      Golem_DeathA_3: -6960492609824681224
       Golem_DeathA_4: 4913858366276946530
+      Golem_DeathA_5: -2697951598644830015
+      Golem_DeathA_6: -1959914090961040170
+      Golem_DeathA_7: 1666243299255332216
+      Golem_DeathA_8: 7429024813292269697
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

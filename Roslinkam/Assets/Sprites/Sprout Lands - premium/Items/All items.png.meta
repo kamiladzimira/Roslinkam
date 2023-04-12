@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -91,6 +91,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1627,78 +1651,78 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      All items_70: 580860525
-      All items_52: 1630533327
-      All items_32: 1087003179
-      All items_19: -1313747139
-      All items_44: 678390596
-      All items_71: 558346195
-      All items_25: -639404703
-      All items_63: -1968510301
-      All items_68: 559065739
-      All items_41: -268240594
-      All items_62: -1023625700
-      All items_21: -1298618214
-      All items_40: -2133159467
+      All items_0: -1791909
+      All items_1: 1243606062
+      All items_10: -1623834260
       All items_11: -2126111965
-      All items_27: -1885418571
-      All items_45: 1637038638
-      All items_47: -426980670
-      All items_49: 400686552
-      All items_67: 1879029941
-      All items_18: -1049484641
-      All items_22: -1573619181
-      All items_42: -1151301205
-      All items_61: 552665338
-      All items_57: 1157708629
-      All items_7: 793811787
-      All items_54: 520715799
-      All items_66: 1042293106
-      All items_69: 532858471
-      All items_28: 852346033
-      All items_46: -55721547
+      All items_12: 1423886871
       All items_13: 357782740
-      All items_35: -1785095175
-      All items_38: 67385927
-      All items_30: -946970108
+      All items_14: 730301150
+      All items_15: 381539967
+      All items_16: 619742699
+      All items_17: 1006943003
+      All items_18: -1049484641
+      All items_19: -1313747139
+      All items_2: -897954914
+      All items_20: 829966783
+      All items_21: -1298618214
+      All items_22: -1573619181
+      All items_23: 1738181972
+      All items_24: -1785141432
+      All items_25: -639404703
+      All items_26: 1470989146
+      All items_27: -1885418571
+      All items_28: 852346033
+      All items_29: 1446478721
       All items_3: -1534262318
+      All items_30: -946970108
+      All items_31: -1206135045
+      All items_32: 1087003179
+      All items_33: -312424231
+      All items_34: -1812117600
+      All items_35: -1785095175
       All items_36: 1669136473
       All items_37: 295682305
-      All items_60: 57806773
-      All items_4: 1086312165
-      All items_23: 1738181972
-      All items_53: 1041024237
-      All items_51: 500792126
-      All items_2: -897954914
-      All items_9: -1437221019
-      All items_31: -1206135045
-      All items_43: -1392986747
-      All items_8: -914225219
-      All items_14: 730301150
-      All items_24: -1785141432
-      All items_59: -2095253904
-      All items_1: 1243606062
-      All items_5: -1598482697
-      All items_34: -1812117600
-      All items_58: 1538801160
-      All items_65: 1422622603
+      All items_38: 67385927
       All items_39: 394844071
+      All items_4: 1086312165
+      All items_40: -2133159467
+      All items_41: -268240594
+      All items_42: -1151301205
+      All items_43: -1392986747
+      All items_44: 678390596
+      All items_45: 1637038638
+      All items_46: -55721547
+      All items_47: -426980670
       All items_48: -1738680993
-      All items_16: 619742699
-      All items_33: -312424231
+      All items_49: 400686552
+      All items_5: -1598482697
       All items_50: 1866782993
+      All items_51: 500792126
+      All items_52: 1630533327
+      All items_53: 1041024237
+      All items_54: 520715799
       All items_55: 895854394
-      All items_12: 1423886871
-      All items_26: 1470989146
-      All items_64: -759445677
-      All items_0: -1791909
-      All items_17: 1006943003
-      All items_10: -1623834260
-      All items_29: 1446478721
       All items_56: 1071026254
+      All items_57: 1157708629
+      All items_58: 1538801160
+      All items_59: -2095253904
       All items_6: 1247313523
-      All items_20: 829966783
-      All items_15: 381539967
+      All items_60: 57806773
+      All items_61: 552665338
+      All items_62: -1023625700
+      All items_63: -1968510301
+      All items_64: -759445677
+      All items_65: 1422622603
+      All items_66: 1042293106
+      All items_67: 1879029941
+      All items_68: 559065739
+      All items_69: 532858471
+      All items_7: 793811787
+      All items_70: 580860525
+      All items_71: 558346195
+      All items_8: -914225219
+      All items_9: -1437221019
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

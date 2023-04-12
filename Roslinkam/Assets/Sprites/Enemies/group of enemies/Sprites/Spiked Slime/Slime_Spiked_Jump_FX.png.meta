@@ -66,7 +66,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -151,6 +151,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -343,14 +355,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slime_Spiked_Jump_FX_4: 7307566540620107963
-      Slime_Spiked_Jump_FX_9: 2314559302037213156
-      Slime_Spiked_Jump_FX_6: 7524902037825835571
-      Slime_Spiked_Jump_FX_5: 8715150257315831493
-      Slime_Spiked_Jump_FX_8: -1093409250314809533
-      Slime_Spiked_Jump_FX_3: -6841430966232491922
       Slime_Spiked_Jump_FX_10: 5584578538990826843
+      Slime_Spiked_Jump_FX_3: -6841430966232491922
+      Slime_Spiked_Jump_FX_4: 7307566540620107963
+      Slime_Spiked_Jump_FX_5: 8715150257315831493
+      Slime_Spiked_Jump_FX_6: 7524902037825835571
       Slime_Spiked_Jump_FX_7: 5469817097825885410
+      Slime_Spiked_Jump_FX_8: -1093409250314809533
+      Slime_Spiked_Jump_FX_9: 2314559302037213156
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

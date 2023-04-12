@@ -101,6 +101,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +157,8 @@ TextureImporter:
         y: 32
         width: 13
         height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,8 +178,8 @@ TextureImporter:
         y: 33
         width: 13
         height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -367,18 +391,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tools and meterials_7: 785742458
-      tools and meterials_1: -469610826
-      tools and meterials_5: -1017346134
-      tools and meterials_9: -502456582
-      tools and meterials_10: -607070522
       tools and meterials_0: 1980410045
-      tools and meterials_3: -192331990
-      tools and meterials_8: 1673822661
-      tools and meterials_2: -420905974
-      tools and meterials_4: -707463161
+      tools and meterials_1: -469610826
+      tools and meterials_10: -607070522
       tools and meterials_11: -116413026
+      tools and meterials_2: -420905974
+      tools and meterials_3: -192331990
+      tools and meterials_4: -707463161
+      tools and meterials_5: -1017346134
       tools and meterials_6: -2083704534
+      tools and meterials_7: 785742458
+      tools and meterials_8: 1673822661
+      tools and meterials_9: -502456582
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

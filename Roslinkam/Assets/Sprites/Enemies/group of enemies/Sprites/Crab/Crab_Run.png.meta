@@ -60,7 +60,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -145,6 +145,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -295,11 +307,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crab_Run_3: 6353432577325987440
-      Crab_Run_2: 7557213267795395730
-      Crab_Run_1: 5241994141584075851
-      Crab_Run_4: 6264126686478269255
       Crab_Run_0: 2438307069932402953
+      Crab_Run_1: 5241994141584075851
+      Crab_Run_2: 7557213267795395730
+      Crab_Run_3: 6353432577325987440
+      Crab_Run_4: 6264126686478269255
       Crab_Run_5: -2540641399431316647
   spritePackingTag: 
   pSDRemoveMatte: 0

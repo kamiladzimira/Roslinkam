@@ -75,7 +75,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -124,6 +124,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -379,17 +403,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite Sheet - Green Hurt - No Flash_8: 5390317748416754442
-      Sprite Sheet - Green Hurt - No Flash_10: -3140844607034348796
+      Sprite Sheet - Green Hurt - No Flash_0: -2159989153046953655
       Sprite Sheet - Green Hurt - No Flash_1: -5940323749537707868
+      Sprite Sheet - Green Hurt - No Flash_10: -3140844607034348796
+      Sprite Sheet - Green Hurt - No Flash_2: 7006359815047711410
       Sprite Sheet - Green Hurt - No Flash_3: -8081401451875462301
       Sprite Sheet - Green Hurt - No Flash_4: -6715015496158861486
-      Sprite Sheet - Green Hurt - No Flash_6: 4789503813110512395
-      Sprite Sheet - Green Hurt - No Flash_0: -2159989153046953655
-      Sprite Sheet - Green Hurt - No Flash_7: -5971996416981112148
-      Sprite Sheet - Green Hurt - No Flash_9: -627908066408712283
-      Sprite Sheet - Green Hurt - No Flash_2: 7006359815047711410
       Sprite Sheet - Green Hurt - No Flash_5: 2417470212608203033
+      Sprite Sheet - Green Hurt - No Flash_6: 4789503813110512395
+      Sprite Sheet - Green Hurt - No Flash_7: -5971996416981112148
+      Sprite Sheet - Green Hurt - No Flash_8: 5390317748416754442
+      Sprite Sheet - Green Hurt - No Flash_9: -627908066408712283
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -66,7 +66,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -151,6 +151,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -343,14 +355,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Golem_Armor_AttackB_6: -5299939812732593925
       Golem_Armor_AttackB_0: 178329479358458330
-      Golem_Armor_AttackB_5: -1802786903815613840
       Golem_Armor_AttackB_1: -8609927983438734989
       Golem_Armor_AttackB_2: -8679349315878163264
-      Golem_Armor_AttackB_4: -3214272448804136580
-      Golem_Armor_AttackB_7: -5957557292585527409
       Golem_Armor_AttackB_3: -430598019169339659
+      Golem_Armor_AttackB_4: -3214272448804136580
+      Golem_Armor_AttackB_5: -1802786903815613840
+      Golem_Armor_AttackB_6: -5299939812732593925
+      Golem_Armor_AttackB_7: -5957557292585527409
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

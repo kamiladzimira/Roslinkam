@@ -60,7 +60,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -145,6 +145,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -295,12 +307,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Slime_Spiked_Death_5: 352125740349179034
-      Slime_Spiked_Death_2: -6865569292106185554
       Slime_Spiked_Death_0: -7403321913631695209
-      Slime_Spiked_Death_3: -5301956442226094466
       Slime_Spiked_Death_1: -7094428357162499472
+      Slime_Spiked_Death_2: -6865569292106185554
+      Slime_Spiked_Death_3: -5301956442226094466
       Slime_Spiked_Death_4: 1492179977762778702
+      Slime_Spiked_Death_5: 352125740349179034
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

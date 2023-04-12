@@ -72,7 +72,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -157,6 +157,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -392,15 +404,15 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Crab_AttackA_0: -3662177350490098988
-      Crab_AttackA_6: 3953059209850009294
-      Crab_AttackA_7: -3885216275447537490
-      Crab_AttackA_9: 5067394379237169732
+      Crab_AttackA_1: -1009078738708124822
+      Crab_AttackA_2: -7706925074210469973
       Crab_AttackA_3: -922103411115158685
       Crab_AttackA_4: -7866958467368345794
       Crab_AttackA_5: -7786871763424885404
-      Crab_AttackA_1: -1009078738708124822
-      Crab_AttackA_2: -7706925074210469973
+      Crab_AttackA_6: 3953059209850009294
+      Crab_AttackA_7: -3885216275447537490
       Crab_AttackA_8: 3186124446743866748
+      Crab_AttackA_9: 5067394379237169732
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

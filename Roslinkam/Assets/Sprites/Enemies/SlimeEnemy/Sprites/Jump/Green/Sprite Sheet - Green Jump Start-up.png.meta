@@ -69,7 +69,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -118,6 +118,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -331,15 +355,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Sprite Sheet - Green Jump Start-up_8: -7616659179368546986
       Sprite Sheet - Green Jump Start-up_0: 8769339193113792372
       Sprite Sheet - Green Jump Start-up_1: -8718068603340582171
-      Sprite Sheet - Green Jump Start-up_4: -1847289444461471078
-      Sprite Sheet - Green Jump Start-up_7: 5410572983432652385
       Sprite Sheet - Green Jump Start-up_2: 5487445420638461289
+      Sprite Sheet - Green Jump Start-up_3: 552165441339613264
+      Sprite Sheet - Green Jump Start-up_4: -1847289444461471078
       Sprite Sheet - Green Jump Start-up_5: -1923823714793028283
       Sprite Sheet - Green Jump Start-up_6: -3434455214464728001
-      Sprite Sheet - Green Jump Start-up_3: 552165441339613264
+      Sprite Sheet - Green Jump Start-up_7: 5410572983432652385
+      Sprite Sheet - Green Jump Start-up_8: -7616659179368546986
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

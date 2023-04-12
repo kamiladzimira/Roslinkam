@@ -75,7 +75,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -160,6 +160,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -416,16 +428,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Golem_Upgrade_0: -6423919989006694690
-      Golem_Upgrade_2: -1541462633613847749
       Golem_Upgrade_1: -7240323082703209764
-      Golem_Upgrade_4: 1046259422303646232
       Golem_Upgrade_10: 4926090123907202300
-      Golem_Upgrade_8: -4155366205407171871
-      Golem_Upgrade_6: 7136916204210688544
+      Golem_Upgrade_2: -1541462633613847749
       Golem_Upgrade_3: -3340979898171032725
-      Golem_Upgrade_9: -6558716321753322450
+      Golem_Upgrade_4: 1046259422303646232
       Golem_Upgrade_5: -4126760732610016684
+      Golem_Upgrade_6: 7136916204210688544
       Golem_Upgrade_7: 8955644042815943930
+      Golem_Upgrade_8: -4155366205407171871
+      Golem_Upgrade_9: -6558716321753322450
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
