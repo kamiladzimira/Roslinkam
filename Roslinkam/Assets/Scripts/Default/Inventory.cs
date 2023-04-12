@@ -9,6 +9,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private List<ItemSlot> itemSlots;
     [SerializeField] private GameObject itemContainer;
     [SerializeField] private GameObject equipContainer;
+
+    [SerializeField] private List<ItemHolder> equipedContainers;
     [SerializeField] private int maxPickupsValue;
     [SerializeField] private List<InventoryView> inventoryViews;
     private List<ItemContainer> itemContainers = new List<ItemContainer>();
@@ -99,21 +101,39 @@ public class Inventory : MonoBehaviour
         {
             return;
         }
-        if (equipedItem != null)
+        if (equipedItem != null )
         {
             equipedItem.gameObject.SetActive(false);
             equipedItem.transform.SetParent(itemContainer.transform);
+            equipedItem = null;
         }
         Item item = itemSlot.ItemContainer.GetFirstItem();
-        if (item == null)
+        ItemHolder itemHolder = GetItemHolder(item);
+        if (item == null || itemHolder == null)
         {
             return;
         }
-        item.transform.SetParent(equipContainer.transform);
+        item.transform.SetParent(itemHolder.transform);
         item.transform.localPosition = Vector3.zero;
         item.gameObject.SetActive(true);
         equipedItem = item;
         equipedItem.Equip(this);
+    }
+
+    public ItemHolder GetItemHolder(Item item)
+    {
+        if(item == null)
+        {
+            return null;
+        }
+        for (int i = 0; i < equipedContainers.Count; i++)
+        {
+            if (equipedContainers[i].ItemPositionType == item.ItemPositionType)
+            {
+                return equipedContainers[i];
+            }
+        }
+        return null;
     }
 
     public void Unequip()

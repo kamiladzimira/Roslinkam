@@ -6,12 +6,14 @@ public abstract class Item : MonoBehaviour, ISellable, IBuyable
     [SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private int price;
     [SerializeField] private string itemName;
+    [SerializeField] private ItemPositionType itemPositionType;
 
     protected Inventory inventory;
     public Sprite Sprite => sprite;
     public int BuyPrice => price;
     public int SellPrice => price;
     public string ItemName => itemName;
+    public ItemPositionType ItemPositionType => itemPositionType;
 
     public void Sell()
     {
