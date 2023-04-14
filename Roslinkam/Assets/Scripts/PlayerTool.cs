@@ -11,10 +11,6 @@ public class PlayerTool: Item
          DealDamage(playerComponentsContainer.PlayerTargetFinder.Target);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        playerComponentsContainer.Inventory.AddItem(item);
-    }
     public void DealDamage(HealthController target)
     {
         if (target == null)
