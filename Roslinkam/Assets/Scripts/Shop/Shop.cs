@@ -45,9 +45,9 @@ public class Shop : MonoBehaviour
             }
         }
 
-        /*for (int i = 0; i < itemSlots.Count; i++)
+        /*for (int _currentMonsterIndex = 0; _currentMonsterIndex < itemSlots.Count; _currentMonsterIndex++)
         {
-            itemSlots[i].Select(false);
+            itemSlots[_currentMonsterIndex].Select(false);
         }*/
     }
 
@@ -72,10 +72,10 @@ public class Shop : MonoBehaviour
             }
         }
 
-        /*for (int i = 0; i < playerItemSlots.Count; i++)
+        /*for (int _currentMonsterIndex = 0; _currentMonsterIndex < playerItemSlots.Count; _currentMonsterIndex++)
         {
 
-            playerItemSlots[i].Select(false);
+            playerItemSlots[_currentMonsterIndex].Select(false);
         }*/
     }
 
@@ -169,16 +169,16 @@ public class Shop : MonoBehaviour
         Destroy(itemToSell.gameObject);
         //List<Item> itemToRemove = new List<Item>();
 
-        /*for (int i = 0; i < itemContainer.Items.Count; i++)
+        /*for (int _currentMonsterIndex = 0; _currentMonsterIndex < itemContainer.Items.Count; _currentMonsterIndex++)
         {
-            itemToRemove.Add(itemContainer.Items[i]);
+            itemToRemove.Add(itemContainer.Items[_currentMonsterIndex]);
             activePlayerInventory.ChangeMoneyValue(10);
         }
 
-        for (int i = 0; i < itemToRemove.Count; i++)
+        for (int _currentMonsterIndex = 0; _currentMonsterIndex < itemToRemove.Count; _currentMonsterIndex++)
         {
-            activePlayerInventory.RemoveItem(itemToRemove[i]);
-            Destroy(itemToRemove[i].gameObject);
+            activePlayerInventory.RemoveItem(itemToRemove[_currentMonsterIndex]);
+            Destroy(itemToRemove[_currentMonsterIndex].gameObject);
         }*/
         SetupPlayerSlots();
         SetupShopSlots();

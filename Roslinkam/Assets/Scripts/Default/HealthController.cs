@@ -22,6 +22,7 @@ public class HealthController : MonoBehaviour
     {
         if (_healthValue > 0)
         {
+            Debug.Log(_healthValue);
             _healthValueImage.fillAmount -= value;
             _healthValue -= value;
             SetHealthBar();
