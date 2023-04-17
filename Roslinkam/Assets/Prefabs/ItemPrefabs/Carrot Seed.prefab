@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3655194828339109629}
   - component: {fileID: 3655194828339109626}
   - component: {fileID: 6034795465411040663}
+  - component: {fileID: -7008349310556773819}
   m_Layer: 6
   m_Name: Carrot Seed
   m_TagString: Pickup
@@ -118,5 +119,19 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3655194828339109629}
   price: 3
   itemName: Carrot seed
+  itemPositionType: 0
   growingTime: 3
   crop: {fileID: 1329351012662633809, guid: 4fb4c7d9d5cec314e99b751a9412518c, type: 3}
+  farmlandFinder: {fileID: 0}
+--- !u!114 &-7008349310556773819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655194828339109627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e8bb83b98335c43882d3a7a645f09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3655194828339109629}
   - component: {fileID: 3655194828339109626}
   - component: {fileID: 6034795465411040663}
+  - component: {fileID: -2513586493037061448}
   m_Layer: 6
   m_Name: Pumpkin Seed
   m_TagString: Pickup
@@ -118,5 +119,19 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3655194828339109629}
   price: 15
   itemName: Pumpkin seed
+  itemPositionType: 0
   growingTime: 15
   crop: {fileID: 1329351012662633809, guid: ce740be8806f6b147833a20ff5ae262c, type: 3}
+  farmlandFinder: {fileID: 0}
+--- !u!114 &-2513586493037061448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655194828339109627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e8bb83b98335c43882d3a7a645f09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

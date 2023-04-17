@@ -5,19 +5,28 @@ using UnityEngine;
 
 public class Farmland : MonoBehaviour
 {
+    [SerializeField]
+    private SpriteRenderer spriteRenderer;
     private Seed seed;
     private float timer;
     private bool isEmpty = true;
+    private bool isActive = false;
 
     public event Action<float> onTimerChangedAction;
     public event Action onPlantSeededAction;
 
     public Seed Seed => seed;
     public bool IsEmpty => isEmpty;
+    public bool IsActive => isActive;
 
     private void Update()
     {
         ProcessTimer();
+    }
+
+    private void Start()
+    {
+        spriteRenderer.enabled = false;
     }
 
     private void ProcessTimer()
@@ -36,11 +45,23 @@ public class Farmland : MonoBehaviour
         }
     }
 
+    public void ActiveFarmland()
+    {
+        if (!isActive)
+        {
+            spriteRenderer.enabled = true;
+        }
+        isActive = true;
+    }
+
     public void SeedPlant(Seed seed)
     {
-        timer = seed.GrowingTime;
-        this.seed = seed;
-        isEmpty = false;
-        onPlantSeededAction?.Invoke();
+        if (isActive)
+        {
+            timer = seed.GrowingTime;
+            this.seed = seed;
+            isEmpty = false;
+            onPlantSeededAction?.Invoke();
+        }
     }
 }

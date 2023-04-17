@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3655194828339109629}
   - component: {fileID: 3655194828339109626}
   - component: {fileID: 6034795465411040663}
+  - component: {fileID: -8163221360274264045}
   m_Layer: 6
   m_Name: Cucumber Seed
   m_TagString: Pickup
@@ -118,5 +119,19 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3655194828339109629}
   price: 5
   itemName: Cucumber seed
+  itemPositionType: 0
   growingTime: 5
   crop: {fileID: 1329351012662633809, guid: 0ee741fc0f8b2fc4f9ca035b7b44a819, type: 3}
+  farmlandFinder: {fileID: 0}
+--- !u!114 &-8163221360274264045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3655194828339109627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62e8bb83b98335c43882d3a7a645f09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

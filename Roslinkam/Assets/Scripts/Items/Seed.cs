@@ -4,25 +4,30 @@ using UnityEngine;
 
 public class Seed : Item
 {
-    private List<Farmland> farmlands = new List<Farmland>();
-
     [SerializeField] private float growingTime;
     [SerializeField] private Item crop;
+    private FarmlandFinder farmlandFinder;
 
     public float GrowingTime => growingTime;
     public Item Crop => crop;
 
+    private void Start()
+    {
+        farmlandFinder = GetComponent<FarmlandFinder>();
+    }
+
     public override void Use()
     {
-        if (farmlands.Count <= 0)
+        if (farmlandFinder.Farmlands.Count <= 0)
         {
             return;
         }
 
-        Farmland farmland = GetClosestEmptyFarmland();
+        Farmland farmland = farmlandFinder.GetClosestEmptyFarmland();
 
-        if (farmland == null)
+        if (farmland == null || !farmland.IsActive)
         {
+            Debug.Log(farmland.IsActive);
             return;
         }
 
@@ -30,43 +35,5 @@ public class Seed : Item
         inventory.Unequip();
         farmland.SeedPlant(this);
         gameObject.SetActive(false);
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Farmland collisionFarmland = collision.GetComponent<Farmland>();
-        if (collisionFarmland == null)
-        {
-            return;
-        }
-        farmlands.Add(collisionFarmland);
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Farmland collisionFarmland = collision.GetComponent<Farmland>();
-        if (collisionFarmland == null || !farmlands.Contains(collisionFarmland))
-        {
-            return;
-        }
-        farmlands.Remove(collisionFarmland);
-    }
-
-    private Farmland GetClosestEmptyFarmland()
-    {
-        Farmland result = null;
-        float minDistance = float.MaxValue;
-
-        for (int i = 0; i < farmlands.Count; i++)
-        {
-            float currentDistance = Vector3.Distance(transform.position, farmlands[i].transform.position);
-
-            if (currentDistance < minDistance && farmlands[i].IsEmpty)
-            {
-                minDistance = currentDistance;
-                result = farmlands[i];
-            }
-        }
-        return result;
     }
 }
