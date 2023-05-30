@@ -17,7 +17,7 @@ public class HealthController : MonoBehaviour
     public void SetHealthBar()
     {
         _healthValueImage.fillAmount = _healthValue/_maxHealthValue;
-    }
+    } 
     public void GetDamage(float value)
     {
         if (_healthValue > 0)
