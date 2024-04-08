@@ -74,12 +74,18 @@ public class GameManager : MonoBehaviour
         StartCoroutine(LoadSameSceneWithDelay());
     }
 
-    public void OnApplicationQuit(InputAction.CallbackContext context)
+    public void OnGameQuit(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
             Application.Quit();
+#endif
         }
+        //Application.Quit();
+        
     }
 
     IEnumerator LoadSameSceneWithDelay()
