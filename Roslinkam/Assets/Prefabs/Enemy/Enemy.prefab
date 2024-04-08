@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4310683289684274366}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7916425355034553995}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9205203490565964440
 SpriteRenderer:
@@ -97,6 +97,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -136,8 +155,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e5a10ba902887547820a1b83716e9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyAnimator: {fileID: 3696726188244780906}
-  onAttack:
+  _enemyAnimator: {fileID: 3696726188244780906}
+  _onAttack:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &6274944316962527038
@@ -165,13 +184,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6274944316962527038}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 19.167797, y: 3.1109102, z: -0.046290725}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7916425355034553995}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &5047397304536730435
 CapsuleCollider2D:
@@ -183,6 +202,25 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -232,6 +270,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7916425355034553996}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -240,7 +279,6 @@ Transform:
   - {fileID: 5357391145942792249}
   - {fileID: 1836010567668971339}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3845563246501444638
 Rigidbody2D:
@@ -259,6 +297,12 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -275,11 +319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32dc581d295e438419073b10e97273f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  route: []
-  positionAccuracy: 0.5
-  animator: {fileID: 3696726188244780906}
-  sprite: {fileID: 9205203490565964440}
-  speed: 1
+  _route: []
+  _positionAccuracy: 0.5
+  _animator: {fileID: 3696726188244780906}
+  _sprite: {fileID: 9205203490565964440}
+  _speed: 0
 --- !u!114 &6486743516667801665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,9 +336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28bd19b7d42e5c5428b9c11f3c56663a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovementAnimator: {fileID: 3696726188244780906}
-  enemyComponentsContainer: {fileID: 4496405546095714259}
-  attackDistance: 1
+  _enemyMovementAnimator: {fileID: 3696726188244780906}
+  _enemyComponentsContainer: {fileID: 4496405546095714259}
+  _attackDistance: 0
 --- !u!114 &4496405546095714259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,12 +351,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f47387af816788e45827a61bce475c6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyMovement: {fileID: 6313097431877225159}
-  enemyAnimatorController: {fileID: 3696726188244780910}
-  enemyController: {fileID: 6486743516667801665}
-  enemyAnimator: {fileID: 3696726188244780906}
-  enemyTargetFinder: {fileID: 6302237475431390474}
-  enemyHealthController: {fileID: 9085793745692833315}
+  _enemyMovement: {fileID: 6313097431877225159}
+  _enemyAnimatorController: {fileID: 3696726188244780910}
+  _enemyController: {fileID: 6486743516667801665}
+  _enemyAnimator: {fileID: 3696726188244780906}
+  _enemyTargetFinder: {fileID: 6302237475431390474}
+  _enemyHealthController: {fileID: 9085793745692833315}
 --- !u!114 &6302237475431390474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,4 +381,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d06f0b817837ca84cb2cee9ba9b709b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackType: {fileID: 0}
+  _attackType: {fileID: 0}
