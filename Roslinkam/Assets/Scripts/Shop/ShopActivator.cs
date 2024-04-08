@@ -4,12 +4,21 @@ using UnityEngine.InputSystem;
 
 public class ShopActivator : MonoBehaviour
 {
+    #region non public fields
+    
     [SerializeField]
-    PlayerComponentsContainer playerComponentsContainer;
+    private PlayerComponentsContainer _playerComponentsContainer;
 
-    private List<Shop> shopItems = new List<Shop>();
-    private Shop openShop;
+    private List<Shop> _shopItems = new List<Shop>();
+    private Shop _openShop;
+    
+    #endregion
 
+    #region public fields
+    #endregion
+
+    #region non public methods
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Shop collisionShop = collision.GetComponent<Shop>();
@@ -18,18 +27,40 @@ public class ShopActivator : MonoBehaviour
             return;
         }
 
-        shopItems.Add(collisionShop);
+        _shopItems.Add(collisionShop);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         Shop collisionShop = collision.GetComponent<Shop>();
-        if (collisionShop == null || !shopItems.Contains(collisionShop))
+        if (collisionShop == null || !_shopItems.Contains(collisionShop))
         {
             return;
         }
-        shopItems.Remove(collisionShop);
+        _shopItems.Remove(collisionShop);
     }
+
+    private Shop GetClosestShop()
+    {
+        Shop result = null;
+        float minDistance = float.MaxValue;
+
+        for (int i = 0; i < _shopItems.Count; i++)
+        {
+            float currentDistance = Vector3.Distance(transform.position, _shopItems[i].transform.position);
+
+            if (currentDistance < minDistance && _shopItems[i].IsEmpty)
+            {
+                minDistance = currentDistance;
+                result = _shopItems[i];
+            }
+        }
+        return result;
+    }
+
+    #endregion
+
+    #region public methods
 
     public void OnShopOpen(InputAction.CallbackContext context)
     {
@@ -38,37 +69,21 @@ public class ShopActivator : MonoBehaviour
             return;
         }
 
-        if (openShop != null)
+        if (_openShop != null)
         {
-            openShop.TriggerShop(playerComponentsContainer);
-            openShop = null;
+            _openShop.TriggerShop(_playerComponentsContainer);
+            _openShop = null;
             return;
         }
 
-        if (shopItems.Count <= 0)
+        if (_shopItems.Count <= 0)
         {
             return;
         }
 
-        openShop = GetClosestShop();
-        openShop.TriggerShop(playerComponentsContainer);
+        _openShop = GetClosestShop();
+        _openShop.TriggerShop(_playerComponentsContainer);
     }
-
-    private Shop GetClosestShop()
-    {
-        Shop result = null;
-        float minDistance = float.MaxValue;
-
-        for (int i = 0; i < shopItems.Count; i++)
-        {
-            float currentDistance = Vector3.Distance(transform.position, shopItems[i].transform.position);
-
-            if (currentDistance < minDistance && shopItems[i].IsEmpty)
-            {
-                minDistance = currentDistance;
-                result = shopItems[i];
-            }
-        }
-        return result;
-    }
+    
+    #endregion
 }

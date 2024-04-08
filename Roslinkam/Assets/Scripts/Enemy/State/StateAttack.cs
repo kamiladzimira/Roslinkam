@@ -2,32 +2,46 @@ using UnityEngine;
 
 public class StateAttack : IEnemyState
 {
-    EnemyComponentsContainer enemyComponentsContainer;
+    #region non public fields
+
+    private EnemyComponentsContainer _enemyComponentsContainer;
+    
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
 
     public StateAttack(EnemyComponentsContainer enemyComponentsContainer)
     {
-        this.enemyComponentsContainer = enemyComponentsContainer;
+        this._enemyComponentsContainer = enemyComponentsContainer;
     }
 
     public IEnemyState DoState()
     {
-        if (enemyComponentsContainer.EnemyTargetFinder.Target == null)
+        if (_enemyComponentsContainer.EnemyTargetFinder.Target == null)
         {
-            return enemyComponentsContainer.EnemyController.StateIdle;
+            return _enemyComponentsContainer.EnemyController.StateIdle;
         }
 
-        if (Vector2.Distance(enemyComponentsContainer.EnemyMovement.transform.position,
-                             enemyComponentsContainer.EnemyTargetFinder.Target.transform.position)
-                                > enemyComponentsContainer.EnemyController.AttackDistance + 0.2)
+        if (Vector2.Distance(_enemyComponentsContainer.EnemyMovement.transform.position,
+                             _enemyComponentsContainer.EnemyTargetFinder.Target.transform.position)
+                                > _enemyComponentsContainer.EnemyController.AttackDistance + 0.2)
         {
-            return enemyComponentsContainer.EnemyController.StateWalkToTarget;
+            return _enemyComponentsContainer.EnemyController.StateWalkToTarget;
         }
         return this;
     }
 
     public void OnEnter()
     {
-        enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
-        enemyComponentsContainer.EnemyAnimator.SetTrigger("Attack");
+        _enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+        _enemyComponentsContainer.EnemyAnimator.SetTrigger("Attack");
     }
+
+    #endregion
 }

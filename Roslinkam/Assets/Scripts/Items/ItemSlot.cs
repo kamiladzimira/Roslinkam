@@ -4,23 +4,41 @@ using TMPro;
 
 public class ItemSlot : MonoBehaviour
 {
-    [SerializeField] Image image;
-    [SerializeField] Image selectedImage;
-    [SerializeField] TextMeshProUGUI amountOfItems;
+    #region non public fields
 
-    private Item item;
-    private ItemContainer itemContainer;
-    public Item Item => item;
-    public ItemContainer ItemContainer => itemContainer;
+    [SerializeField]
+    private Image _image;
+    [SerializeField]
+    private Image _selectedImage;
+    [SerializeField]
+    private TextMeshProUGUI _amountOfItems;
+
+    private Item _item;
+    private ItemContainer _itemContainer;
+
+    #endregion
+
+    #region public fields
+
+    public Item Item => _item;
+    public ItemContainer ItemContainer => _itemContainer;
+
+    #endregion
+
+    #region non public methods
 
     private void Start()
     {
         Setup();
     }
 
+    #endregion
+
+    #region public methods
+
     public void Select(bool isSelected)
     {
-        selectedImage.gameObject.SetActive(isSelected);
+        _selectedImage.gameObject.SetActive(isSelected);
     }
 
     public void Setup(Item item)
@@ -31,9 +49,9 @@ public class ItemSlot : MonoBehaviour
             return;
         }
 
-        image.sprite = item.Sprite;
-        image.gameObject.SetActive(true);
-        this.item = item;
+        _image.sprite = item.Sprite;
+        _image.gameObject.SetActive(true);
+        this._item = item;
     }
 
     public void Setup(ItemContainer itemContainer)
@@ -46,17 +64,19 @@ public class ItemSlot : MonoBehaviour
             return;
         }
 
-        image.sprite = item.Sprite;
-        image.gameObject.SetActive(true);
-        this.itemContainer = itemContainer;
-        amountOfItems.text = itemContainer.Items.Count.ToString();
+        _image.sprite = item.Sprite;
+        _image.gameObject.SetActive(true);
+        this._itemContainer = itemContainer;
+        _amountOfItems.text = itemContainer.Items.Count.ToString();
     }
 
     public void Setup()
     {
-        image.sprite = null;
-        image.gameObject.SetActive(false);
-        item = null;
-        amountOfItems.text = "";
+        _image.sprite = null;
+        _image.gameObject.SetActive(false);
+        _item = null;
+        _amountOfItems.text = "";
     }
+
+    #endregion
 }

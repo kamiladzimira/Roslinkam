@@ -2,13 +2,28 @@ using UnityEngine;
 
 public class SwordTool: Item
 {
-    [SerializeField] private int damage;
-    [SerializeField] PlayerComponentsContainer playerComponentsContainer;
-    private Item item;
+    #region non public fields
+    
+    [SerializeField] 
+    private int _damage;
+    [SerializeField] 
+    private PlayerComponentsContainer _playerComponentsContainer;
 
+    private Item _item;
+    
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
+    
     public override void Use()
     {
-         DealDamage(playerComponentsContainer.PlayerTargetFinder.Target);
+         DealDamage(_playerComponentsContainer.PlayerTargetFinder.Target);
     }
 
     public void DealDamage(HealthController target)
@@ -17,6 +32,8 @@ public class SwordTool: Item
         {
             return;
         }
-        target.GetDamage(damage);
+        target.GetDamage(_damage);
     }
+    
+    #endregion
 }

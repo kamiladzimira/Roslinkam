@@ -2,10 +2,20 @@ using UnityEngine;
 
 public class PlayerTargetFinder : MonoBehaviour
 {
-    private HealthController target;
+    #region non public fields
+    
+    private HealthController _target;
+    
+    #endregion
 
-    public HealthController Target => target;
+    #region public fields
+    
+    public HealthController Target => _target;
+    
+    #endregion
 
+    #region non public methods
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         HealthController tmpTarget = collision.GetComponent<HealthController>();
@@ -13,16 +23,21 @@ public class PlayerTargetFinder : MonoBehaviour
         {
             return;
         }
-        target = tmpTarget;
+        _target = tmpTarget;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         HealthController tmpTarget = collision.GetComponent<HealthController>();
-        if (tmpTarget != target)
+        if (tmpTarget != _target)
         {
             return;
         }
-        target = null;
+        _target = null;
     }
+    
+    #endregion
+
+    #region public methods
+    #endregion
 }

@@ -1,27 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Subsystems;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private int _speed;
-    [SerializeField] private int _rotationSpeed;
-    [SerializeField] private int _damage;
-    [SerializeField] private float _followTime = 2;
-    [SerializeField] private float _lifeTime = 6;
+    #region non public fields
+
+    [SerializeField] 
+    private int _speed;
+    [SerializeField] 
+    private int _rotationSpeed;
+    [SerializeField] 
+    private int _damage;
+    [SerializeField] 
+    private float _followTime = 2;
+    [SerializeField] 
+    private float _lifeTime = 6;
     private EnemyComponentsContainer _enemyComponentsContainer;
     private HealthController _target;
     private float _timer = 0;
     private Vector3 _direction;
 
+    #endregion
+
+    #region public fields
+    
     public int Damage => _damage;
+
+    #endregion
+
+    #region non public methods
 
     private void Update()
     {
         _timer += Time.deltaTime;
-        if(_target == null)
+        if (_target == null)
         {
             Spawner.Instance.ReturnBulletBackToPool(this);
             return;
@@ -38,22 +49,6 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         HandleDealDamage(collision);
-    }
-
-    public void Setup(EnemyComponentsContainer container)
-    {
-        _enemyComponentsContainer = container;
-        _target = _enemyComponentsContainer.EnemyTargetFinder.Target;
-        CalculateRotation();
-        transform.rotation = Quaternion.LookRotation(Vector3.back, _direction);
-    }
-
-    public void ResetBullet()
-    {
-        _timer = 0;
-        _target = null;
-        _direction = Vector3.zero;
-        _enemyComponentsContainer = null;
     }
 
     private void MoveBullet(int speed)
@@ -88,4 +83,26 @@ public class Bullet : MonoBehaviour
         Quaternion newRotation = Quaternion.RotateTowards(transform.rotation, rotationTarget, _rotationSpeed * Time.deltaTime);
         transform.rotation = newRotation;
     }
+
+    #endregion
+
+    #region public methods
+
+    public void Setup(EnemyComponentsContainer container)
+    {
+        _enemyComponentsContainer = container;
+        _target = _enemyComponentsContainer.EnemyTargetFinder.Target;
+        CalculateRotation();
+        transform.rotation = Quaternion.LookRotation(Vector3.back, _direction);
+    }
+
+    public void ResetBullet()
+    {
+        _timer = 0;
+        _target = null;
+        _direction = Vector3.zero;
+        _enemyComponentsContainer = null;
+    }
+
+    #endregion
 }

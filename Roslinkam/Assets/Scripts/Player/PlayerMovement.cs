@@ -3,35 +3,39 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 5f;
-    Rigidbody2D rb2D;
-    Vector2 movementVector;
-    Animator animator;
+    #region non public fields
+    
+    [SerializeField] 
+    private float _moveSpeed = 5f;
+    private Rigidbody2D _rb2D;
+    private Vector2 _movementVector;
+    private Animator _animator;
+    
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
 
     private void Awake()
     {
-        rb2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        _rb2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
     }
-
-    public void OnWalk(InputAction.CallbackContext context)
-    {
-       movementVector = context.ReadValue<Vector2>();
-    }
-
     private void Move()
     {
-        rb2D.MovePosition(rb2D.position + (movementVector * moveSpeed * Time.fixedDeltaTime));
+        _rb2D.MovePosition(_rb2D.position + (_movementVector * _moveSpeed * Time.fixedDeltaTime));
 
-        if (movementVector.magnitude > Mathf.Epsilon)
+        if (_movementVector.magnitude > Mathf.Epsilon)
         {
-            animator.SetBool("isWalking", true);
-            animator.SetFloat("XSpeed", movementVector.x);
-            animator.SetFloat("YSpeed", movementVector.y);
+            _animator.SetBool("isWalking", true);
+            _animator.SetFloat("XSpeed", _movementVector.x);
+            _animator.SetFloat("YSpeed", _movementVector.y);
         }
         else
         {
-            animator.SetBool("isWalking", false);
+            _animator.SetBool("isWalking", false);
         }
     }
 
@@ -39,4 +43,15 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
     }
+
+    #endregion
+
+    #region public methods
+
+    public void OnWalk(InputAction.CallbackContext context)
+    {
+       _movementVector = context.ReadValue<Vector2>();
+    }
+
+    #endregion
 }

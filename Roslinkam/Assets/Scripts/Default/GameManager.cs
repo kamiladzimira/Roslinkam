@@ -6,41 +6,75 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
-    [SerializeField] private TextMeshProUGUI displayedGameOver;
-    [SerializeField] private GameObject gameOver;
-    [SerializeField] private TextMeshProUGUI coins;
-    [SerializeField] PlayerComponentsContainer playerComponentsContainer;
-    private HealthController playerHealthController;
-    private int loadSceneDelay = 2;
+    #region non public fields
+
+    [SerializeField]
+    private TextMeshProUGUI _displayedGameOver;
+    [SerializeField]
+    private GameObject _gameOver;
+    [SerializeField]
+    private TextMeshProUGUI _coins;
+    [SerializeField]
+    private PlayerComponentsContainer _playerComponentsContainer;
+
+    private static GameManager _instance;
+    private HealthController _playerHealthController;
+    private int _loadSceneDelay = 2;
+
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
 
     private void Awake()
     {
-        if (instance != null)
+        if (_instance != null)
         {
             Destroy(this);
         }
         else
         {
-            instance = this;
+            _instance = this;
         }
-    }
-    public static GameManager GetInstance()
-    {
-        return instance;
     }
 
     private void Start()
     {
-        gameOver.SetActive(false);
+        _gameOver.SetActive(false);
     }
     private void Update()
     {
         CoinsValueDispay();
     }
+
+    private void OnPlayerDied()
+    {
+        _gameOver.SetActive(true);
+        StartCoroutine(LoadSameSceneWithDelay());
+    }
+
+    private IEnumerator LoadSameSceneWithDelay()
+    {
+        Scene activeScene = SceneManager.GetActiveScene();
+        int sceneToLoad = activeScene.buildIndex;
+        yield return new WaitForSecondsRealtime(_loadSceneDelay);
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
+    #endregion
+
+    #region public methods
+
+    public static GameManager GetInstance()
+    {
+        return _instance;
+    }
+
     public void CoinsValueDispay()
     {
-        coins.text = playerComponentsContainer.Inventory.Money.ToString();
+        _coins.text = _playerComponentsContainer.Inventory.Money.ToString();
     }
 
     public void PlayHitSound()
@@ -60,18 +94,12 @@ public class GameManager : MonoBehaviour
 
     public void RegisterPlayer(HealthController healthController)
     {
-        if (playerHealthController != null)
+        if (_playerHealthController != null)
         {
-            playerHealthController.OnDied -= OnPlayerDied;
+            _playerHealthController.OnDied -= OnPlayerDied;
         }
-        playerHealthController = healthController;
-        playerHealthController.OnDied += OnPlayerDied;
-    }
-
-    private void OnPlayerDied()
-    {
-        gameOver.SetActive(true);
-        StartCoroutine(LoadSameSceneWithDelay());
+        _playerHealthController = healthController;
+        _playerHealthController.OnDied += OnPlayerDied;
     }
 
     public void OnGameQuit(InputAction.CallbackContext context)
@@ -83,14 +111,8 @@ public class GameManager : MonoBehaviour
 #else
             Application.Quit();
 #endif
-        }        
+        }
     }
 
-    IEnumerator LoadSameSceneWithDelay()
-    {
-        Scene activeScene = SceneManager.GetActiveScene();
-        int sceneToLoad = activeScene.buildIndex;
-        yield return new WaitForSecondsRealtime(loadSceneDelay);
-        SceneManager.LoadScene(sceneToLoad);   
-    }
+    #endregion
 }

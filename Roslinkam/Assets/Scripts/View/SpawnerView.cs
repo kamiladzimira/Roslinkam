@@ -3,26 +3,42 @@ using TMPro;
 
 public class SpawnerView : MonoBehaviour
 {
-    [SerializeField] private SeedSpawner seedSpawner;
-    [SerializeField] TextMeshProUGUI timer;
+    #region non public fields
+    
+    [SerializeField] 
+    private SeedSpawner _seedSpawner;
+    [SerializeField] 
+    private TextMeshProUGUI _timer;
+    
+    #endregion
 
+    #region public fields
+    #endregion
+
+    #region non public methods
+    
     private void OnEnable()
     {
-        seedSpawner.onTimerChangedAction += OnTimerChanged;
+        _seedSpawner.OnTimerChangedAction += OnTimerChanged;
     }
 
     private void OnDisable()
     {
-        seedSpawner.onTimerChangedAction -= OnTimerChanged;
+        _seedSpawner.OnTimerChangedAction -= OnTimerChanged;
     }
 
     private void OnTimerChanged(float timerValue)
     {
         if (timerValue <= 0)
         {
-            timer.text = "Ready!";
+            _timer.text = "Ready!";
             return;
         }
-        timer.text = timerValue.ToString("0.00");
+        _timer.text = timerValue.ToString("0.00");
     }
+    
+    #endregion
+
+    #region public methods
+    #endregion
 }

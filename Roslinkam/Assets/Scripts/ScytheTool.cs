@@ -1,19 +1,33 @@
 public class ScytheTool : Item
 {
-    private FarmlandFinder farmlandFinder;
+    #region non public fields
 
+    private FarmlandFinder _farmlandFinder;
+    
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    
     private void Start()
     {
-        farmlandFinder = GetComponent<FarmlandFinder>();
+        _farmlandFinder = GetComponent<FarmlandFinder>();
     }
+    
+    #endregion
+
+    #region public methods
+    
     public override void Use()
     {
-        if (farmlandFinder.Farmlands.Count <= 0)
+        if (_farmlandFinder.Farmlands.Count <= 0)
         {
             return;
         }
 
-        Farmland farmland = farmlandFinder.GetClosestEmptyFarmland();
+        Farmland farmland = _farmlandFinder.GetClosestEmptyFarmland();
 
         if (farmland == null)
         {
@@ -22,4 +36,6 @@ public class ScytheTool : Item
 
         farmland.ActiveFarmland();
     }
+    
+    #endregion
 }

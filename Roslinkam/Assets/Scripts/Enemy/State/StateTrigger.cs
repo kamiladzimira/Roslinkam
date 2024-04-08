@@ -2,20 +2,44 @@ using UnityEngine;
 
 public class StateTrigger : IEnemyState
 {
-    EnemyComponentsContainer enemyComponentsContainer;
+    #region non public fields
+
+    private EnemyComponentsContainer _enemyComponentsContainer;
     private float _timer;
     private bool _shouldMove;
+    
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+
+    private IEnemyState HandleBeforeMove()
+    {
+        _timer -= Time.deltaTime;
+        if (_timer <= 0)
+        {
+            _shouldMove = true;
+            return _enemyComponentsContainer.EnemyController.StateWalkToTarget;
+        }
+        return this;
+    }
+
+    #endregion
+
+    #region public methods
 
     public StateTrigger(EnemyComponentsContainer enemyComponentsContainer)
     {
-        this.enemyComponentsContainer = enemyComponentsContainer;
+        this._enemyComponentsContainer = enemyComponentsContainer;
     }
 
     public IEnemyState DoState()
     {
-        if(enemyComponentsContainer.EnemyTargetFinder.Target == null)
+        if(_enemyComponentsContainer.EnemyTargetFinder.Target == null)
         {
-            return enemyComponentsContainer.EnemyController.StateIdle;
+            return _enemyComponentsContainer.EnemyController.StateIdle;
         }
         if (!_shouldMove)
         {
@@ -24,22 +48,13 @@ public class StateTrigger : IEnemyState
         return this;
     }
 
-    private IEnemyState HandleBeforeMove()
-    {
-        _timer -= Time.deltaTime;
-        if (_timer <= 0)
-        {
-            _shouldMove = true;
-            return enemyComponentsContainer.EnemyController.StateWalkToTarget;
-        }
-        return this;
-    }
-
     public void OnEnter()
     {
         _timer = 1;
         _shouldMove = false;
-        enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
-        enemyComponentsContainer.EnemyAnimator.SetTrigger("Trigger");
+        _enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+        _enemyComponentsContainer.EnemyAnimator.SetTrigger("Trigger");
     }
+
+    #endregion
 }

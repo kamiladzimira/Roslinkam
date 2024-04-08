@@ -3,40 +3,69 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    [SerializeField] private GameObject shopInventoryPanel;
-    [SerializeField] private GameObject playerInventoryPanel;
-    [SerializeField] private List<ItemSlot> itemSlots;
-    [SerializeField] private List<ItemSlot> playerItemSlots;
-    [SerializeField] List<ItemContainer> buyableItemsContainers = new List<ItemContainer>();
-    private Inventory activePlayerInventory;
-    private bool isEmpty = true;
-    public bool IsEmpty => isEmpty;
-    private ItemSlot selectedItemSlot;
+    #region non public fields
 
-    void Start()
+    [SerializeField] 
+    private GameObject _shopInventoryPanel;
+    [SerializeField] 
+    private GameObject _playerInventoryPanel;
+    [SerializeField] 
+    private List<ItemSlot> _itemSlots;
+    [SerializeField] 
+    private List<ItemSlot> _playerItemSlots;
+    [SerializeField] 
+    private List<ItemContainer> _buyableItemsContainers = new List<ItemContainer>();
+    private Inventory _activePlayerInventory;
+    private bool _isEmpty = true;
+    private ItemSlot _selectedItemSlot;
+    
+    #endregion
+
+    #region public fields
+    
+    public bool IsEmpty => _isEmpty;
+
+    #endregion
+
+    #region non public methods
+
+    private void Start()
     {
-        shopInventoryPanel.SetActive(false);
-        playerInventoryPanel.SetActive(false);
+        _shopInventoryPanel.SetActive(false);
+        _playerInventoryPanel.SetActive(false);
     }
+
+    private void RemoveFromBuyable(ItemContainer itemContainer, Item item)
+    {
+        itemContainer.RemoveItem(item);
+        if (itemContainer.Items.Count <= 0)
+        {
+            _buyableItemsContainers.Remove(itemContainer);
+        }
+    }
+
+    #endregion
+
+    #region public methods
 
     public void TriggerShop(PlayerComponentsContainer playerComponentsContainer)
     {
-        activePlayerInventory = playerComponentsContainer.Inventory;
-        shopInventoryPanel.SetActive(!shopInventoryPanel.activeSelf);
-        playerInventoryPanel.SetActive(!playerInventoryPanel.activeSelf);
+        _activePlayerInventory = playerComponentsContainer.Inventory;
+        _shopInventoryPanel.SetActive(!_shopInventoryPanel.activeSelf);
+        _playerInventoryPanel.SetActive(!_playerInventoryPanel.activeSelf);
         SetupShopSlots();
         SetupPlayerSlots();
     }
 
     public void SetupShopSlots()
     {
-        for (int i = 0; i < itemSlots.Count; i++)
+        for (int i = 0; i < _itemSlots.Count; i++)
         {
-            ItemSlot itemSlot = itemSlots[i];
+            ItemSlot itemSlot = _itemSlots[i];
 
-            if (i < buyableItemsContainers.Count)
+            if (i < _buyableItemsContainers.Count)
             {
-                itemSlot.Setup(buyableItemsContainers[i]);
+                itemSlot.Setup(_buyableItemsContainers[i]);
             }
             else
             {
@@ -52,18 +81,18 @@ public class Shop : MonoBehaviour
 
     public void SetupPlayerSlots()
     {
-        if (activePlayerInventory == null)
+        if (_activePlayerInventory == null)
         {
             return;
         }
 
-        for (int i = 0; i < playerItemSlots.Count; i++)
+        for (int i = 0; i < _playerItemSlots.Count; i++)
         {
-            ItemSlot playerItemSlot = playerItemSlots[i];
+            ItemSlot playerItemSlot = _playerItemSlots[i];
 
-            if (i < activePlayerInventory.ItemContainers.Count)
+            if (i < _activePlayerInventory.ItemContainers.Count)
             {
-                playerItemSlot.Setup(activePlayerInventory.ItemContainers[i]);
+                playerItemSlot.Setup(_activePlayerInventory.ItemContainers[i]);
             }
             else
             {
@@ -85,11 +114,11 @@ public class Shop : MonoBehaviour
             return;
         }
 
-        selectedItemSlot = itemSlot;
+        _selectedItemSlot = itemSlot;
 
-        foreach (ItemSlot slot in itemSlots)
+        foreach (ItemSlot slot in _itemSlots)
         {
-            if (slot == selectedItemSlot)
+            if (slot == _selectedItemSlot)
             {
                 slot.Select(true);
             }
@@ -99,9 +128,9 @@ public class Shop : MonoBehaviour
             }
         }
 
-        foreach (ItemSlot slot in playerItemSlots)
+        foreach (ItemSlot slot in _playerItemSlots)
         {
-            if (slot == selectedItemSlot)
+            if (slot == _selectedItemSlot)
             {
                 slot.Select(true);
             }
@@ -114,18 +143,18 @@ public class Shop : MonoBehaviour
 
     public void BuySelectedItemFromItemContainer()
     {
-        if (activePlayerInventory.Money <= 0 || selectedItemSlot == null)
+        if (_activePlayerInventory.Money <= 0 || _selectedItemSlot == null)
         {
             return;
         }
 
-        ItemContainer itemContainer = selectedItemSlot.ItemContainer;
+        ItemContainer itemContainer = _selectedItemSlot.ItemContainer;
         Item itemToBuy = itemContainer.GetFirstItem();
         if (itemToBuy == null)
         {
             return;
         }
-        if (activePlayerInventory.Money < itemToBuy.BuyPrice)
+        if (_activePlayerInventory.Money < itemToBuy.BuyPrice)
         {
             Debug.Log("You dont have enough money");
             return;
@@ -133,38 +162,31 @@ public class Shop : MonoBehaviour
         Debug.Log("You buy item for: " + itemToBuy.BuyPrice);
         RemoveFromBuyable(itemContainer, itemToBuy);
 
-        activePlayerInventory.AddItem(itemToBuy);
+        _activePlayerInventory.AddItem(itemToBuy);
         SetupPlayerSlots();
         SetupShopSlots();
-        activePlayerInventory.ChangeMoneyValue(-(itemToBuy.BuyPrice));
+        _activePlayerInventory.ChangeMoneyValue(-(itemToBuy.BuyPrice));
     }
 
-    private void RemoveFromBuyable(ItemContainer itemContainer, Item item)
-    {
-        itemContainer.RemoveItem(item);
-        if (itemContainer.Items.Count <= 0)
-        {
-            buyableItemsContainers.Remove(itemContainer);
-        }
-    }
+    
 
     public void SellSelectedItemFromItemContainer()
     {
-        if (selectedItemSlot == null)
+        if (_selectedItemSlot == null)
         {
             return;
         }
 
-        ItemContainer itemContainer = selectedItemSlot.ItemContainer;
+        ItemContainer itemContainer = _selectedItemSlot.ItemContainer;
         Item itemToSell = itemContainer.GetFirstItem();
-        if (  activePlayerInventory.ItemContainers == null || itemToSell == null)
+        if (  _activePlayerInventory.ItemContainers == null || itemToSell == null)
         {
             return;
         }
         Debug.Log("You sell item for: " + itemToSell.SellPrice);
-        activePlayerInventory.ChangeMoneyValue(itemToSell.SellPrice);
+        _activePlayerInventory.ChangeMoneyValue(itemToSell.SellPrice);
 
-        activePlayerInventory.RemoveItem(itemToSell);
+        _activePlayerInventory.RemoveItem(itemToSell);
         Destroy(itemToSell.gameObject);
         //List<Item> itemToRemove = new List<Item>();
 
@@ -182,4 +204,6 @@ public class Shop : MonoBehaviour
         SetupPlayerSlots();
         SetupShopSlots();
     }
+
+    #endregion
 }

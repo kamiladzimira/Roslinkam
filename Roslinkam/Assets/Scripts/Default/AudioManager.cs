@@ -2,29 +2,39 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    private static AudioManager instance;
-    [SerializeField] private AudioSource backgroundMusicSource;
-    [SerializeField] private AudioSource hitSoundSource;
-    [SerializeField] private AudioSource explodeSoundSource;
-    [SerializeField] private AudioSource shootSoundSource;
-    [SerializeField] private AudioSource itemPickUpSoundSource;
+    #region non public fields
+
+    [SerializeField]
+    private AudioSource _backgroundMusicSource;
+    [SerializeField]
+    private AudioSource _hitSoundSource;
+    [SerializeField]
+    private AudioSource _explodeSoundSource;
+    [SerializeField]
+    private AudioSource _shootSoundSource;
+    [SerializeField]
+    private AudioSource _itemPickUpSoundSource;
+
+    private static AudioManager _instance;
+
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
 
     private void Awake()
     {
-        if (instance != null)
+        if (_instance != null)
         {
             Destroy(this);
         }
         else
         {
-            instance = this;
+            _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-    }
-
-    public static AudioManager GetInstance()
-    {
-        return instance;
     }
 
     private void Start()
@@ -32,32 +42,39 @@ public class AudioManager : MonoBehaviour
         PlayBackgroundMusic();
     }
 
+    #endregion
+
+    #region public methods
+
+    public static AudioManager GetInstance()
+    {
+        return _instance;
+    }
+
     public void PlayBackgroundMusic()
     {
-        backgroundMusicSource.Play();
+        _backgroundMusicSource.Play();
     }
 
     public void PlayHitSound()
     {
-        hitSoundSource.Play();
+        _hitSoundSource.Play();
     }
 
     public void PlayPickUpSound()
     {
-        itemPickUpSoundSource.Play();
+        _itemPickUpSoundSource.Play();
     }
 
     public void PlayExplodeSound()
     {
-        explodeSoundSource.Play();
+        _explodeSoundSource.Play();
     }
 
     public void PlayShootSound()
     {
-        shootSoundSource.Play();
+        _shootSoundSource.Play();
     }
+
+    #endregion
 }
-
-
-
-

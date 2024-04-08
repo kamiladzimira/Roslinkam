@@ -2,16 +2,31 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    private int damage;
-    [SerializeField] protected AttackType attackType;
+    #region non public fields
+
+    private int _damage;
+    [SerializeField] 
+    protected AttackType _attackType;
+
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
 
     public void TryDoAttack()
     {
-        attackType?.DoAttack(damage);
+        _attackType?.DoAttack(_damage);
     }
 
     public void SetAttackType(AttackType newAttackType)
     {
-        attackType = newAttackType;
+        _attackType = newAttackType;
     }
+
+    #endregion
 }

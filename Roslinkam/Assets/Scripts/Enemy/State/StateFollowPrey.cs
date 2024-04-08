@@ -2,32 +2,46 @@ using UnityEngine;
 
 public class StateFollowPrey : IEnemyState
 {
-    EnemyComponentsContainer enemyComponentsContainer;
-  
+    #region non public fields
+
+    private EnemyComponentsContainer _enemyComponentsContainer;
+    
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
+
     public StateFollowPrey(EnemyComponentsContainer enemyComponentsContainer)
     {
-        this.enemyComponentsContainer = enemyComponentsContainer;
+        this._enemyComponentsContainer = enemyComponentsContainer;
     }
 
     public IEnemyState DoState()
     {
-        if (enemyComponentsContainer.EnemyTargetFinder.Target == null)
+        if (_enemyComponentsContainer.EnemyTargetFinder.Target == null)
         {
-            return enemyComponentsContainer.EnemyController.StateIdle;
+            return _enemyComponentsContainer.EnemyController.StateIdle;
         }
-        if (Vector2.Distance(enemyComponentsContainer.EnemyMovement.transform.position,
-                             enemyComponentsContainer.EnemyTargetFinder.Target.transform.position)
-                                < enemyComponentsContainer.EnemyController.AttackDistance)
+        if (Vector2.Distance(_enemyComponentsContainer.EnemyMovement.transform.position,
+                             _enemyComponentsContainer.EnemyTargetFinder.Target.transform.position)
+                                < _enemyComponentsContainer.EnemyController.AttackDistance)
         {
-            return enemyComponentsContainer.EnemyController.StateAttack;
+            return _enemyComponentsContainer.EnemyController.StateAttack;
         }
-        enemyComponentsContainer.EnemyMovement.Move(enemyComponentsContainer.EnemyTargetFinder.Target.transform);
+        _enemyComponentsContainer.EnemyMovement.Move(_enemyComponentsContainer.EnemyTargetFinder.Target.transform);
         return this;
     }
 
     public void OnEnter()
     {
-        enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
-        enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
+        _enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+        _enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
     }
+
+    #endregion
 }

@@ -4,20 +4,40 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
+    #region non public fields
+
+    [SerializeField]
+    private float _maxHealthValue;
+    [SerializeField]
+    private Image _healthValueImage;
+
     private float _healthValue;
-    [SerializeField] private float _maxHealthValue;
-    [SerializeField] private Image _healthValueImage;
+
+    #endregion
+
+    #region public fields
 
     public event Action OnDied;
+
+    #endregion
+
+    #region non public methods
+
     private void Start()
     {
         _healthValue = _maxHealthValue;
         SetHealthBar();
     }
+
+    #endregion
+
+    #region public methods
+
     public void SetHealthBar()
     {
         _healthValueImage.fillAmount = _healthValue/_maxHealthValue;
     } 
+
     public void GetDamage(float value)
     {
         if (_healthValue > 0)
@@ -33,4 +53,6 @@ public class HealthController : MonoBehaviour
             }
         }
     }
+
+    #endregion
 }

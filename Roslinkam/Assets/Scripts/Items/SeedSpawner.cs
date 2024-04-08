@@ -4,19 +4,32 @@ using System;
 
 public class SeedSpawner : MonoBehaviour
 {
-    [SerializeField] private List <Seed> seeds;
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] public Action<float> onTimerChangedAction;
+    #region non public fields
+    
+    [SerializeField] 
+    private List <Seed> _seeds;
+    [SerializeField] 
+    private Transform _spawnPoint;
+    [SerializeField] 
+    private float _defaultTimer = 5f;
+    
+    private float _timer;
+    private Seed _currentSeed;
+    private Shop _shop;
 
-    [SerializeField] float defaultTimer = 5f;
-    private float timer;
+    #endregion
 
-    private Seed currentSeed;
-    private Shop shop;
+    #region public fields
+
+    public Action<float> OnTimerChangedAction;
+
+    #endregion
+
+    #region non public methods
 
     private void Start()
     {
-        onTimerChangedAction?.Invoke(timer);
+        OnTimerChangedAction?.Invoke(_timer);
     }
 
     private void Update()
@@ -32,33 +45,38 @@ public class SeedSpawner : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         Seed seed = collision.GetComponent<Seed>();
-        if (seed != currentSeed)
+        if (seed != _currentSeed)
         {
             return;
         }
-        currentSeed = null;
+        _currentSeed = null;
     }
 
     private void HandlePlayerTrigger(Collider2D collision)
     {
         PlayerMovement playerMovement = collision.GetComponent<PlayerMovement>();
 
-        if (playerMovement == null || currentSeed != null || timer > 0)
+        if (playerMovement == null || _currentSeed != null || _timer > 0)
         {
             return;
         }
         
-        currentSeed = Instantiate(seeds[UnityEngine.Random.Range(0, seeds.Count)], spawnPoint.position, Quaternion.identity, null);
-        timer = defaultTimer;
+        _currentSeed = Instantiate(_seeds[UnityEngine.Random.Range(0, _seeds.Count)], _spawnPoint.position, Quaternion.identity, null);
+        _timer = _defaultTimer;
     }
 
     private void ProcessTimer()
     {
-        if (timer <= 0)
+        if (_timer <= 0)
         {
             return;
         }
-        timer -= Time.deltaTime;
-        onTimerChangedAction?.Invoke(timer);
+        _timer -= Time.deltaTime;
+        OnTimerChangedAction?.Invoke(_timer);
     }
+    
+    #endregion
+
+    #region public methods
+    #endregion
 }

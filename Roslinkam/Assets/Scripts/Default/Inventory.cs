@@ -4,59 +4,42 @@ using UnityEngine.InputSystem;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private GameObject inventoryPanel;
-    [SerializeField] private List<ItemSlot> itemSlots;
-    [SerializeField] private GameObject itemContainer;
-    [SerializeField] private GameObject equipContainer;
+    #region non public fields
 
-    [SerializeField] private List<ItemHolder> equipedContainers;
-    [SerializeField] private int maxPickupsValue;
-    [SerializeField] private List<InventoryView> inventoryViews;
-    private List<ItemContainer> itemContainers = new List<ItemContainer>();
-    private Item equipedItem;
-    private ItemSlot selectedItemSlot;
-    private int money = 999;
-    public IReadOnlyList<ItemContainer> ItemContainers => itemContainers;
-    public int Money => money;
+    [SerializeField]
+    private GameObject _inventoryPanel;
+    [SerializeField]
+    private List<ItemSlot> _itemSlots;
+    [SerializeField]
+    private GameObject _itemContainer;
+    [SerializeField]
+    private GameObject _equipContainer;
+    [SerializeField]
+    private List<ItemHolder> _equipedContainers;
+    [SerializeField]
+    private int _maxPickupsValue;
+    [SerializeField]
+    private List<InventoryView> _inventoryViews;
+
+    private List<ItemContainer> _itemContainers = new List<ItemContainer>();
+    private Item _equipedItem;
+    private ItemSlot _selectedItemSlot;
+    private int _money = 999;
+
+    #endregion
+
+    #region public fields
+
+    public IReadOnlyList<ItemContainer> ItemContainers => _itemContainers;
+    public int Money => _money;
+
+    #endregion
+
+    #region non public methods
 
     private void Start()
     {
-        inventoryPanel.SetActive(false);
-    }
-
-    public void ChangeMoneyValue(int value)
-    {
-        if (money + value < 0)
-        {
-            return;
-        }
-        money += value;
-    }
-
-    public void AddMoney(int value)
-    {
-        money += value;
-    }
-
-    public void OnItemUse(InputAction.CallbackContext context)
-    {
-        if (equipedItem == null)
-        {
-            return;
-        }
-        if (context.performed)
-        {
-            equipedItem.Use();
-        }
-    }
-
-    public void OnInventoryOpen(InputAction.CallbackContext context)
-    {
-        if (context.performed)
-        {
-            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-            SetupSlots();
-        }
+        _inventoryPanel.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,16 +58,82 @@ public class Inventory : MonoBehaviour
         AddItem(item);
     }
 
+    private void SetupSlots()
+    {
+        for (int i = 0; i < _inventoryViews.Count; i++)
+        {
+            _inventoryViews[i].SetupSlots(_itemContainers);
+        }
+        for (int i = 0; i < _itemSlots.Count; i++)
+        {
+            ItemSlot itemSlot = _itemSlots[i];
+
+            if (i < _itemContainers.Count)
+            {
+                ItemContainer itemContainer = _itemContainers[i];
+                itemSlot.Setup(itemContainer);
+            }
+            else
+            {
+                itemSlot.Setup();
+            }
+        }
+        for (int i = 0; i < _itemSlots.Count; i++)
+        {
+            _itemSlots[i].Select(false);
+        }
+        _selectedItemSlot = null;
+    }
+
+    #endregion
+
+    #region public methods
+
+    public void ChangeMoneyValue(int value)
+    {
+        if (_money + value < 0)
+        {
+            return;
+        }
+        _money += value;
+    }
+
+    public void AddMoney(int value)
+    {
+        _money += value;
+    }
+
+    public void OnItemUse(InputAction.CallbackContext context)
+    {
+        if (_equipedItem == null)
+        {
+            return;
+        }
+        if (context.performed)
+        {
+            _equipedItem.Use();
+        }
+    }
+
+    public void OnInventoryOpen(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            _inventoryPanel.SetActive(!_inventoryPanel.activeSelf);
+            SetupSlots();
+        }
+    }
+
     public void Select(ItemSlot itemSlot)
     {
         if (itemSlot.ItemContainer == null)
         {
             return;
         }
-        selectedItemSlot = itemSlot;
-        foreach (ItemSlot slot in itemSlots)
+        _selectedItemSlot = itemSlot;
+        foreach (ItemSlot slot in _itemSlots)
         {
-            if (slot == selectedItemSlot)
+            if (slot == _selectedItemSlot)
             {
                 slot.Select(true);
             }
@@ -100,11 +149,11 @@ public class Inventory : MonoBehaviour
         {
             return;
         }
-        if (equipedItem != null )
+        if (_equipedItem != null)
         {
-            equipedItem.gameObject.SetActive(false);
-            equipedItem.transform.SetParent(itemContainer.transform);
-            equipedItem = null;
+            _equipedItem.gameObject.SetActive(false);
+            _equipedItem.transform.SetParent(_itemContainer.transform);
+            _equipedItem = null;
         }
         Item item = itemSlot.ItemContainer.GetFirstItem();
         ItemHolder itemHolder = GetItemHolder(item);
@@ -115,21 +164,21 @@ public class Inventory : MonoBehaviour
         item.transform.SetParent(itemHolder.transform);
         item.transform.localPosition = Vector3.zero;
         item.gameObject.SetActive(true);
-        equipedItem = item;
-        equipedItem.Equip(this);
+        _equipedItem = item;
+        _equipedItem.Equip(this);
     }
 
     public ItemHolder GetItemHolder(Item item)
     {
-        if(item == null)
+        if (item == null)
         {
             return null;
         }
-        for (int i = 0; i < equipedContainers.Count; i++)
+        for (int i = 0; i < _equipedContainers.Count; i++)
         {
-            if (equipedContainers[i].ItemPositionType == item.ItemPositionType)
+            if (_equipedContainers[i].ItemPositionType == item.ItemPositionType)
             {
-                return equipedContainers[i];
+                return _equipedContainers[i];
             }
         }
         return null;
@@ -137,11 +186,11 @@ public class Inventory : MonoBehaviour
 
     public void Unequip()
     {
-        if (equipedItem == null)
+        if (_equipedItem == null)
         {
             return;
         }
-        equipedItem = null;
+        _equipedItem = null;
     }
 
     public void Drop(ItemContainer itemContainer)
@@ -161,7 +210,7 @@ public class Inventory : MonoBehaviour
 
     public void Drop(Item item)
     {
-        if (itemContainer == null)
+        if (_itemContainer == null)
         {
             return;
         }
@@ -176,38 +225,38 @@ public class Inventory : MonoBehaviour
         if (item != null)
         {
             bool foundContainer = false;
-            for (int i = 0; i < itemContainers.Count; i++)
+            for (int i = 0; i < _itemContainers.Count; i++)
             {
-                if (itemContainers[i].Items[0].ItemName == item.ItemName)
+                if (_itemContainers[i].Items[0].ItemName == item.ItemName)
                 {
-                    itemContainers[i].AddItem(item);
+                    _itemContainers[i].AddItem(item);
                     foundContainer = true;
                     SetupSlots();
                     break;
                 }
             }
-            if (itemContainers.Count >= maxPickupsValue)
+            if (_itemContainers.Count >= _maxPickupsValue)
             {
                 return;
             }
             if (!foundContainer)
             {
                 ItemContainer itemContainer = new ItemContainer(item);
-                itemContainers.Add(itemContainer);
+                _itemContainers.Add(itemContainer);
                 SetupSlots();
             }
             item.gameObject.SetActive(false);
-            item.transform.SetParent(itemContainer.transform);
+            item.transform.SetParent(_itemContainer.transform);
         }
     }
 
     public void RemoveItem(ItemContainer itemContainer)
     {
-        if (!itemContainers.Contains(itemContainer))
+        if (!_itemContainers.Contains(itemContainer))
         {
             return;
         }
-        itemContainers.Remove(itemContainer);
+        _itemContainers.Remove(itemContainer);
         for (int i = 0; i < itemContainer.Items.Count; i++)
         {
             itemContainer.Items[i].transform.SetParent(null);
@@ -219,9 +268,9 @@ public class Inventory : MonoBehaviour
     {
         ItemContainer itemContainer = null;
 
-        for (int i = 0; i < itemContainers.Count; i++)
+        for (int i = 0; i < _itemContainers.Count; i++)
         {
-            ItemContainer tempContainer = itemContainers[i];
+            ItemContainer tempContainer = _itemContainers[i];
             for (int j = 0; j < tempContainer.Items.Count; j++)
             {
                 if (tempContainer.Items[j] == item)
@@ -240,36 +289,11 @@ public class Inventory : MonoBehaviour
         item.transform.SetParent(null);
         if (itemContainer.Items.Count <= 0)
         {
-            itemContainers.Remove(itemContainer);
+            _itemContainers.Remove(itemContainer);
 
         }
         SetupSlots();
     }
 
-    private void SetupSlots()
-    {
-        for (int i = 0; i < inventoryViews.Count; i++)
-        {
-            inventoryViews[i].SetupSlots(itemContainers);
-        }
-        for (int i = 0; i < itemSlots.Count; i++)
-        {
-            ItemSlot itemSlot = itemSlots[i];
-
-            if (i < itemContainers.Count)
-            {
-                ItemContainer itemContainer = itemContainers[i];
-                itemSlot.Setup(itemContainer);
-            }
-            else
-            {
-                itemSlot.Setup();
-            }
-        }
-        for (int i = 0; i < itemSlots.Count; i++)
-        {
-            itemSlots[i].Select(false);
-        }
-        selectedItemSlot = null;
-    }
+    #endregion
 }

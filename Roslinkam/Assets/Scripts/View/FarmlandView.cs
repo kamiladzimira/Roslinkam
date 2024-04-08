@@ -3,20 +3,32 @@ using TMPro;
 
 public class FarmlandView : MonoBehaviour
 {
-    [SerializeField] private Farmland farmland;
-    [SerializeField] TextMeshProUGUI timer;
-    [SerializeField] public SpriteRenderer seedRenderer;
+    #region non public fields
+    
+    [SerializeField] 
+    private Farmland _farmland;
+    [SerializeField] 
+    private TextMeshProUGUI _timer;
+    [SerializeField]
+    private SpriteRenderer _seedRenderer;
+    
+    #endregion
 
+    #region public fields
+    #endregion
+
+    #region non public methods
+    
     private void OnEnable()
     {
-        farmland.onTimerChangedAction += OnTimerChanged;
-        farmland.onPlantSeededAction += OnPlantSeeded;
+        _farmland.OnTimerChangedAction += OnTimerChanged;
+        _farmland.OnPlantSeededAction += OnPlantSeeded;
     }
 
     private void OnDisable()
     {
-        farmland.onTimerChangedAction -= OnTimerChanged;
-        farmland.onPlantSeededAction -= OnPlantSeeded;
+        _farmland.OnTimerChangedAction -= OnTimerChanged;
+        _farmland.OnPlantSeededAction -= OnPlantSeeded;
     }
 
     private void OnTimerChanged(float timerValue)
@@ -24,15 +36,20 @@ public class FarmlandView : MonoBehaviour
         if(timerValue <= 0)
         {
             timerValue = 0;
-            timer.gameObject.SetActive(false);
-            seedRenderer.sprite = null;
+            _timer.gameObject.SetActive(false);
+            _seedRenderer.sprite = null;
         }
-        timer.text = timerValue.ToString("0.00");
+        _timer.text = timerValue.ToString("0.00");
     }
 
     private void OnPlantSeeded()
     {
-        timer.gameObject.SetActive(true);
-        seedRenderer.sprite = farmland.Seed.Sprite;
+        _timer.gameObject.SetActive(true);
+        _seedRenderer.sprite = _farmland.Seed.Sprite;
     }
+    
+    #endregion
+
+    #region public methods
+    #endregion
 }

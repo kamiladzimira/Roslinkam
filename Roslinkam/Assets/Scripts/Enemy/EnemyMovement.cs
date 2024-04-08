@@ -3,37 +3,61 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private List<Transform> route;
-    [SerializeField] private float positionAccuracy = 0.5f;
-    [SerializeField] private Animator animator;
-    [SerializeField] private SpriteRenderer sprite;
-    [SerializeField] private int speed;
-    private Vector2 lastPos;
-    public List<Transform> Route => route;
-    public float PositionAccuracy => positionAccuracy;
-    public int Speed => speed;
+    #region non public fields
+
+    [SerializeField]
+    private List<Transform> _route;
+    [SerializeField]
+    private float _positionAccuracy = 0.5f;
+    [SerializeField]
+    private Animator _animator;
+    [SerializeField]
+    private SpriteRenderer _sprite;
+    [SerializeField]
+    private int _speed;
+
+    private Vector2 _lastPos;
+
+    #endregion
+
+    #region public fields
+
+    public List<Transform> Route => _route;
+    public float PositionAccuracy => _positionAccuracy;
+    public int Speed => _speed;
+
+    #endregion
+
+    #region non public methods
+
     private void Awake()
     {
-        lastPos = transform.position;
+        _lastPos = transform.position;
     }
 
-    public void Move(Transform currentTarget)
-    {
-        lastPos = transform.position;
-        transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, speed * Time.deltaTime);
-        Vector2 movementdirection = ((Vector2)transform.position - lastPos).normalized;
-        FlipSprite(movementdirection);
-    }
-
-    void FlipSprite(Vector2 movementDirection)
+    private void FlipSprite(Vector2 movementDirection)
     {
         if (movementDirection.x < 0)
         {
-            sprite.flipX = true;
+            _sprite.flipX = true;
         }
         else
         {
-            sprite.flipX = false;
+            _sprite.flipX = false;
         }
     }
+
+    #endregion
+
+    #region public methods
+
+    public void Move(Transform currentTarget)
+    {
+        _lastPos = transform.position;
+        transform.position = Vector2.MoveTowards(transform.position, currentTarget.position, _speed * Time.deltaTime);
+        Vector2 movementdirection = ((Vector2)transform.position - _lastPos).normalized;
+        FlipSprite(movementdirection);
+    }
+
+    #endregion
 }

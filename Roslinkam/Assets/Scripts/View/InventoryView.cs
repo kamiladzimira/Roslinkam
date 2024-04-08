@@ -3,20 +3,35 @@ using UnityEngine;
 
 public class InventoryView : MonoBehaviour
 {
-    [SerializeField] private Inventory inventory;
-    [SerializeField] private List<ItemSlot> itemSlots;
-    private ItemSlot selectedItemSlot;
+    #region non public fields
+    
+    [SerializeField] 
+    private Inventory _inventory;
+    [SerializeField] 
+    private List<ItemSlot> _itemSlots;
 
+    private ItemSlot _selectedItemSlot;
+    
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
+    
     public void Select(ItemSlot itemSlot)
     {
         if (itemSlot.ItemContainer == null)
         {
             return;
         }
-        selectedItemSlot = itemSlot;
-        foreach (ItemSlot slot in itemSlots)
+        _selectedItemSlot = itemSlot;
+        foreach (ItemSlot slot in _itemSlots)
         {
-            if (slot == selectedItemSlot)
+            if (slot == _selectedItemSlot)
             {
                 slot.Select(true);
             }
@@ -29,28 +44,28 @@ public class InventoryView : MonoBehaviour
 
     public void EquipSelectedItem()
     {
-        if (selectedItemSlot == null)
+        if (_selectedItemSlot == null)
         {
             return;
         }
 
-        inventory.Equip(selectedItemSlot);
+        _inventory.Equip(_selectedItemSlot);
     }
 
     public void DropSelectedItem()
     {
-        if (selectedItemSlot == null)
+        if (_selectedItemSlot == null)
         {
             return;
         }
-        inventory.Drop(selectedItemSlot.ItemContainer);
+        _inventory.Drop(_selectedItemSlot.ItemContainer);
     }
 
     public void SetupSlots(List<ItemContainer> itemContainers)
     {
-        for (int i = 0; i < itemSlots.Count; i++)
+        for (int i = 0; i < _itemSlots.Count; i++)
         {
-            ItemSlot itemSlot = itemSlots[i];
+            ItemSlot itemSlot = _itemSlots[i];
 
             if (i < itemContainers.Count)
             {
@@ -63,12 +78,14 @@ public class InventoryView : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < itemSlots.Count; i++)
+        for (int i = 0; i < _itemSlots.Count; i++)
         {
-            itemSlots[i].Select(false);
+            _itemSlots[i].Select(false);
         }
 
-        selectedItemSlot = null;
+        _selectedItemSlot = null;
     }
+    
+    #endregion
 }
 

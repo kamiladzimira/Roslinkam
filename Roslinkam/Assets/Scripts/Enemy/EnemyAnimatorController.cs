@@ -3,21 +3,34 @@ using UnityEngine.Events;
 
 public class EnemyAnimatorController : MonoBehaviour
 {
-    [SerializeField] private Animator enemyAnimator;
+    #region non public fields
+
+    [SerializeField] 
+    private Animator _enemyAnimator;
     [SerializeField]
-    private UnityEvent onAttack;
+    private UnityEvent _onAttack;
+
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
 
     public void OnAttack()
     {
-        onAttack?.Invoke();
+        _onAttack?.Invoke();
     }
 
     public void ResetAllTriggers()
     {
-        enemyAnimator.ResetTrigger("Trigger");
-        enemyAnimator.ResetTrigger("Walk");
-        enemyAnimator.ResetTrigger("Attack");
+        _enemyAnimator.ResetTrigger("Trigger");
+        _enemyAnimator.ResetTrigger("Walk");
+        _enemyAnimator.ResetTrigger("Attack");
     }
+    
+    #endregion
 }
-
-

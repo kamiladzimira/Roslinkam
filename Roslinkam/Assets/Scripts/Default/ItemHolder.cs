@@ -2,8 +2,22 @@ using UnityEngine;
 
 public class ItemHolder : MonoBehaviour
 {
-    [SerializeField]
-    private ItemPositionType itemPositionType;
+    #region non public fields
 
-    public ItemPositionType ItemPositionType => itemPositionType;
+    [SerializeField]
+    private ItemPositionType _itemPositionType;
+
+    #endregion
+
+    #region public fields
+
+    public ItemPositionType ItemPositionType => _itemPositionType;
+
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
+    #endregion
 }

@@ -5,35 +5,53 @@ using UnityEngine;
 [Serializable]
 public class ItemContainer
 {
-    [SerializeField] private List<Item> items;
-    public IReadOnlyList<Item> Items => items;
+    #region non public fields
+
+    [SerializeField] 
+    private List<Item> _items;
+    
+    #endregion
+
+    #region public fields
+
+    public IReadOnlyList<Item> Items => _items;
+    
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
+
     public ItemContainer(Item item)
     {
-        items = new List<Item>();
-        items.Add(item);
+        _items = new List<Item>();
+        _items.Add(item);
     }
 
     public Item GetFirstItem()
     {
-        if(items.Count <= 0)
+        if(_items.Count <= 0)
         {
             return null;
         }
-        Item firstItem = items[0];
+        Item firstItem = _items[0];
         return firstItem;
     }
 
     public void AddItem(Item item)
     {
-        items.Add(item);
+        _items.Add(item);
     }
 
     public void RemoveItem(Item item)
     {
-        if (!items.Contains(item))
+        if (!_items.Contains(item))
         {
             return;
         }
-        items.Remove(item);
+        _items.Remove(item);
     }
+
+    #endregion
 }

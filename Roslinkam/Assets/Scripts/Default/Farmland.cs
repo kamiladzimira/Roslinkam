@@ -3,19 +3,29 @@ using UnityEngine;
 
 public class Farmland : MonoBehaviour
 {
+    #region non public fields
+
     [SerializeField]
-    private SpriteRenderer spriteRenderer;
-    private Seed seed;
-    private float timer;
-    private bool isEmpty = true;
-    private bool isActive = false;
+    private SpriteRenderer _spriteRenderer;
+    private Seed _seed;
+    private float _timer;
+    private bool _isEmpty = true;
+    private bool _isActive = false;
 
-    public event Action<float> onTimerChangedAction;
-    public event Action onPlantSeededAction;
+    #endregion
 
-    public Seed Seed => seed;
-    public bool IsEmpty => isEmpty;
-    public bool IsActive => isActive;
+    #region public fields
+
+    public Seed Seed => _seed;
+    public bool IsEmpty => _isEmpty;
+    public bool IsActive => _isActive;
+
+    public event Action<float> OnTimerChangedAction;
+    public event Action OnPlantSeededAction;
+
+    #endregion
+
+    #region non public methods
 
     private void Update()
     {
@@ -24,42 +34,48 @@ public class Farmland : MonoBehaviour
 
     private void Start()
     {
-        spriteRenderer.enabled = false;
+        _spriteRenderer.enabled = false;
     }
 
     private void ProcessTimer()
     {
-        if (timer <= 0)
+        if (_timer <= 0)
         {
             return;
         }
-        timer -= Time.deltaTime;
-        onTimerChangedAction?.Invoke(timer);
-        if (timer <= 0)
+        _timer -= Time.deltaTime;
+        OnTimerChangedAction?.Invoke(_timer);
+        if (_timer <= 0)
         {
-            Instantiate(seed.Crop, transform.position, Quaternion.identity, null);
-            Destroy(seed.gameObject);
-            isEmpty = true;
+            Instantiate(_seed.Crop, transform.position, Quaternion.identity, null);
+            Destroy(_seed.gameObject);
+            _isEmpty = true;
         }
     }
 
+    #endregion
+
+    #region public methods
+
     public void ActiveFarmland()
     {
-        if (!isActive)
+        if (!_isActive)
         {
-            spriteRenderer.enabled = true;
+            _spriteRenderer.enabled = true;
         }
-        isActive = true;
+        _isActive = true;
     }
 
     public void SeedPlant(Seed seed)
     {
-        if (isActive)
+        if (_isActive)
         {
-            timer = seed.GrowingTime;
-            this.seed = seed;
-            isEmpty = false;
-            onPlantSeededAction?.Invoke();
+            _timer = seed.GrowingTime;
+            this._seed = seed;
+            _isEmpty = false;
+            OnPlantSeededAction?.Invoke();
         }
     }
+
+    #endregion
 }

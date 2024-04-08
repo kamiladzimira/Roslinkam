@@ -2,20 +2,36 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    [SerializeField] private EnemyComponentsContainer enemyComponentsContainer;
-    [SerializeField] private int damage;
+    #region non public fields
+
+    [SerializeField]
+    private EnemyComponentsContainer _enemyComponentsContainer;
+    [SerializeField]
+    private int _damage;
+
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
 
     public void DealDamageToTarget()
     {
-        DealDamage(enemyComponentsContainer.EnemyTargetFinder.Target);
+        DealDamage(_enemyComponentsContainer.EnemyTargetFinder.Target);
     }
 
     public void DealDamage(HealthController target)
     {
-        if(target == null)
+        if (target == null)
         {
             return;
         }
-        target.GetDamage(damage);
+        target.GetDamage(_damage);
     }
+
+    #endregion
 }

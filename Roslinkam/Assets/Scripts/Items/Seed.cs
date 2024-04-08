@@ -2,26 +2,43 @@ using UnityEngine;
 
 public class Seed : Item
 {
-    [SerializeField] private float growingTime;
-    [SerializeField] private Item crop;
-    private FarmlandFinder farmlandFinder;
+    #region non public fields
 
-    public float GrowingTime => growingTime;
-    public Item Crop => crop;
+    [SerializeField]
+    private float _growingTime;
+    [SerializeField]
+    private Item _crop;
 
+    private FarmlandFinder _farmlandFinder;
+
+    #endregion
+
+    #region public fields
+
+    public float GrowingTime => _growingTime;
+    public Item Crop => _crop;
+
+    #endregion
+
+    #region non public methods
+    
     private void Start()
     {
-        farmlandFinder = GetComponent<FarmlandFinder>();
+        _farmlandFinder = GetComponent<FarmlandFinder>();
     }
+
+    #endregion
+
+    #region public methods
 
     public override void Use()
     {
-        if (farmlandFinder.Farmlands.Count <= 0)
+        if (_farmlandFinder.Farmlands.Count <= 0)
         {
             return;
         }
 
-        Farmland farmland = farmlandFinder.GetClosestEmptyFarmland();
+        Farmland farmland = _farmlandFinder.GetClosestEmptyFarmland();
 
         if (farmland == null || !farmland.IsActive)
         {
@@ -29,9 +46,11 @@ public class Seed : Item
             return;
         }
 
-        inventory.Drop(this);
-        inventory.Unequip();
+        _inventory.Drop(this);
+        _inventory.Unequip();
         farmland.SeedPlant(this);
         gameObject.SetActive(false);
     }
+
+    #endregion
 }

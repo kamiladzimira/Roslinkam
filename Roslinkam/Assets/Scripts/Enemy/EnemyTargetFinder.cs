@@ -2,9 +2,19 @@ using UnityEngine;
 
 public class EnemyTargetFinder : MonoBehaviour
 {
-    private HealthController target;
+    #region non public fields
 
-    public HealthController Target => target;
+    private HealthController _target;
+    
+    #endregion
+
+    #region public fields
+
+    public HealthController Target => _target;
+
+    #endregion
+
+    #region non public methods
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,16 +23,21 @@ public class EnemyTargetFinder : MonoBehaviour
         {
             return;
         }
-        target = tmpTarget.HealthController;
+        _target = tmpTarget.HealthController;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         HealthController tmpTarget = collision.GetComponent<HealthController>();
-        if (tmpTarget != target)
+        if (tmpTarget != _target)
         {
             return;
         }
-        target = null;
+        _target = null;
     }
+
+    #endregion
+
+    #region public methods
+    #endregion
 }

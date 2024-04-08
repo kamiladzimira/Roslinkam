@@ -3,40 +3,54 @@ using UnityEngine;
 
 public class StateIdle : IEnemyState
 {
-    private EnemyComponentsContainer enemyComponentsContainer;
-    private Transform currentTarget;
-    private int routeIndex;
-    private EnemyMovement enemyMovement => enemyComponentsContainer.EnemyMovement;
+    #region non public fields
+
+    private EnemyComponentsContainer _enemyComponentsContainer;
+    private Transform _currentTarget;
+    private int _routeIndex;
+    private EnemyMovement enemyMovement => _enemyComponentsContainer.EnemyMovement;
+
+    #endregion
+
+    #region public fields
+    #endregion
+
+    #region non public methods
+    #endregion
+
+    #region public methods
 
     public StateIdle(EnemyComponentsContainer enemyComponentsContainer)
     {
-        this.enemyComponentsContainer = enemyComponentsContainer;
-        routeIndex = 0;
-        currentTarget = enemyComponentsContainer.EnemyMovement.Route[routeIndex];
+        this._enemyComponentsContainer = enemyComponentsContainer;
+        _routeIndex = 0;
+        _currentTarget = enemyComponentsContainer.EnemyMovement.Route[_routeIndex];
     }
 
     public IEnemyState DoState()
     {
-        enemyMovement.Move(currentTarget);
+        enemyMovement.Move(_currentTarget);
         Transform enemyTransform = enemyMovement.transform;
         List<Transform> route = enemyMovement.Route;
 
-        if (Vector2.Distance(enemyTransform.position, currentTarget.position) < enemyMovement.PositionAccuracy)
+        if (Vector2.Distance(enemyTransform.position, _currentTarget.position) < enemyMovement.PositionAccuracy)
         {
-            routeIndex = (routeIndex + 1) % route.Count;
-            currentTarget = route[routeIndex];
+            _routeIndex = (_routeIndex + 1) % route.Count;
+            _currentTarget = route[_routeIndex];
         }
 
-        if(enemyComponentsContainer.EnemyTargetFinder.Target == null)
+        if(_enemyComponentsContainer.EnemyTargetFinder.Target == null)
         {
             return this;
         }
-        return enemyComponentsContainer.EnemyController.StateTrigger;
+        return _enemyComponentsContainer.EnemyController.StateTrigger;
     }
 
     public void OnEnter()
     {
-        enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
-        enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
+        _enemyComponentsContainer.EnemyAnimatorController.ResetAllTriggers();
+        _enemyComponentsContainer.EnemyAnimator.SetTrigger("Walk");
     }   
+
+    #endregion
 }
