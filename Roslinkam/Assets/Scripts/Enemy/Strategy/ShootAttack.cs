@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class ShootAttack : AttackType
 {
     [SerializeField] private EnemyComponentsContainer enemyComponentsContainer;
     [SerializeField] private Bullet bullet;
-    private int _amountOfBullet = 20;
 
     public override void DoAttack(int damage)
     {
@@ -16,8 +12,6 @@ public class ShootAttack : AttackType
 
     public void CreateBullet(Bullet bullet)
     {
-        //Bullet currentBullet = Instantiate(bullet, transform.position, Quaternion.identity);
-
         Bullet currentBullet = Spawner.Instance.GetBullet();
         currentBullet.transform.SetParent(null);
         currentBullet.transform.position = transform.position;

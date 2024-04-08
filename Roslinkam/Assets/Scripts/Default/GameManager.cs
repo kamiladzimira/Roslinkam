@@ -83,9 +83,7 @@ public class GameManager : MonoBehaviour
 #else
             Application.Quit();
 #endif
-        }
-        //Application.Quit();
-        
+        }        
     }
 
     IEnumerator LoadSameSceneWithDelay()
