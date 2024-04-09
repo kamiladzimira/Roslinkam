@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3655194828339109627}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3655194828339109629
 SpriteRenderer:
@@ -97,6 +97,25 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -115,14 +134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec17015b79a507542adae94cb6843a71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprite: {fileID: -1728784961, guid: ca0613f176c2b444b848e94a9399923a, type: 3}
-  spriteRenderer: {fileID: 3655194828339109629}
-  price: 5
-  itemName: Cucumber seed
-  itemPositionType: 0
-  growingTime: 5
-  crop: {fileID: 1329351012662633809, guid: 0ee741fc0f8b2fc4f9ca035b7b44a819, type: 3}
-  farmlandFinder: {fileID: 0}
+  _sprite: {fileID: -1664663590, guid: ca0613f176c2b444b848e94a9399923a, type: 3}
+  _spriteRenderer: {fileID: 3655194828339109629}
+  _price: 10
+  _itemName: Cucumber Seed
+  _itemPositionType: 0
+  _growingTime: 2
+  _crop: {fileID: 1329351012662633809, guid: 0ee741fc0f8b2fc4f9ca035b7b44a819, type: 3}
 --- !u!114 &-8163221360274264045
 MonoBehaviour:
   m_ObjectHideFlags: 0
