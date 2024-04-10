@@ -10,7 +10,8 @@ public class ShopActivator : MonoBehaviour
     private PlayerComponentsContainer _playerComponentsContainer;
 
     private List<Shop> _shopItems = new List<Shop>();
-    private Shop _openShop;
+    private List<ShopSO> _shopSOItems = new List<ShopSO>();
+    private ShopSO _openShop;
     
     #endregion
 
@@ -21,23 +22,22 @@ public class ShopActivator : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Shop collisionShop = collision.GetComponent<Shop>();
-        if (collisionShop == null)
+        if (!collision.TryGetComponent<ShopSO>(out ShopSO collisionShop))
         {
             return;
         }
 
-        _shopItems.Add(collisionShop);
+        _shopSOItems.Add(collisionShop);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Shop collisionShop = collision.GetComponent<Shop>();
-        if (collisionShop == null || !_shopItems.Contains(collisionShop))
+        if (!collision.TryGetComponent<ShopSO>(out ShopSO collisionShop) || !_shopSOItems.Contains(collisionShop))
         {
             return;
         }
-        _shopItems.Remove(collisionShop);
+
+        _shopSOItems.Remove(collisionShop);
     }
 
     private Shop GetClosestShop()
@@ -55,6 +55,25 @@ public class ShopActivator : MonoBehaviour
                 result = _shopItems[i];
             }
         }
+        return result;
+    }
+
+    private ShopSO GetClosestSOShop()
+    {
+        ShopSO result = null;
+        float minDistance = float.MaxValue;
+
+        for (int i = 0; i < _shopSOItems.Count; i++)
+        {
+            float currentDistance = Vector3.Distance(transform.position, _shopSOItems[i].transform.position);
+
+            if (currentDistance < minDistance && _shopSOItems[i].IsEmpty)
+            {
+                minDistance = currentDistance;
+                result = _shopSOItems[i];
+            }
+        }
+        Debug.Log($"result: {result}");
         return result;
     }
 
@@ -76,12 +95,12 @@ public class ShopActivator : MonoBehaviour
             return;
         }
 
-        if (_shopItems.Count <= 0)
+        if (_shopSOItems.Count <= 0)
         {
             return;
         }
 
-        _openShop = GetClosestShop();
+        _openShop = GetClosestSOShop();
         _openShop.TriggerShop(_playerComponentsContainer);
     }
     

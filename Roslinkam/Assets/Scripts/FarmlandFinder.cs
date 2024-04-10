@@ -19,22 +19,20 @@ public class FarmlandFinder : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Farmland collisionFarmland = collision.GetComponent<Farmland>();
-        if (collisionFarmland == null)
+        if (collision.TryGetComponent<Farmland>(out Farmland collisionFarmland))
         {
-            return;
+            _farmlands.Add(collisionFarmland);
         }
-        _farmlands.Add(collisionFarmland);
+        return;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Farmland collisionFarmland = collision.GetComponent<Farmland>();
-        if (collisionFarmland == null || !_farmlands.Contains(collisionFarmland))
+        if (!collision.TryGetComponent<Farmland>(out Farmland collisionFarmland) || _farmlands.Contains(collisionFarmland))
         {
-            return;
+            _farmlands.Remove(collisionFarmland);
         }
-        _farmlands.Remove(collisionFarmland);
+        return;
     }
     
     #endregion

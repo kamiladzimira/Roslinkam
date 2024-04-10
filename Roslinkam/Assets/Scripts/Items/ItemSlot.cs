@@ -14,6 +14,7 @@ public class ItemSlot : MonoBehaviour
     private TextMeshProUGUI _amountOfItems;
 
     private Item _item;
+    private InventoryItem _inventoryItem;
     private ItemContainer _itemContainer;
 
     #endregion
@@ -21,6 +22,7 @@ public class ItemSlot : MonoBehaviour
     #region public fields
 
     public Item Item => _item;
+    public InventoryItem InventoryItem => _inventoryItem;
     public ItemContainer ItemContainer => _itemContainer;
 
     #endregion
@@ -54,6 +56,19 @@ public class ItemSlot : MonoBehaviour
         this._item = item;
     }
 
+    public void Setup(InventoryItem inventoryItem)
+    {
+        if (inventoryItem == null)
+        {
+            Setup();
+            return;
+        }
+
+        _image.sprite = inventoryItem.GetSprite();
+        _image.gameObject.SetActive(true);
+        this._inventoryItem = inventoryItem;
+    }
+
     public void Setup(ItemContainer itemContainer)
     {
         Item item = itemContainer.GetFirstItem();
@@ -74,7 +89,7 @@ public class ItemSlot : MonoBehaviour
     {
         _image.sprite = null;
         _image.gameObject.SetActive(false);
-        _item = null;
+        _inventoryItem = null;
         _amountOfItems.text = "";
     }
 

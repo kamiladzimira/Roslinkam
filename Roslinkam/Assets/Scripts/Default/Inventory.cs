@@ -250,6 +250,37 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void AddItem(InventoryItem inventoryItem)
+    {
+        if (inventoryItem != null)
+        {
+            bool foundContainer = false;
+            for (int i = 0; i < _itemContainers.Count; i++)
+            {
+                if (_itemContainers[i].Items[0].ItemName == inventoryItem.GetIconName())
+                {
+                    _itemContainers[i].AddItem(inventoryItem);
+                    foundContainer = true;
+                    SetupSlots();
+                    break;
+                }
+            }
+            if (_itemContainers.Count >= _maxPickupsValue)
+            {
+                return;
+            }
+            if (!foundContainer)
+            {
+                ItemContainer itemContainer = new ItemContainer(inventoryItem);
+                _itemContainers.Add(itemContainer);
+                SetupSlots();
+            }
+
+            /*inventoryItem.SetActive(false);
+            inventoryItem.transform.SetParent(_itemContainer.transform);*/
+        }
+    }
+
     public void RemoveItem(ItemContainer itemContainer)
     {
         if (!_itemContainers.Contains(itemContainer))
