@@ -29,12 +29,12 @@ public class ScytheTool : Item
 
         Farmland farmland = _farmlandFinder.GetClosestEmptyFarmland();
 
-        if (farmland)
+        if (farmland == null)
         {
-            farmland.ActiveFarmland();
+            return;
         }
-        return;
 
+        farmland.ActiveFarmland();
     }
     
     #endregion
