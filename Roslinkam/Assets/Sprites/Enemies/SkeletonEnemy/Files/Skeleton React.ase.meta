@@ -212,6 +212,7 @@ ScriptedImporter:
     cells:
     - name: Skeleton React_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -220,6 +221,7 @@ ScriptedImporter:
       spriteId: 1ea3acb300ff2af43920a57207097abc
     - name: Skeleton React_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -228,6 +230,7 @@ ScriptedImporter:
       spriteId: 03e42ea291561484ba707323910ab6b4
     - name: Skeleton React_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -236,6 +239,7 @@ ScriptedImporter:
       spriteId: 64952ae3986ca5b46aeb4d7f5503362c
     - name: Skeleton React_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

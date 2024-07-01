@@ -432,6 +432,7 @@ ScriptedImporter:
     cells:
     - name: Skeleton Dead_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 11
         y: 0
@@ -440,6 +441,7 @@ ScriptedImporter:
       spriteId: 9034d85b992477b45865827c60862185
     - name: Skeleton Dead_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 8
         y: 0
@@ -448,6 +450,7 @@ ScriptedImporter:
       spriteId: 9a2bdc593236c854f9972bdd89c95eba
     - name: Skeleton Dead_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 0
@@ -456,6 +459,7 @@ ScriptedImporter:
       spriteId: bbea157e50111ed4dbe35d3d4589b4dc
     - name: Skeleton Dead_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -464,6 +468,7 @@ ScriptedImporter:
       spriteId: 586e9858d4f7ef54d8656556fd8eb620
     - name: Skeleton Dead_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -472,6 +477,7 @@ ScriptedImporter:
       spriteId: 2c0f0280e211d1443aa65a461cec64da
     - name: Skeleton Dead_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -480,6 +486,7 @@ ScriptedImporter:
       spriteId: cdd0028a18786a648b0db7088969e263
     - name: Skeleton Dead_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -488,6 +495,7 @@ ScriptedImporter:
       spriteId: de1f7b5d3ec344b4bb53c1b95a554897
     - name: Skeleton Dead_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -496,6 +504,7 @@ ScriptedImporter:
       spriteId: 122137da1d1d1984db9a3fbd721889ec
     - name: Skeleton Dead_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -504,6 +513,7 @@ ScriptedImporter:
       spriteId: 47130a7aad5529044a647a087bec8ba2
     - name: Skeleton Dead_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 0
@@ -512,6 +522,7 @@ ScriptedImporter:
       spriteId: 51c6d0d98446d004797189d2194db311
     - name: Skeleton Dead_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 0
@@ -520,6 +531,7 @@ ScriptedImporter:
       spriteId: 67ad337a50fe63147a9308de6e7c2f93
     - name: Skeleton Dead_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 0
@@ -528,6 +540,7 @@ ScriptedImporter:
       spriteId: 156992e9f8afa5a499882f4f55e63b59
     - name: Skeleton Dead_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -536,6 +549,7 @@ ScriptedImporter:
       spriteId: de9a79c3cf7fab74b8579bb3f25c6f0d
     - name: Skeleton Dead_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -544,6 +558,7 @@ ScriptedImporter:
       spriteId: 09a63218b3204024fbeddebe4c839ec5
     - name: Skeleton Dead_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0

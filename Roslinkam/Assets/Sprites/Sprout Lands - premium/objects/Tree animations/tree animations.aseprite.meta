@@ -452,6 +452,7 @@ ScriptedImporter:
     cells:
     - name: tree animations_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -460,6 +461,7 @@ ScriptedImporter:
       spriteId: 7d8022ca57947004a8bea4f09f8184f5
     - name: tree animations_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -468,6 +470,7 @@ ScriptedImporter:
       spriteId: 745ebdf4d21afbb4f9d8616a9087d3b3
     - name: tree animations_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -476,6 +479,7 @@ ScriptedImporter:
       spriteId: c74776d5fc0f8b74aa0a9c634ade3893
     - name: tree animations_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -484,6 +488,7 @@ ScriptedImporter:
       spriteId: fa84f12b06cd2764fa04972089c55ea2
     - name: tree animations_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -492,6 +497,7 @@ ScriptedImporter:
       spriteId: c1eb55d1e7e56964baf7571510dc3c78
     - name: tree animations_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -500,6 +506,7 @@ ScriptedImporter:
       spriteId: d8736b4fc2cb8ac4583337754ed81dcd
     - name: tree animations_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -508,6 +515,7 @@ ScriptedImporter:
       spriteId: d239b980e384c7342b2fa7363a69fb81
     - name: tree animations_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -516,6 +524,7 @@ ScriptedImporter:
       spriteId: a5fa7c8627353e447b764fe8daa92039
     - name: tree animations_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -524,6 +533,7 @@ ScriptedImporter:
       spriteId: b3414794b30d7d84f9bfaddd02b36b2c
     - name: tree animations_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -532,6 +542,7 @@ ScriptedImporter:
       spriteId: 5bb66b7879862d345827f663859bf1ab
     - name: tree animations_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -540,6 +551,7 @@ ScriptedImporter:
       spriteId: 7b80d589d59e9084fa95da550c23e9fe
     - name: tree animations_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -548,6 +560,7 @@ ScriptedImporter:
       spriteId: d095600df97a1b941b442157b68035d3
     - name: tree animations_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -556,6 +569,7 @@ ScriptedImporter:
       spriteId: 4a3204e48598acc469fce348ccea658f
     - name: tree animations_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -564,6 +578,7 @@ ScriptedImporter:
       spriteId: bc3fe562c9050e444aaffd1db17a29a5
     - name: tree animations_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1
@@ -572,6 +587,7 @@ ScriptedImporter:
       spriteId: c1981893d639b734a9d43e61f36ac665
     - name: tree animations_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 1

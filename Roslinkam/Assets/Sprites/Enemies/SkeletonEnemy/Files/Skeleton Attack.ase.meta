@@ -492,6 +492,7 @@ ScriptedImporter:
     cells:
     - name: Skeleton Attack_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
@@ -500,6 +501,7 @@ ScriptedImporter:
       spriteId: 0a4fee289c4ea324ab2787ed733fe657
     - name: Skeleton Attack_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
@@ -508,6 +510,7 @@ ScriptedImporter:
       spriteId: 9f6d594b33d3a4c44b64a989992dc0e6
     - name: Skeleton Attack_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
@@ -516,6 +519,7 @@ ScriptedImporter:
       spriteId: 5464427b3a28f5346b3fac9a3649c94c
     - name: Skeleton Attack_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 0
@@ -524,6 +528,7 @@ ScriptedImporter:
       spriteId: d68af8a2d47bfbf4dbfaecf9fadc9ea7
     - name: Skeleton Attack_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 4
         y: 0
@@ -532,6 +537,7 @@ ScriptedImporter:
       spriteId: 9211beb34b808ec4480c063993bcb487
     - name: Skeleton Attack_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 0
@@ -540,6 +546,7 @@ ScriptedImporter:
       spriteId: 16803e0a56c4f384f9be43de35f35893
     - name: Skeleton Attack_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -548,6 +555,7 @@ ScriptedImporter:
       spriteId: bb2c5ea04e9a9d447ad78d222e4df7b3
     - name: Skeleton Attack_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
@@ -556,6 +564,7 @@ ScriptedImporter:
       spriteId: 90e0edf8d0bee694d983b351d48ed59a
     - name: Skeleton Attack_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 10
         y: 0
@@ -564,6 +573,7 @@ ScriptedImporter:
       spriteId: 6a256dc81b401bb4587834fc9c7e2191
     - name: Skeleton Attack_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 8
         y: 0
@@ -572,6 +582,7 @@ ScriptedImporter:
       spriteId: 9a1f4373b7aa67744a60df12921f8f9c
     - name: Skeleton Attack_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 8
         y: 0
@@ -580,6 +591,7 @@ ScriptedImporter:
       spriteId: 3e98d57b56f96ae4fa98309ce8ac8394
     - name: Skeleton Attack_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 0
@@ -588,6 +600,7 @@ ScriptedImporter:
       spriteId: 6f74419b5380d1e488734f87f5cf48c1
     - name: Skeleton Attack_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 9
         y: 0
@@ -596,6 +609,7 @@ ScriptedImporter:
       spriteId: fab300a121a141644a60a80d66da30bf
     - name: Skeleton Attack_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 7
         y: 0
@@ -604,6 +618,7 @@ ScriptedImporter:
       spriteId: c07be433480add84ea0d611420fbde71
     - name: Skeleton Attack_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 6
         y: 0
@@ -612,6 +627,7 @@ ScriptedImporter:
       spriteId: ae0f0bbb230df5341819a80b43a3d2a1
     - name: Skeleton Attack_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 0
@@ -620,6 +636,7 @@ ScriptedImporter:
       spriteId: 86a8372aeac5d2f4087daca7df731f80
     - name: Skeleton Attack_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
@@ -628,6 +645,7 @@ ScriptedImporter:
       spriteId: a7ee5ddd6bdea2e448ea38702298d882
     - name: Skeleton Attack_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 0
