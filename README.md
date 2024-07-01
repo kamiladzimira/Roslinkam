@@ -1,4 +1,5 @@
 # Main scene - Roslinkam\Assets\Scenes\WonderfulGarden.unity
+## Unity version - 2022.3.34f1
 
 ### Walk using WSAD:
 ![](https://github.com/kamiladzimira/Roslinkam/blob/main/Roslinkam/Assets/GIFs/walking.gif)
