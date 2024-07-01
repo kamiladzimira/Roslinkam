@@ -524,4 +524,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyComponentsContainer: {fileID: 2576179971088182488}
-  _damage: 0
+  _damage: 2

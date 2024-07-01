@@ -323,7 +323,7 @@ MonoBehaviour:
   _positionAccuracy: 0.5
   _animator: {fileID: 3696726188244780906}
   _sprite: {fileID: 9205203490565964440}
-  _speed: 0
+  _speed: 1
 --- !u!114 &6486743516667801665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _enemyMovementAnimator: {fileID: 3696726188244780906}
   _enemyComponentsContainer: {fileID: 4496405546095714259}
-  _attackDistance: 0
+  _attackDistance: 0.5
 --- !u!114 &4496405546095714259
 MonoBehaviour:
   m_ObjectHideFlags: 0
